@@ -49,3 +49,46 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+
+  # Cross-platform determinism run: each platform parses every reconciled table and writes its
+  # output, and the compare job fails if any output differs or fewer than two operating systems
+  # or two processor architectures ran. Milestone 2 extends the output to every engine fixture.
+  determinism-run:
+    name: Determinism run (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: mkdir -p determinism-output
+        shell: bash
+      - run: node tools/determinism/cli.ts emit determinism-output/${{ matrix.os }}.json
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        with:
+          name: determinism-${{ matrix.os }}
+          path: determinism-output/${{ matrix.os }}.json
+          if-no-files-found: error
+
+  determinism-compare:
+    name: Determinism comparison
+    needs: determinism-run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: determinism-*
+          path: determinism-output
+          merge-multiple: true
+      - run: node tools/determinism/cli.ts compare determinism-output/*.json

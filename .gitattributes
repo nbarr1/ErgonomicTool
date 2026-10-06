@@ -1,0 +1,6 @@
+# Check out every text file with LF line endings on every platform, so that transcription files,
+# checksums, and determinism outputs don't vary with the operating system.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
