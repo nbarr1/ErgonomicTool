@@ -20,6 +20,9 @@ Started October 6, 2026.
 ### Changed
 
 - CI actions pinned to commit SHAs of their Node.js 24 releases.
+- The product owner's answers recorded: reviewer, band map approver, permission to implement the sources, and deferrals (D-110 to D-113).
+- Apache License 2.0 adopted for original code and documentation, with a `NOTICE` for third-party material (D-114).
+- The LiFFT, DUET, Shoulder Tool, and LM-MMH papers recorded in the source log after the product owner supplied them.
 
 ### Method versions
 

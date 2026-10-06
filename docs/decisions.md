@@ -168,3 +168,38 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Status:** Engineer decision, pending review.
 - **Date:** October 6, 2026.
 - **Decision:** Under design default D-015, every GitHub Action in the CI workflow is pinned to the full commit SHA of a release tag, with the tag named in a comment. The workflow uses `actions/checkout` v7, `actions/setup-node` v7, `actions/upload-artifact` v7, and `actions/download-artifact` v8, which run on Node.js 24. The v4 releases ran on the deprecated Node.js 20 runtime, and CI flagged them with a warning.
+
+## Product owner answers
+
+### D-110: The product owner is the qualified reviewer
+
+- **Status:** Confirmed by the product owner on October 6, 2026 (answers OQ-008).
+- **Decision:** The product owner is the qualified reviewer for method specifications and validation reports, and signs them.
+
+### D-111: The product owner approves band maps and ranking configuration
+
+- **Status:** Confirmed by the product owner on October 6, 2026 (answers OQ-010).
+- **Decision:** The product owner approves each band map, the priority level names, and the tie-breaker order.
+
+### D-112: Permission to implement the sources
+
+- **Status:** Confirmed by the product owner on October 6, 2026 (answers OQ-009).
+- **Decision:** "Unless stated otherwise, yes": the product owner has access to each primary source and permission to implement its equations and tables, except where the product owner says otherwise. The product owner supplied the LiFFT, DUET, Shoulder Tool, and LM-MMH papers on October 6, 2026 (answers OQ-102 and OQ-103).
+- **Note:** The repository is public. The LM-MMH paper carries a CC BY-NC-ND 4.0 license, which permits non-commercial reuse of the article "provided the original work is properly cited, and is not altered, transformed, or built upon in any way." Committing transcribed coefficients to a public repository and building software on them may fall outside those terms, depending on whether the coefficients are protected at all. This is flagged for the product owner (OQ-150). It isn't legal advice.
+
+### D-113: Deferred questions
+
+- **Status:** Confirmed by the product owner on October 6, 2026.
+- **Decision:** The Liberty Mutual interpretation figures (OQ-105) and the job demands field list (OQ-006 and OQ-142) are deferred. The LM-MMH band map proposal and the field-level job demands specification wait for them.
+
+### D-114: Repository license
+
+- **Status:** Engineer recommendation adopted at the product owner's request on October 6, 2026 (answers OQ-106). The product owner can change it.
+- **Decision:** The Apache License, Version 2.0, covers the repository's original code and documentation. A `NOTICE` file states that third-party material, including every transcription of a source table, stays under its own terms and isn't relicensed.
+- **Reason:** The repository is public. Apache 2.0 is a permissive license with an explicit patent grant and a `NOTICE` mechanism suited to recording third-party attributions. The license text was retrieved from `https://www.apache.org/licenses/LICENSE-2.0.txt` on October 6, 2026 (SHA-256 `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`).
+
+### D-115: Recommended first-release methods and order
+
+- **Status:** Engineer recommendation, pending the product owner's confirmation (OQ-001).
+- **Recommendation:** All six calculation methods go in the first release, implemented and validated in this order: (1) the Revised NIOSH Lifting Equation; (2) the BWC/OSU push/pull guidelines; (3) LiFFT, DUET, and the Shoulder Tool, together; (4) the LM-MMH equations. The job demands analysis follows when its field list is decided (D-113).
+- **Reason:** The order follows how ready each method is and how much risk it carries. The NIOSH manual is public domain and its specification is drafted. The BWC/OSU specification is drafted but waits on answers about three source defects (OQ-130, OQ-132, OQ-133). The three fatigue-failure tools share one calculation pattern (damage per cycle, summed cumulative damage, and a probability curve), so they are cheapest to build and validate together. LM-MMH has the most equations and coefficients, a license question (OQ-150), and deferred interpretation figures (OQ-105).

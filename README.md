@@ -95,4 +95,4 @@ web/                 Web client (planned, milestone 4)
 
 ## License
 
-The license is pending until the product owner chooses one. No license file exists, so no license is granted.
+The repository's original code and documentation are licensed under the [Apache License, Version 2.0](LICENSE). Third-party material, including every transcription of a source table, stays under its own terms. See [`NOTICE`](NOTICE) and decision D-114 in the [decision log](docs/decisions.md).

@@ -39,35 +39,43 @@ A web page can change after retrieval. The checksum records the exact copy that 
 
 - **Method:** `lm-mmh`
 - **Citation:** Potvin JR, Ciriello VM, Snook SH, Maynard WS, Brogmus GE. The Liberty Mutual manual materials handling (LM-MMH) equations. Ergonomics. 2021;64(8):955-970. [https://doi.org/10.1080/00140139.2021.1891297](https://doi.org/10.1080/00140139.2021.1891297). PubMed ID 33729096. Bibliographic data from the OpenAlex record.
-- **Status:** **Not retrieved.**
-- **Attempts on October 6, 2026:** `https://www.tandfonline.com/doi/full/10.1080/00140139.2021.1891297` and `https://www.tandfonline.com/doi/pdf/10.1080/00140139.2021.1891297` both returned HTTP 403. Europe PMC lists no PubMed Central copy.
-- **Open-access status:** OpenAlex records the article as open access ("hybrid") with the license "cc-by-nc-nd." Semantic Scholar records the license as "CCBYNCND." The build didn't read the license statement on the article itself.
-- **Terms of use:** **Licensing flag:** A CC BY-NC-ND license restricts commercial use and derivative works. Whether implementing the equations in this application falls within those terms is a question for the product owner.
-- **Open question:** OQ-103.
+- **Status:** **Supplied by the product owner** on October 6, 2026, after automated retrieval failed (HTTP 403 from the publisher's site).
+- **File:** `The_Liberty_Mutual_manual_materials_handling__LM-MMH__equations.pdf`, the publisher's version of record. Its first page states: "This article has been corrected with minor changes. These changes do not impact the academic content of the article."
+- **SHA-256:** `4413e0b82f7102a77e5dbfcebf604cdeed0a70d2c4ec56d0fa414c4002394072`
+- **Size:** 2,094,961 bytes, 17 pages. PDF metadata: created July 24, 2021.
+- **Terms of use:** The article states: "This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial-NoDerivatives License (http://creativecommons.org/licenses/by-nc-nd/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited, and is not altered, transformed, or built upon in any way." **Licensing flag:** See D-112 and OQ-150.
+- **Supplementary material:** The article cites "Supplementary Table S1." The supplementary material wasn't supplied.
 
 ### LiFFT: Gallagher et al. (2017)
 
 - **Method:** `lifft`
 - **Citation:** Gallagher S, Sesek RF, Schall MC, Huangfu R. Development and validation of an easy-to-use risk assessment tool for cumulative low back loading: The Lifting Fatigue Failure Tool (LiFFT). Applied Ergonomics. 2017;63:142-150. [https://doi.org/10.1016/j.apergo.2017.04.016](https://doi.org/10.1016/j.apergo.2017.04.016). PubMed ID 28477843. The DOI resolves to the ScienceDirect item `S0003687017301023` named in the build prompt.
-- **Status:** **Not retrieved.** OpenAlex, Semantic Scholar, and Europe PMC record the article as closed access, with no open copy.
-- **Terms of use:** **Licensing flag:** Subscription article. Reuse terms unknown.
-- **Open question:** OQ-102.
+- **Status:** **Supplied by the product owner** on October 6, 2026.
+- **File:** `LiFFT_manuscript_Final_revised_3.docx`, an author's manuscript, not the publisher's version of record. Document properties: last modified April 21, 2017, revision 7. The build converted it to PDF with LibreOffice (14 pages) for page locators; the locators in the specification refer to that conversion and to the manuscript's section numbers.
+- **SHA-256:** `4daefbb722e19da6b181386fc5438d5656cad363fbb9781eec62223b4352965b`
+- **Size:** 93,002 bytes.
+- **Version note:** An author's manuscript can differ from the version of record. The specification records the manuscript's content and flags anything that the version of record or the calculator might state differently (OQ-140).
+- **Terms of use:** No license statement in the manuscript. **Licensing flag:** Covered by the product owner's general permission (D-112).
 
 ### DUET: Gallagher et al. (2018)
 
 - **Method:** `duet`
 - **Citation:** Gallagher S, Schall MC, Sesek RF, Huangfu R. An upper extremity risk assessment tool based on material fatigue failure theory: The Distal Upper Extremity Tool (DUET). Human Factors. 2018;60(8):1146-1162. [https://doi.org/10.1177/0018720818789319](https://doi.org/10.1177/0018720818789319). PubMed ID 30063405.
-- **Status:** **Not retrieved.** OpenAlex, Semantic Scholar, and Europe PMC record the article as closed access, with no open copy.
-- **Terms of use:** **Licensing flag:** Subscription article. Reuse terms unknown.
-- **Open question:** OQ-102.
+- **Status:** **Supplied by the product owner** on October 6, 2026.
+- **File:** `DUET_preprint.pdf`. Despite its name, the file is typeset in the journal's layout and carries the line "Copyright © 2018, Human Factors and Ergonomics Society." PDF metadata: created July 26, 2018, and modified August 7, 2018. Whether it matches the final issue version wasn't checked.
+- **SHA-256:** `1476c40e76c9c45c669ec3a7d44f9115b5205a68533a0b1f57487664ffd584f7`
+- **Size:** 300,126 bytes, 17 pages.
+- **Terms of use:** Copyright the Human Factors and Ergonomics Society. **Licensing flag:** Covered by the product owner's general permission (D-112).
 
 ### The Shoulder Tool: Bani Hani et al. (2020)
 
 - **Method:** `shoulder-tool`
 - **Citation:** Bani Hani D, Huangfu R, Sesek R, Schall MC, Davis GA, Gallagher S. Development and validation of a cumulative exposure shoulder risk assessment tool based on fatigue failure theory. Ergonomics. 2021;64(1):39-54. Published online August 19, 2020. [https://doi.org/10.1080/00140139.2020.1811399](https://doi.org/10.1080/00140139.2020.1811399). PubMed ID 32812850. The build prompt cites the 2020 online date.
-- **Status:** **Not retrieved.** OpenAlex, Semantic Scholar, and Europe PMC record the article as closed access, with no open copy.
-- **Terms of use:** **Licensing flag:** Subscription article. Reuse terms unknown.
-- **Open question:** OQ-102.
+- **Status:** **Supplied by the product owner** on October 6, 2026.
+- **File:** `cdc_225789_DS1.pdf`, the publisher's version of record with the Taylor & Francis cover page ("Published online: 28 Aug 2020"). The file name suggests it came from the CDC Stacks repository.
+- **SHA-256:** `175b93fc0d6c70807baa27601e4e9682f3e30bb318464fa751b7c5910ee882b5`
+- **Size:** 3,007,104 bytes, 17 pages.
+- **Terms of use:** The cover page refers to the publisher's terms and conditions. No open license is stated. **Licensing flag:** Covered by the product owner's general permission (D-112).
 
 ## Reference tools
 

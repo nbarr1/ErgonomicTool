@@ -10,3 +10,7 @@ determinism-output/
 
 # Transcription passes are stored exactly as transcribed.
 methods/**/transcription/*.csv
+
+# License texts are stored exactly as published.
+LICENSE
+NOTICE
