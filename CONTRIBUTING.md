@@ -11,7 +11,7 @@ These conventions apply to every change in this repository. The governing specif
 
 ## Commits
 
-- Commit in small steps. Each commit does one thing and leaves every check passing.
+- Commit in small steps. Each commit does one thing and leaves every check passing. The one exception is a pass B transcription, which is committed alone before pass A exists, so that the history shows the order of the passes. The commit that adds pass A and the reconciliation restores a passing check.
 - Write a descriptive subject line in the imperative mood, with no ending period, at 72 characters or fewer. Explain why in the body when the reason isn't obvious.
 - Commit code and its tests together.
 - Update the README and the relevant guide in the same commit as the change they describe.
