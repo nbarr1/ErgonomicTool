@@ -71,7 +71,7 @@ A web page can change after retrieval. The checksum records the exact copy that 
 
 ## Reference tools
 
-These public calculators support reference-tool parity tests. The build reads their pages but sends no bulk or automated calculation requests.
+These public calculators support reference-tool parity tests. The build reads their pages but sends no bulk or automated calculation requests. **Terms of use:** The LiFFT, DUET, and Shoulder Tool pages carry author copyright notices ("© 2016 - 2022," "© 2016 - 2023," and "© 2019 - 2022"). The method documents quote them briefly for verification only. **Licensing flag** for any reuse beyond that.
 
 | Tool                             | Address                                                       | Retrieved       | SHA-256 of the HTML                                                | Result                                                                         |
 | -------------------------------- | ------------------------------------------------------------- | --------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
@@ -79,6 +79,8 @@ These public calculators support reference-tool parity tests. The build reads th
 | The Shoulder Tool, instructions  | `https://theshouldertool.pythonanywhere.com/en/instruction/`  | October 6, 2026 | `74fa0600802d0eb619547335c4e560b3acc078228b4576747c5174a5f3a2d2ee` | Retrieved                                                                      |
 | LiFFT                            | `http://lifft.pythonanywhere.com/`                            | October 6, 2026 | `a2261703fdfa53e3a5fb1048d7a7e46f0532d51e4ef141a8bd77b433d9e26ec0` | Retrieved. Redirected to `https://lifft.pythonanywhere.com/en/unit/english/`.  |
 | DUET                             | `http://duet.pythonanywhere.com/`                             | October 6, 2026 | `2511d1b48703af97dad75316a40cfc620a3b391c527b3c5db60693a3947fa9fa` | Retrieved. Redirected to `https://duet.pythonanywhere.com/`.                   |
+| LiFFT, instructions              | `https://lifft.pythonanywhere.com/instruction/`               | October 6, 2026 | `9b2809471fe12423d3ce2cd6054c1305622936d33d0c8b2588c2733e1598324d` | Retrieved. Version 1.4.1, last updated August 26, 2019.                        |
+| DUET, instructions               | `https://duet.pythonanywhere.com/instruction/`                | October 6, 2026 | `2eb3c1753fa18759e9d27784cf80700d242414a7fdcc7a87a4e2ccfbc94ad736` | Retrieved. Version 1.3.1, last updated November 28, 2023.                      |
 | Liberty Mutual MMH tables        | `https://libertymmhtables.libertymutual.com/`                 | October 6, 2026 | Not recorded                                                       | **Not retrieved.** HTTP 403 with an Akamai "Access Denied" page. See OQ-105.   |
 | OHCOW JobAssess tool page        | `https://my.ohcow.on.ca/tools-and-apps/job-assess-tool/`      | October 6, 2026 | `09eb537d878353647d992ab74a5a0b0a0f82e4d415dfecfc531f69cedb7e001c` | Retrieved. Field-level content requires a login, which the build doesn't have. |
 | OHCOW JobAssess announcement     | `https://www.ohcow.on.ca/posts/jobassess-app/`                | October 6, 2026 | `b698d48e867b7d694661902dd406991f674d1331e3584ea98dca4fe2a4abe53b` | Retrieved                                                                      |
