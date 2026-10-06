@@ -1,0 +1,12 @@
+# The governing specification is stored unedited.
+docs/build-prompt.md
+
+# Generated or third-party files
+package-lock.json
+node_modules/
+dist/
+coverage/
+determinism-output/
+
+# Transcription passes are stored exactly as transcribed.
+methods/**/transcription/*.csv

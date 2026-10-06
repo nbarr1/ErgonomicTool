@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+.vite/
+.vitest/
+
+# Test and tool output
+playwright-report/
+test-results/
+determinism-output/
+*.log
+npm-debug.log*
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# Editor and operating system files
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Downloaded source documents (record them in docs/sources.md, never commit them)
+sources/
+source-documents/
+*.pdf
+*.PDF
