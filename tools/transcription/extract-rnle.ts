@@ -43,7 +43,7 @@ if (checksum !== EXPECTED_SHA256) {
 }
 
 const pages = new Map<number, Word[]>();
-for (const page of [24, 25, 26, 27, 29, 31, 33, 34]) {
+for (const page of [23, 24, 25, 26, 27, 29, 31, 33, 34]) {
   pages.set(page, readPageWords(pdfPath, page));
 }
 
@@ -60,6 +60,19 @@ function simple(id: string, regions: Region[]): void {
   }
   write(id, extractGrid(pages, regions, headerColumns(pages, first)));
 }
+
+// Unnumbered table of the load constant and multiplier formulas under section 1.3, printed page 7.
+// Column boundaries fall between the names (from x = 119), the symbols (from x = 243), the metric
+// formulas (from x = 285), and the U.S. customary formulas (from x = 398). Each line is one row.
+write(
+  'table-0-multiplier-formulas',
+  extractTextGrid(
+    pages.get(23) ?? [],
+    { page: 23, yMin: 265, yMax: 410, xMin: 100, xMax: 500, headerLines: 1 },
+    [230, 280, 390],
+    10,
+  ),
+);
 
 // Table 1: Horizontal Multiplier, printed pages 8 and 9.
 const t1 = [

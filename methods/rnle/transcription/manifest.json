@@ -7,6 +7,22 @@
   },
   "tables": [
     {
+      "id": "table-0-multiplier-formulas",
+      "title": "Unnumbered table: load constant and multiplier formulas",
+      "locator": "NIOSH 94-110 (Rev. 9/2021), chapter 1, section 1.3, table following 'Where:', printed page 7 (PDF page 23)",
+      "passA": {
+        "method": "Machine extraction of the PDF text layer with tools/transcription/extract-rnle.ts (Poppler pdftotext -bbox word coordinates; layout parameters only)",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session"
+      },
+      "passB": {
+        "method": "Manual reading of page images rendered with Poppler pdftoppm at 110 to 240 dpi. The transcriber had read the text layer of this table while reading section 1.3, before making this pass, so this pass is less independent than the passes for Tables 1 to 7",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session"
+      },
+      "notes": "The table has no number in the source; 'table-0' is a local identifier. Multiplication signs, absolute-value bars, and spacing are transcribed as printed."
+    },
+    {
       "id": "table-1-horizontal-multiplier-us",
       "title": "Table 1: Horizontal Multiplier (H in, HM columns)",
       "locator": "NIOSH 94-110 (Rev. 9/2021), Chapter 1, Table 1 and Table 1 (Continued), printed pages 8-9 (PDF pages 24-25), left column pair",
