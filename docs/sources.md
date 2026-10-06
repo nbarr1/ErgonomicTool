@@ -27,6 +27,7 @@ A web page can change after retrieval. The checksum records the exact copy that 
 - **Landing page:** [BWC/OSU push/pull guidelines](https://www.bwc.ohio.gov/employer/programs/safety/PushPullGuide/PushPullGuide.aspx)
   - **Retrieved:** October 6, 2026
   - **SHA-256 of the HTML:** `d1650e39e1d44d79e3a0acd6b914b85e4fe4ce957228729715590b144d36628f`
+  - **Use:** The build read the page's text for measurement instructions and read its calculator script once to cross-check the PDF tables (see `docs/methods/bwc-osu-push-pull.md`). It sent no calculation requests to the calculator.
   - **Retrieval note:** The server for `www.bwc.ohio.gov` sent an incomplete certificate chain: it omitted the intermediate certificate "Sectigo Public Server Authentication CA OV R36." The build fetched that intermediate from the address in the server certificate's Authority Information Access field (`http://crt.sectigo.com/SectigoPublicServerAuthenticationCAOVR36.crt`), confirmed with `openssl verify` that it chains to a trusted root, and added it to the trust store for this one request. Certificate verification stayed on.
 - **File:** `https://dam.assets.ohio.gov/image/upload/info.bwc.ohio.gov/forms/PushPullGuidelines.pdf`, linked from the landing page
 - **Retrieved:** October 6, 2026

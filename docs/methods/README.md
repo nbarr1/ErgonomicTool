@@ -4,14 +4,14 @@ Each method has one specification here, named `<method-id>.md`. A specification 
 
 Every specification is a draft until the product owner and the reviewer named by the product owner approve it.
 
-| Method                         | Identifier          | Specification status                | Primary source status |
-| ------------------------------ | ------------------- | ----------------------------------- | --------------------- |
-| Revised NIOSH Lifting Equation | `rnle`              | [Draft 1](rnle.md), awaiting review | Retrieved             |
-| LM-MMH equations               | `lm-mmh`            | Not started                         | Not retrieved         |
-| BWC/OSU push/pull guidelines   | `bwc-osu-push-pull` | Not started                         | Retrieved             |
-| LiFFT                          | `lifft`             | Not started                         | Not retrieved         |
-| DUET                           | `duet`              | Not started                         | Not retrieved         |
-| The Shoulder Tool              | `shoulder-tool`     | Not started                         | Not retrieved         |
-| Job demands analysis           | `jda`               | Not started                         | Not retrieved         |
+| Method                         | Identifier          | Specification status                             | Primary source status |
+| ------------------------------ | ------------------- | ------------------------------------------------ | --------------------- |
+| Revised NIOSH Lifting Equation | `rnle`              | [Draft 1](rnle.md), awaiting review              | Retrieved             |
+| LM-MMH equations               | `lm-mmh`            | Not started                                      | Not retrieved         |
+| BWC/OSU push/pull guidelines   | `bwc-osu-push-pull` | [Draft 1](bwc-osu-push-pull.md), awaiting review | Retrieved             |
+| LiFFT                          | `lifft`             | Not started                                      | Not retrieved         |
+| DUET                           | `duet`              | Not started                                      | Not retrieved         |
+| The Shoulder Tool              | `shoulder-tool`     | Not started                                      | Not retrieved         |
+| Job demands analysis           | `jda`               | Not started                                      | Not retrieved         |
 
 The [source log](../sources.md) records each retrieval and the reason for each failure.
