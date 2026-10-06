@@ -1,0 +1,3 @@
+Metric [All distances in cm],U.S. Customary [All distances in inches]
+H = 20 + W/2 for V ≥ 25 cm,H = 8 + W/2 for V ≥ 10 inches
+H = 25 + W/2 for V < 25 cm,H = 10 + W/2 for V < 10 inches

@@ -74,6 +74,18 @@ write(
   ),
 );
 
+// Unnumbered table of equations for estimating H, section 1.3.1.1, printed page 8. The metric
+// column starts at x = 144 and the U.S. customary column at x = 313. Each line is one row.
+write(
+  'table-h-estimation',
+  extractTextGrid(
+    pages.get(24) ?? [],
+    { page: 24, yMin: 175, yMax: 230, xMin: 100, xMax: 500, headerLines: 1 },
+    [300],
+    10,
+  ),
+);
+
 // Table 1: Horizontal Multiplier, printed pages 8 and 9.
 const t1 = [
   { page: 24, yMin: 515, yMax: 688, headerLines: 1 },
