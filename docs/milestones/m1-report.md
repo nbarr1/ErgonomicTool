@@ -1,7 +1,7 @@
 # Milestone 1 report: sources and specifications
 
 - **Date:** October 6, 2026
-- **Branch:** `claude/pensive-maxwell-mqwopv`
+- **Branch:** `claude/pensive-maxwell-mqwopv`, reviewed in a pull request into `main`
 - **Status:** Work complete for every method whose source the build could retrieve. The milestone can't exit yet: its exit criterion is approval by the product owner and a reviewer, and no reviewer is named (OQ-008).
 
 ## Summary
@@ -75,7 +75,7 @@ Every question is in the [open-question log](../open-questions.md). These block 
 - **Sources:** OQ-102 (three subscription papers), OQ-103 (LM-MMH paper), OQ-105 (Liberty Mutual figures), OQ-006 and OQ-142 (job demands fields).
 - **RNLE content:** OQ-110 to OQ-125. The most consequential are OQ-122 (which unit system the engine computes in), OQ-124 (how worked-example tests handle the source's rounded multipliers), OQ-113 (FM interpolation near the maximum frequency), and OQ-118 (CLI tie-breaking).
 - **BWC/OSU content:** OQ-130 to OQ-135. The most consequential are OQ-130 (the turning moment arm, where the PDF and the calculator differ by a factor of two), OQ-131 (values between whole-number limits), and OQ-132 (the overlapping row).
-- **Repository:** OQ-101 (base branch for the pull request) and OQ-106 (license).
+- **Repository:** OQ-106 (license). OQ-101 (base branch) was answered on October 6, 2026; see decision D-101.
 
 ## Files added in this milestone
 

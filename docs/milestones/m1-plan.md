@@ -1,7 +1,7 @@
 # Milestone 1 plan: sources and specifications
 
 - **Started:** October 6, 2026
-- **Branch:** `claude/pensive-maxwell-mqwopv` (see decision D-101)
+- **Branch:** `claude/pensive-maxwell-mqwopv`, with a pull request into `main` (see decision D-101)
 - **Exit criterion:** The product owner and the reviewer approve the method specifications.
 
 No application code is written in this milestone. The only code is repository tooling that checks the transcription files and the determinism of number handling.
@@ -55,7 +55,6 @@ These questions from the [open-question log](../open-questions.md) block milesto
 | OQ-010 | Who approves the band maps and priority level names?                    | Approval of the band map proposals.                                                       |
 | OQ-105 | Can the product owner record the Liberty Mutual interpretation figures? | The LM-MMH band map proposal.                                                             |
 | OQ-001 | Which Tier 1 methods are in the first release, and in what order?       | Nothing immediately. The build works on the methods whose sources it has.                 |
-| OQ-101 | How should the base branch for the milestone pull request be set up?    | Opening the milestone 1 pull request.                                                     |
 
 ## Risks
 

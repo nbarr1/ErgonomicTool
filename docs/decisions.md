@@ -102,12 +102,11 @@ Open questions that need an answer before a decision can be made are in the [ope
 
 ## Engineer decisions
 
-### D-101: Milestone 1 branch name
+### D-101: Milestone 1 branch and base branch
 
-- **Status:** Engineer decision, pending review.
-- **Date:** October 6, 2026.
-- **Context:** The hosting session for this build is bound to the branch `claude/pensive-maxwell-mqwopv` and can't push to any other branch without the product owner's explicit permission. The repository had no branches before the first commit.
-- **Decision:** Milestone 1 work is on `claude/pensive-maxwell-mqwopv`. Because that branch is the first one pushed, GitHub treats it as the default branch until a `main` branch exists and the product owner changes the default. Open question OQ-101 asks how the product owner wants the base branch set up for the milestone pull requests.
+- **Status:** Confirmed by the product owner on October 6, 2026.
+- **Context:** The hosting session for this build is bound to the branch `claude/pensive-maxwell-mqwopv` and can't push to any other branch without the product owner's explicit permission. The repository had no branches before the first commit, so that branch became the repository's first branch and its default.
+- **Decision:** Milestone 1 work is on `claude/pensive-maxwell-mqwopv`. The product owner renamed the repository's default branch to `main`. With the product owner's approval, `main` was then moved back to the first commit, `fd9070f` ("Add build prompt and repository scaffolding"), so that the milestone 1 pull request from `claude/pensive-maxwell-mqwopv` into `main` shows all of milestone 1 for review. Later milestones each get their own branch and pull request into `main` (design default D-001).
 
 ### D-102: Tool versions
 
