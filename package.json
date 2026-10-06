@@ -12,7 +12,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "check": "npm run lint && npm run format:check && npm run typecheck"
+    "test": "vitest run",
+    "check:transcriptions": "node tools/transcription/cli.ts check methods",
+    "check": "npm run lint && npm run format:check && npm run typecheck && npm run test && npm run check:transcriptions"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

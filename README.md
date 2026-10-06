@@ -53,7 +53,7 @@ To run every check that continuous integration runs, use this command:
 npm run check
 ```
 
-The individual checks are `npm run lint`, `npm run format:check`, and `npm run typecheck`. To reformat files in place, run `npm run format`.
+The individual checks are `npm run lint`, `npm run format:check`, `npm run typecheck`, `npm test`, and `npm run check:transcriptions`. The last one checks the double-transcription files described in [`methods/README.md`](methods/README.md). To reformat files in place, run `npm run format`.
 
 ## Repository layout
 
@@ -71,6 +71,7 @@ docs/                Specification, logs, method specifications, validation repo
   validation/        One validation report for each method (from milestone 2)
   guides/            User guide, administrator guide, and method reference
 methods/<method-id>/ Specification data, transcriptions, code, and tests for each method
+tools/               Repository tooling: transcription check and determinism run
 engine/              Calculation engine (planned, milestone 2)
 api/                 API (planned, milestone 3)
 web/                 Web client (planned, milestone 4)

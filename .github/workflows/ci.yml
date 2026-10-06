@@ -13,12 +13,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Linting, formatting, and type checks.
-  # Later milestones add jobs here as soon as they have something to check (decision D-014):
-  # unit and published-example tests and the cross-platform determinism run (milestones 1-2),
-  # end-to-end tests and automated accessibility checks (milestone 4).
+  # Linting, formatting, type checks, and the transcription check.
+  # Later milestones add jobs as soon as they have something to check (decision D-014):
+  # published-example tests (milestone 2) and end-to-end tests and automated
+  # accessibility checks (milestone 4).
   static-checks:
-    name: Lint, format, and type check
+    name: Lint, format, type check, and transcriptions
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,3 +30,22 @@ jobs:
       - run: npm run lint
       - run: npm run format:check
       - run: npm run typecheck
+      - run: npm run check:transcriptions
+
+  unit-tests:
+    name: Unit tests (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        # Linux x64, macOS arm64, and Windows x64: at least two operating systems and two
+        # processor architectures, as part 2 of the build prompt requires.
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm test
