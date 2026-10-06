@@ -144,3 +144,28 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Date:** October 6, 2026.
 - **Context:** Part 2 requires two independent transcription passes for every table. In this build session, one agent makes both passes, and the build prompt doesn't name a second transcriber.
 - **Decision:** Pass B is a manual reading of the rendered page image, written to a file before pass A exists. Pass A is a machine extraction of the PDF text layer. A script compares the passes cell by cell, and every difference is resolved against the page image and recorded with its evidence. Both passes come from the same agent, so they aren't independent in the sense of two people. A human second transcription before reviewer approval is recommended, and open question OQ-104 asks whether the reviewer accepts this procedure.
+
+### D-106: Chapter 1 RNLE tables govern
+
+- **Status:** Engineer decision, pending review.
+- **Date:** October 6, 2026.
+- **Context:** The NIOSH manual prints Tables 1 to 5 and 7 in chapter 1 and reprints them in chapter 3 "to provide a useful reference." The reprints differ in labels and formatting, including a typographical "≤2" where chapter 1 has "≤0.2."
+- **Decision:** The chapter 1 tables are transcribed twice and govern. The chapter 3 reprints are compared with them by machine, and every difference is listed in `docs/methods/rnle.md`. No numeric multiplier differs.
+
+### D-107: Transcription conventions
+
+- **Status:** Engineer decision, pending review.
+- **Date:** October 6, 2026.
+- **Decision:** Both passes follow the same conventions, which each manifest records: tables printed side by side in two unit systems are stored as separate files, merged cells are written on every row they span, line breaks inside a cell become single spaces, and multi-line headings are joined into one heading per column. Footnote markers and the characters printed in the source, such as "≤" and "−," are kept.
+
+### D-108: Reference calculators are cross-checks only
+
+- **Status:** Engineer decision, pending review.
+- **Date:** October 6, 2026.
+- **Decision:** Where a public calculator's page is read, its content is used only to find disagreements with the primary source, which are then logged as open questions. It is never a source for an equation, threshold, or table value. The build sends no calculation requests to any calculator. Reference-tool parity pairs are recorded by a person, as part 2 of the build prompt requires.
+
+### D-109: CI actions pinned to commit SHAs
+
+- **Status:** Engineer decision, pending review.
+- **Date:** October 6, 2026.
+- **Decision:** Under design default D-015, every GitHub Action in the CI workflow is pinned to the full commit SHA of a release tag, with the tag named in a comment. The workflow uses `actions/checkout` v7, `actions/setup-node` v7, `actions/upload-artifact` v7, and `actions/download-artifact` v8, which run on Node.js 24. The v4 releases ran on the deprecated Node.js 20 runtime, and CI flagged them with a warning.
