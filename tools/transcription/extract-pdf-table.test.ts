@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   type Word,
+  columnCells,
   extractGrid,
   extractTextGrid,
   groupLines,
@@ -81,5 +82,17 @@ describe('extractTextGrid', () => {
 describe('toCsv', () => {
   it('quotes cells that contain commas, quotes, or line breaks', () => {
     expect(toCsv([['a,b', 'say "x"', 'plain']])).toBe('"a,b","say ""x""",plain\n');
+  });
+});
+
+describe('columnCells', () => {
+  it('joins words per column in reading order across lines', () => {
+    const words = [
+      word('protected', 60, 12),
+      word('Most', 50, 0),
+      word('Action', 0, 6),
+      word('Green', 70, 0),
+    ];
+    expect(columnCells(words, [40])).toEqual(['Action', 'Most Green protected']);
   });
 });

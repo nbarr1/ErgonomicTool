@@ -206,3 +206,17 @@ export function toCsv(grid: string[][]): string {
     /[",\n\r]/.test(cell) ? `"${cell.replace(/"/g, '""')}"` : cell;
   return grid.map((row) => row.map(escape).join(',')).join('\n') + '\n';
 }
+
+/**
+ * Joins words into one text cell per column, in reading order (top to bottom, then left to
+ * right). A word belongs to the column whose left boundary is the last one at or left of it.
+ */
+export function columnCells(words: Word[], boundaries: number[]): string[] {
+  const columns = Array.from({ length: boundaries.length + 1 }, () => [] as string[]);
+  for (const line of groupLines(words)) {
+    for (const word of line) {
+      columns[boundaries.filter((b) => word.xMin >= b).length]?.push(word.text);
+    }
+  }
+  return columns.map((parts) => parts.join(' '));
+}
