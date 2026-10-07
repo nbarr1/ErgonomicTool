@@ -298,7 +298,7 @@ This proposal needs the product owner's approval (D-111). It can't be used until
 | Source band            | Condition as printed | Source wording                                       | Proposed priority level |
 | ---------------------- | -------------------- | ---------------------------------------------------- | ----------------------- |
 | Low risk (green)       | < 25%                | "low risk (green, < 25% risk of LBP)"                | Low                     |
-| Moderate risk (yellow) | 25-50%               | "moderate risk (yellow, between 25-50% risk of LBP)" | Medium                  |
+| Moderate risk (yellow) | between 25-50%       | "moderate risk (yellow, between 25-50% risk of LBP)" | Medium                  |
 | High risk (red)        | > 50%                | "high risk (red, > 50% risk of LBP)"                 | High                    |
 
 These points are for the product owner:
