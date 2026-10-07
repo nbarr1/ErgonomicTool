@@ -53,6 +53,7 @@ A web page can change after retrieval. The checksum records the exact copy that 
 - **Status:** **Supplied by the product owner** on October 6, 2026.
 - **File:** `LiFFT_manuscript_Final_revised_3.docx`, an author's manuscript, not the publisher's version of record. Document properties: last modified April 21, 2017, revision 7. The build converted it to PDF with LibreOffice (14 pages) for page locators; the locators in the specification refer to that conversion and to the manuscript's section numbers.
 - **SHA-256:** `4daefbb722e19da6b181386fc5438d5656cad363fbb9781eec62223b4352965b`
+- **Converted PDF:** `LiFFT_manuscript_Final_revised_3.pdf`, made by the build with LibreOffice 24.2 on October 6, 2026, 14 pages, SHA-256 `0ccc6752f1671ac30d884a0fe9e269a0304826e67feb48ce21eb9c9119818f20`. It is kept with the manuscript, outside the repository. The manuscript has no figure or table images, so the conversion has none either.
 - **Size:** 93,002 bytes.
 - **Version note:** An author's manuscript can differ from the version of record. The specification records the manuscript's content and flags anything that the version of record or the calculator might state differently (OQ-140).
 - **Terms of use:** No license statement in the manuscript. **Licensing flag:** Covered by the product owner's general permission (D-112).
@@ -73,6 +74,7 @@ A web page can change after retrieval. The checksum records the exact copy that 
 - **Citation:** Bani Hani D, Huangfu R, Sesek R, Schall MC, Davis GA, Gallagher S. Development and validation of a cumulative exposure shoulder risk assessment tool based on fatigue failure theory. Ergonomics. 2021;64(1):39-54. Published online August 19, 2020. [https://doi.org/10.1080/00140139.2020.1811399](https://doi.org/10.1080/00140139.2020.1811399). PubMed ID 32812850. The build prompt cites the 2020 online date.
 - **Status:** **Supplied by the product owner** on October 6, 2026.
 - **File:** `cdc_225789_DS1.pdf`, the publisher's version of record with the Taylor & Francis cover page ("Published online: 28 Aug 2020"). The file name suggests it came from the CDC Stacks repository.
+- **Date note:** The citation's online date, August 19, 2020, came from the bibliographic lookups, not from the file. The file's cover page reads "Published online: 28 Aug 2020," and its first page states: "This article has been republished with minor changes. These changes do not impact the academic content of the article." The file doesn't say what changed. The specification cites the file.
 - **SHA-256:** `175b93fc0d6c70807baa27601e4e9682f3e30bb318464fa751b7c5910ee882b5`
 - **Size:** 3,007,104 bytes, 17 pages.
 - **Terms of use:** The cover page refers to the publisher's terms and conditions. No open license is stated. **Licensing flag:** Covered by the product owner's general permission (D-112).
