@@ -79,6 +79,40 @@ A web page can change after retrieval. The checksum records the exact copy that 
 - **Size:** 3,007,104 bytes, 17 pages.
 - **Terms of use:** The cover page refers to the publisher's terms and conditions. No open license is stated. **Licensing flag:** Covered by the product owner's general permission (D-112).
 
+## Sources for values the papers don't print
+
+The product owner allowed the authors' online calculators as sources (D-117). The build looked first for documents by the same authors that print the missing values exactly, because a value read from a calculator's rounded output is approximate. None of these files is in the repository; each was saved outside it and is recorded here. The specifications record which value comes from which document.
+
+### Authors' calculator workbooks
+
+The authors' research page links an Excel version of each tool:
+
+- **Linking page:** Auburn University Human Systems Integration Center, "Research" page, [https://eng.auburn.edu/human-systems-integration-center/research/research-2.html](https://eng.auburn.edu/human-systems-integration-center/research/research-2.html). Retrieved October 7, 2026, 22:32 UTC. SHA-256 `453678e8e930d64c4c783d7eef529d35ea007db96d5fe1b97578a46cf8d83bc1`. An Internet Archive capture of the older page that the Shoulder Tool paper cites (September 28, 2020) links the same files.
+
+| Tool          | Workbook as named on Box                           | Version line in the workbook                | Shared link                                                                                                    | Retrieved (UTC)        | Size (bytes) | SHA-256                                                            |
+| ------------- | -------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------ | ------------------------------------------------------------------ |
+| LiFFT         | `LiFFT_v1.4.0_locked-New.xlsm`                     | "Version 1.4.0 - Last updated 06/05/2018"   | [auburn.box.com/s/66hq1pht73xi9el7eq0jvg309rqqt1ah](https://auburn.box.com/s/66hq1pht73xi9el7eq0jvg309rqqt1ah) | October 7, 2026, 23:05 | 499,982      | `6d67fb470794fc12e8971f4710c8c47d8b87b198427acbd9ce4b8f5b7b975a81` |
+| Shoulder Tool | `shoulder_tool_one_shoulder_locked-1.xlsm`         | "Version 1.0.0 - Last updated on 6/11/2019" | [auburn.box.com/s/df6aqnspkpjd95bkis084c7utheqhnjy](https://auburn.box.com/s/df6aqnspkpjd95bkis084c7utheqhnjy) | October 7, 2026, 22:33 | 936,138      | `929450451344bafd83a3a18ee5faf12e8d85acbcfd0c5e8e2aaa3f3eeea7522e` |
+| DUET          | `The Distal Upper Extremity Tool_DUET_v1.3.0.xlsm` | "Version 1.3.0 - Last updated 04/19/2018"   | [auburn.box.com/s/dfdko7lnmeqc99ro4wtrb3vr2rkyhch3](https://auburn.box.com/s/dfdko7lnmeqc99ro4wtrb3vr2rkyhch3) | October 7, 2026, 22:35 | 1,249,565    | `a3e95040271481a21beebaca548ec780de9a405f180ee5a330cd603e75534b6b` |
+
+- **Terms of use:** Each workbook prints a copyright line, for example "2016 - 2019 © Sean Gallagher, Richard Sesek, Mark Schall, Rong Huangfu" (LiFFT), and no license. Covered by the product owner's answers (D-117, D-118).
+- **Handling:** The workbooks contain macros. The build read their cells with tools that don't run macros, and never opened them in a program that could.
+
+### Documents that print the same values
+
+These documents are by the tools' authors and corroborate the workbooks. They are recorded because the specifications cite them:
+
+- **Zelik et al. (2022):** Zelik KE, Nurse CA, Schall MC Jr, Sesek RF, Marino MC, Gallagher S. An ergonomic assessment tool for evaluating the effect of back exoskeletons on injury risk. Applied Ergonomics. 2022;99:103619. [https://doi.org/10.1016/j.apergo.2021.103619](https://doi.org/10.1016/j.apergo.2021.103619). PubMed Central PMC9827614 (NIH author manuscript). Full-text XML retrieved October 7, 2026, 18:18 UTC from the NCBI E-utilities service, 132,514 bytes, SHA-256 `6c2c610d6877110e6553488d8a2123d91e618fabe0a82d4dde6f899a4d462844`. Terms: PubMed Central states "This file is available for text mining. It may also be used consistent with the principles of fair use under the copyright law." It prints LiFFT's damage and risk equations with rounded constants.
+- **Bani Hani (2019):** Bani Hani D. Development and Validation of a Cumulative Exposure Shoulder Risk Assessment Tool Based on the Fatigue-Failure Theory. Doctoral dissertation, Auburn University, 2019. [https://etd.auburn.edu/handle/10415/6964](https://etd.auburn.edu/handle/10415/6964). PDF retrieved October 7, 2026, 18:16 UTC, 4,214,886 bytes, SHA-256 `813d154ad76c5566bb2b04c140fe69ae89f5a9c838442f3209dc9626458a5224`. Terms: "Copyright 2019 by Dania Bani Hani"; no license. It prints the Shoulder Tool's fitted risk equations, including the one the calculator uses.
+- **Gallagher et al. (2017), version of record:** the published LiFFT article, from CDC Stacks [https://stacks.cdc.gov/view/cdc/211289](https://stacks.cdc.gov/view/cdc/211289). PDF retrieved October 7, 2026, 18:20 UTC, 1,729,059 bytes, SHA-256 `dd086b3c0d59833a0a2f9d5f6b7d61efb777d7d2e30f296338bdcc9d46b608a8`. Terms: "© 2017 Elsevier Ltd. All rights reserved." It contains the figures and Table 1 that the supplied manuscript lacks, including two screenshots of LiFFT version 1.1. It prints neither the moment-to-damage equation nor the risk equation.
+
+### Documents reviewed and not used for values
+
+- Gallagher S. "New and Easy to Use Ergonomics Risk Assessment Tools for the Back, Distal Upper Extremity and Shoulder," ErgoExpo slides, 2021 ([PDF](https://ergocentral.ergoexpo.com/wp-content/uploads/2021/01/Gallagher_Michael_011921.pdf), SHA-256 `cfe50a648876e02308ff30ef9d0c5fa33af364de90fdd9282aa379c98ff9aeb9`). Prints the same Shoulder Tool risk equation as the workbook.
+- Mehdizadeh A, et al. Job rotation and work-related musculoskeletal disorders: a fatigue-failure perspective. Ergonomics. 2020;63(4):461-476 ([CDC Stacks 230662](https://stacks.cdc.gov/view/cdc/230662), SHA-256 `e751d7ac3519e9f4ee2c9a241e2cd0c2d86d4ab9b01aae2cb6f9e32bf64511db`). Prints LiFFT and DUET risk coefficients in a different functional form; its DUET form doesn't reproduce the DUET paper's or the calculator's examples, so it isn't used.
+- Smith NC. In Vitro Tensile Fatigue of Human Flexor Digitorum Profundus and Superficialis Tendons. Doctoral dissertation, Auburn University, 2019 ([PDF](https://etd.auburn.edu/handle/10415/6896), SHA-256 `1e5dc496eed4b88aede63022003fe6f9b27c29c8f6ce2950969eda6b8af8a6b5`). Prints an alternative research table of damage per cycle that no calculator uses.
+- Rempel D, Gallagher S. Workplace Risk Assessment Tools for Preventing Shoulder Disorders (abstract). Safety and Health at Work. 2022;13:S29-S30 ([CDC Stacks 231258](https://stacks.cdc.gov/view/cdc/231258), SHA-256 `852c4ee246a9d88a0f3b15e5de568e1b781c57fd42eb583b0a922bace7284556`). Describes the Shoulder Tool; prints no values.
+
 ## Reference tools
 
 These public calculators support reference-tool parity tests. The build reads their pages but sends no bulk or automated calculation requests. **Terms of use:** The LiFFT, DUET, and Shoulder Tool pages carry author copyright notices ("© 2016 - 2022," "© 2016 - 2023," and "© 2019 - 2022"). The method documents quote them briefly for verification only. **Licensing flag** for any reuse beyond that.

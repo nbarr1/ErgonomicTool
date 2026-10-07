@@ -21,10 +21,18 @@ export interface PassDescription {
   by: string;
 }
 
+export interface ManifestSource {
+  title: string;
+  file: string;
+  sha256: string;
+}
+
 export interface ManifestTable {
   id: string;
   title: string;
   locator: string;
+  /** The table's own source, when it differs from the manifest's source. */
+  source?: ManifestSource;
   passA: PassDescription;
   passB: PassDescription;
   notes?: string;
@@ -32,7 +40,7 @@ export interface ManifestTable {
 
 export interface Manifest {
   method: string;
-  source: { title: string; file: string; sha256: string };
+  source: ManifestSource;
   tables: ManifestTable[];
 }
 
