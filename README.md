@@ -20,17 +20,17 @@ Accuracy (each result matches the published method exactly) and repeatability (t
 
 The build runs in seven milestones, with a product-owner review at the end of each one. No application code is written until the method specifications are approved.
 
-| Milestone                     | Status          | Notes                                                                                                                               |
-| ----------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Sources and specifications | Awaiting review | Two draft specifications, five methods blocked on sources or decisions. See [the milestone 1 report](docs/milestones/m1-report.md). |
-| 2. Calculation engine         | Not started     | Blocked on approved specifications and the stack decision.                                                                          |
-| 3. Data and storage           | Not started     |                                                                                                                                     |
-| 4. Assessment workflow        | Not started     |                                                                                                                                     |
-| 5. Prioritization             | Not started     |                                                                                                                                     |
-| 6. Biomechanical analysis     | Not started     |                                                                                                                                     |
-| 7. Hardening                  | Not started     |                                                                                                                                     |
+| Milestone                     | Status          | Notes                                                                                                                                                                                                                            |
+| ----------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Sources and specifications | Awaiting review | Four specifications ready for review (RNLE, BWC/OSU, DUET, and LM-MMH); LiFFT and the Shoulder Tool blocked by missing equations; the job demands analysis deferred. See [the milestone 1 report](docs/milestones/m1-report.md). |
+| 2. Calculation engine         | Not started     | Blocked on approved specifications and the stack decision.                                                                                                                                                                       |
+| 3. Data and storage           | Not started     |                                                                                                                                                                                                                                  |
+| 4. Assessment workflow        | Not started     |                                                                                                                                                                                                                                  |
+| 5. Prioritization             | Not started     |                                                                                                                                                                                                                                  |
+| 6. Biomechanical analysis     | Not started     |                                                                                                                                                                                                                                  |
+| 7. Hardening                  | Not started     |                                                                                                                                                                                                                                  |
 
-No method is validated. Every method is in draft until a reviewer named by the product owner approves its specification and signs its validation report.
+No method is validated. Every method is in draft until the product owner, who is also the reviewer (decision D-110), approves its specification and signs its validation report.
 
 ## Install, run, and test
 
