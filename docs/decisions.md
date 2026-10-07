@@ -169,6 +169,14 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Date:** October 6, 2026.
 - **Decision:** Under design default D-015, every GitHub Action in the CI workflow is pinned to the full commit SHA of a release tag, with the tag named in a comment. The workflow uses `actions/checkout` v7, `actions/setup-node` v7, `actions/upload-artifact` v7, and `actions/download-artifact` v8, which run on Node.js 24. The v4 releases ran on the deprecated Node.js 20 runtime, and CI flagged them with a warning.
 
+### D-116: Two-agent transcription passes for the supplied papers
+
+- **Status:** Engineer decision, pending review (OQ-104).
+- **Date:** October 7, 2026.
+- **Context:** D-105 describes passes that one agent made by two methods. For the four papers the product owner supplied, the build could run two separate agents with separate working contexts.
+- **Decision:** For the LM-MMH, DUET, LiFFT, and Shoulder Tool sources, two transcription agents work in parallel from the same structural skeleton (header row and row keys). Pass A starts from the text layer and checks every cell against page renders, which govern. Pass B works from page renders only, with no access to the text layer, the other pass, or the source survey; its tool log is checked for this after the run. Every minus sign in a number or equation is written as U+2212, whatever glyph the source uses, and labels keep their printed dashes. The engineer prefilled the skeletons' header rows and row keys from a one-pass survey, and both passes checked those cells against the page. The comparison, resolutions, and check are the same as for D-105.
+- **Limits:** The two agents are separate instances of the same model, not two people. A human second transcription before reviewer approval is still recommended (OQ-104).
+
 ## Product owner answers
 
 ### D-110: The product owner is the qualified reviewer
