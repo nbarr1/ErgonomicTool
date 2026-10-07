@@ -1,0 +1,90 @@
+{
+  "method": "lm-mmh",
+  "source": {
+    "title": "Potvin JR, Ciriello VM, Snook SH, Maynard WS, Brogmus GE. The Liberty Mutual manual materials handling (LM-MMH) equations. Ergonomics. 2021;64(8):955-970 (publisher version of record, corrected)",
+    "file": "https://doi.org/10.1080/00140139.2021.1891297",
+    "sha256": "4413e0b82f7102a77e5dbfcebf604cdeed0a70d2c4ec56d0fa414c4002394072"
+  },
+  "tables": [
+    {
+      "id": "equation-terms",
+      "title": "Scale-factor equations for the 14 task, variant, and sex combinations, one row per printed term",
+      "locator": "Sections 3.1 to 3.3, PDF pp. 9-10 (journal pp. 962-963)",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Columns equation, factor, and term were prefilled. The build engineer prefilled the header row and the row-key cells listed here from a one-pass survey of the source; both passes checked those cells against the page and neither changed them. \"sign\" is the sign printed before the term inside its bracket; \"value\" is the unsigned printed number (the divisor for a term written as X/c). The text layer of this paper turns decimal points into colons and drops minus signs, so pass A read every equation from the render. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "constraints",
+      "title": "Input constraints for lift and lower, push and pull, and carry (bulleted text)",
+      "locator": "PDF p. 9 right column to p. 10 left column (lift and lower), p. 10 right column (push and pull), p. 11 left column (carry); journal pp. 962-964",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Columns task family and bullet were prefilled. The build engineer prefilled the header row and the row-key cells listed here from a one-pass survey of the source; both passes checked those cells against the page and neither changed them. The approximation sign before 0.0021 is U+223C, as printed. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "table-3-anthropometric-heights",
+      "title": "Table 3. Summary of anatomical landmark heights assumed from the ANSUR II database (Gordon et al. 2014) and the vertical range middle (VRM) values calculated with those landmarks",
+      "locator": "PDF p. 5 (journal p. 958), left column",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "The header row was prefilled; the printed spanning heading \"Height (m)\" is folded into the column headings \"Female (m)\" and \"Male (m)\". Both passes added the 12 data rows themselves. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "table-4-reference-loads",
+      "title": "Table 4. Summary of the number of conditions, reference loads, mean CVs, maximum 75% capable reference loads, as well as the mean and RMS differences ... (calculation columns only)",
+      "locator": "PDF p. 12 (journal p. 965), landscape page",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Only the Conditions, Reference Load, Mean CV, and 75% Capable Max columns are transcribed; the difference columns are validation statistics that no calculation uses. The printed nested row labels are split into the prefilled task, variant, and sex columns. The build engineer prefilled the header row and the row-key cells listed here from a one-pass survey of the source; both passes checked those cells against the page and neither changed them. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "text-constants",
+      "title": "Constants stated in the running text",
+      "locator": "Locators in the second column of each row",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Columns key and locator were written by the build engineer; only the third column is transcribed. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    }
+  ]
+}

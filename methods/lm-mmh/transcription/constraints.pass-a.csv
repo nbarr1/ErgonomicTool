@@ -1,0 +1,14 @@
+task family,bullet,constraint text
+Lift and Lower,1,"Horizontal reach distance (H) must range from 0.20 to 0.68 m for females and 0.25 to 0.73 m for males. If H changes during a lift or lower, the mean H or maximum H can be used."
+Lift and Lower,2,"Maximum vertical height of the hand is calculated as VRM + DV/2 and must not exceed arm reach for the anthropometry being used (e.g. 1.96 m and 2.14 m for 50th percentile females and males, respectively, Table 3)."
+Lift and Lower,3,Distance travelled vertically (DV) per lift or lower must not be lower than 0.25 m or exceed arm reach for the anthropometry being used.
+Lift and Lower,4,Frequency (F) must range from 1 per day (i.e. 1/480 = ∼0.0021/min) to 20/min.
+Lift and Lower,5,Mean vertical velocity is calculated as DV x F and must not exceed 11 m/min.
+Push and Pull,1,Vertical height of the hands during the push or pull (V) must range from 0.58 to 1.33 m for females and 0.63 to 1.44 m for males.
+Push and Pull,2,Distance travelled horizontally (DH) per push or pull must range from 2.1 m to 61 m.
+Push and Pull,3,Frequency (F) must range from 1 per day (i.e. 1/480 = ∼0.0021/min) to 10/min.
+Push and Pull,4,Mean horizontal velocity is calculated as DH x F and must not exceed 37 m/min.
+Carry,1,Vertical height of the hands (V) during the carry must range from 0.71 to 1.03 m for females and 0.78 to 1.10 m for males.
+Carry,2,Distance travelled horizontally (DH) per carry must range from 2.1 m to 10 m.
+Carry,3,Frequency (F) must range from 1 per day (i.e. 1/480 = ∼0.0021/min) to 10/min.
+Carry,4,Mean horizontal velocity is calculated as DH x F and must not exceed 29 m/min.

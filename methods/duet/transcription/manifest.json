@@ -1,0 +1,74 @@
+{
+  "method": "duet",
+  "source": {
+    "title": "Gallagher S, Schall MC, Sesek RF, Huangfu R. An upper extremity risk assessment tool based on material fatigue failure theory: The Distal Upper Extremity Tool (DUET). Human Factors. 2018;60(8):1146-1162 (journal-typeset online-first file)",
+    "file": "https://doi.org/10.1177/0018720818789319",
+    "sha256": "1476c40e76c9c45c669ec3a7d44f9115b5205a68533a0b1f57487664ffd584f7"
+  },
+  "tables": [
+    {
+      "id": "table-1-omni-res-damage-per-cycle",
+      "title": "TABLE 1: OMNI Perceived Exertion Scale for Resistance Exercise Scale (OMNI-RES) and Associated Estimates of Percentage of Tendon Ultimate Stress, Cycles to Failure, and Damage Per Cycle Weights Derived From Schechtman and Bader (1997) Data",
+      "locator": "PDF p. 3 (printed p. 3), top of page",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "The header row was prefilled. The build engineer prefilled the header row and the row-key cells listed here from a one-pass survey of the source; both passes checked those cells against the page and neither changed them. The first column keeps the printed verbal anchors, and cycles to failure keep their thousands separators. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "table-3-multitask-job-examples",
+      "title": "TABLE 3: Examples of Three Multitask Jobs From the Epidemiology Database (Each Comprised of Multiple DUE Tasks) Demonstrating How the Daily Dose of Cumulative Damage Was Calculated",
+      "locator": "PDF p. 7 (printed p. 7), top of page",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "The header row was prefilled; the first column has no printed heading. Summary labels and their arrows are in the Damage/Effort column and their values in the Damage/Hour column, where they are printed. Values are copied as printed, including the apparent typo in the Damage/Hour cell of the second door-seal task (see the specification). By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "figures-2-3-calculator",
+      "title": "Figure 2 (mono-task) and Figure 3 (multitask) calculator screenshots",
+      "locator": "PDF p. 13 (printed p. 13), raster images",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Columns figure and row were prefilled as row keys, and the header row was prefilled. The build engineer prefilled the header row and the row-key cells listed here from a one-pass survey of the source; both passes checked those cells against the page and neither changed them. Only filled task rows, the first empty task row, and the two summary rows are transcribed. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "text-constants",
+      "title": "Constants, equations, and statements in the running text",
+      "locator": "Locators in the second column of each row",
+      "passA": {
+        "method": "Independent transcription starting from the PDF text layer (Poppler pdftotext, layout and bbox modes), with every cell checked against page renders (Poppler pdftoppm, 300 to 500 dpi); the render governs where the two differ",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from page renders only (Poppler pdftoppm, 300 to 400 dpi, enlarged crops for small print). The agent had no access to the text layer, to pass A, or to the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Columns key and locator were written by the build engineer; only the third column is transcribed. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    }
+  ]
+}

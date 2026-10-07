@@ -1,0 +1,22 @@
+,Efforts/ Minute,OMNI-RES Intensity,Damage/Effort,Damage/Hour
+Left-hand door body seal,,,,
+1. Prep/place sealant,3.75,2,0.00000137,0.00030825
+2. Guide panel,1.5,4,0.00001262,0.0011385
+3. Lift/place panel,4.5,6,0.00011625,0.0313875
+,,,Total damage/hour →,0.03283155
+,,,Typical work duration →,10
+,,,Total damage/day →,0.3283155
+OHC engine cover,,,,
+1. Grab/place outer belt cover,10,2,0.00000137,0.000822
+2. Drive screw,4,2,0.00000137,0.0003288
+,,,Total damage/hour →,0.0011508
+,,,Typical work duration →,9
+,,,Total damage/day →,0.0103572
+Build disk assembly,,,,
+1. Get/place part,2.73,2,0.00000137,0.000224406
+2. Assemble,30,2,0.00000137,0.002466
+3. Drive screws,5.4545,4,0.00001262,0.004130147
+4. Place completed part,2.7273,2,0.00000137,0.000224184
+,,,Total damage/hour →,0.007044737
+,,,Typical work duration →,10
+,,,Total damage/day →,0.07044737

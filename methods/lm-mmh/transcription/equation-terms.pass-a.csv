@@ -1,0 +1,130 @@
+equation,factor,term,sign,value
+Lift – Female,RL,reference load,,34.9
+Lift – Female,HSF,constant,+,1.2602
+Lift – Female,HSF,H/c,−,0.7686
+Lift – Female,VRMSF,constant,+,0.9877
+Lift – Female,VRMSF,VRM/c,+,13.69
+Lift – Female,VRMSF,VRM^2/c,−,9.221
+Lift – Female,DVSF,constant,+,0.8199
+Lift – Female,DVSF,ln(DV)/c,−,7.696
+Lift – Female,FSF,constant,+,0.6767
+Lift – Female,FSF,ln(F)/c,−,12.59
+Lift – Female,FSF,ln(F)^2/c,−,228.2
+Lift – Female,CV,value,,0.260
+Lift – Male,RL,reference load,,82.6
+Lift – Male,HSF,constant,+,1.3532
+Lift – Male,HSF,H/c,−,0.7079
+Lift – Male,VRMSF,constant,+,0.7746
+Lift – Male,VRMSF,VRM/c,+,1.912
+Lift – Male,VRMSF,VRM^2/c,−,3.296
+Lift – Male,DVSF,constant,+,0.8695
+Lift – Male,DVSF,ln(DV)/c,−,10.62
+Lift – Male,FSF,constant,+,0.6259
+Lift – Male,FSF,ln(F)/c,−,9.092
+Lift – Male,FSF,ln(F)^2/c,−,125.0
+Lift – Male,CV,value,,0.276
+Lower – Female,RL,reference load,,37.0
+Lower – Female,HSF,constant,+,1.2602
+Lower – Female,HSF,H/c,−,0.7686
+Lower – Female,VRMSF,constant,+,0.9877
+Lower – Female,VRMSF,VRM/c,+,13.69
+Lower – Female,VRMSF,VRM^2/c,−,9.221
+Lower – Female,DVSF,constant,+,0.8199
+Lower – Female,DVSF,ln(DV)/c,−,7.696
+Lower – Female,FSF,constant,+,0.6767
+Lower – Female,FSF,ln(F)/c,−,12.59
+Lower – Female,FSF,ln(F)^2/c,−,228.2
+Lower – Female,CV,value,,0.307
+Lower – Male,RL,reference load,,95.9
+Lower – Male,HSF,constant,+,1.3532
+Lower – Male,HSF,H/c,−,0.7079
+Lower – Male,VRMSF,constant,+,0.7746
+Lower – Male,VRMSF,VRM/c,+,1.912
+Lower – Male,VRMSF,VRM^2/c,−,3.296
+Lower – Male,DVSF,constant,+,0.8695
+Lower – Male,DVSF,ln(DV)/c,−,10.62
+Lower – Male,FSF,constant,+,0.5773
+Lower – Male,FSF,ln(F)/c,−,10.80
+Lower – Male,FSF,ln(F)^2/c,−,255.9
+Lower – Male,CV,value,,0.304
+Push or Pull – Initial – Female,RL,reference load,,36.9
+Push or Pull – Initial – Female,VSF,constant,−,0.5304
+Push or Pull – Initial – Female,VSF,V/c,+,0.3361
+Push or Pull – Initial – Female,VSF,V^2/c,−,0.6915
+Push or Pull – Initial – Female,DHSF,constant,+,1.0286
+Push or Pull – Initial – Female,DHSF,DH/c,−,72.22
+Push or Pull – Initial – Female,DHSF,DH^2/c,+,9782
+Push or Pull – Initial – Female,FSF,constant,+,0.7251
+Push or Pull – Initial – Female,FSF,ln(F)/c,−,13.19
+Push or Pull – Initial – Female,FSF,ln(F)^2/c,−,197.3
+Push or Pull – Initial – Female,CV for Push – Initial – Female,value,,0.214
+Push or Pull – Initial – Female,CV for Pull – Initial – Female,value,,0.234
+Push or Pull – Sustained – Female,RL,reference load,,25.5
+Push or Pull – Sustained – Female,VSF,constant,−,0.6539
+Push or Pull – Sustained – Female,VSF,V/c,+,0.2941
+Push or Pull – Sustained – Female,VSF,V^2/c,−,0.5722
+Push or Pull – Sustained – Female,DHSF,constant,+,1.0391
+Push or Pull – Sustained – Female,DHSF,DH/c,−,52.91
+Push or Pull – Sustained – Female,DHSF,DH^2/c,+,7975
+Push or Pull – Sustained – Female,FSF,constant,+,0.6086
+Push or Pull – Sustained – Female,FSF,ln(F)/c,−,11.95
+Push or Pull – Sustained – Female,FSF,ln(F)^2/c,−,304.4
+Push or Pull – Sustained – Female,CV for Push – Sustained – Female,value,,0.286
+Push or Pull – Sustained – Female,CV for Pull – Sustained – Female,value,,0.298
+Push – Initial – Male,RL,reference load,,70.3
+Push – Initial – Male,VSF,constant,+,1.2737
+Push – Initial – Male,VSF,V/c,−,1.335
+Push – Initial – Male,VSF,V^2/c,+,2.576
+Push – Initial – Male,DHSF,constant,+,1.0790
+Push – Initial – Male,DHSF,ln(DH)/c,−,9.392
+Push – Initial – Male,FSF,constant,+,0.6281
+Push – Initial – Male,FSF,ln(F)/c,−,13.07
+Push – Initial – Male,FSF,ln(F)^2/c,−,379.5
+Push – Initial – Male,CV,value,,0.231
+Push – Sustained – Male,RL,reference load,,65.3
+Push – Sustained – Male,VSF,constant,+,2.2940
+Push – Sustained – Male,VSF,V/c,−,0.3345
+Push – Sustained – Male,VSF,V^2/c,+,0.6887
+Push – Sustained – Male,DHSF,constant,+,1.1035
+Push – Sustained – Male,DHSF,ln(DH)/c,−,7.170
+Push – Sustained – Male,FSF,constant,+,0.4896
+Push – Sustained – Male,FSF,ln(F)/c,−,10.20
+Push – Sustained – Male,FSF,ln(F)^2/c,−,403.9
+Push – Sustained – Male,CV,value,,0.267
+Pull – Initial – Male,RL,reference load,,69.8
+Pull – Initial – Male,VSF,constant,+,1.7186
+Pull – Initial – Male,VSF,V/c,−,0.6888
+Pull – Initial – Male,VSF,V^2/c,+,2.025
+Pull – Initial – Male,DHSF,constant,+,1.0790
+Pull – Initial – Male,DHSF,ln(DH)/c,−,9.392
+Pull – Initial – Male,FSF,constant,+,0.6281
+Pull – Initial – Male,FSF,ln(F)/c,−,13.07
+Pull – Initial – Male,FSF,ln(F)^2/c,−,379.5
+Pull – Initial – Male,CV,value,,0.238
+Pull – Sustained – Male,RL,reference load,,61.0
+Pull – Sustained – Male,VSF,constant,+,2.1977
+Pull – Sustained – Male,VSF,V/c,−,0.3850
+Pull – Sustained – Male,VSF,V^2/c,+,0.9047
+Pull – Sustained – Male,DHSF,constant,+,1.1035
+Pull – Sustained – Male,DHSF,ln(DH)/c,−,7.170
+Pull – Sustained – Male,FSF,constant,+,0.4896
+Pull – Sustained – Male,FSF,ln(F)/c,−,10.20
+Pull – Sustained – Male,FSF,ln(F)^2/c,−,403.9
+Pull – Sustained – Male,CV,value,,0.257
+Carry – Female,RL,reference load,,28.6
+Carry – Female,VSF,constant,+,1.1645
+Carry – Female,VSF,V/c,−,4.437
+Carry – Female,DHSF,constant,+,1.0101
+Carry – Female,DHSF,DH/c,−,207.8
+Carry – Female,FSF,constant,+,0.6224
+Carry – Female,FSF,ln(F)/c,−,16.33
+Carry – Female,CV,value,,0.231
+Carry – Male,RL,reference load,,74.9
+Carry – Male,VSF,constant,+,1.5505
+Carry – Male,VSF,V/c,−,1.417
+Carry – Male,DHSF,constant,+,1.1172
+Carry – Male,DHSF,ln(DH)/c,−,6.332
+Carry – Male,FSF,constant,+,0.5149
+Carry – Male,FSF,ln(F)/c,−,7.958
+Carry – Male,FSF,ln(F)^2/c,−,131.1
+Carry – Male,CV,value,,0.278

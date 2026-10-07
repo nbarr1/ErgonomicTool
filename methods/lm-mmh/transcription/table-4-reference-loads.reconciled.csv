@@ -1,0 +1,18 @@
+task,variant,sex,Conditions,Reference Load (kg),Mean CV,75% Capable Max (kg)
+Lift,,Female,54,34.9,0.260,28.8
+Lift,,Male,58,82.6,0.276,67.2
+Lower,,Female,34,37.0,0.307,29.3
+Lower,,Male,37,95.9,0.304,76.2
+Push,Initial,Female,26,36.9,0.214,31.6
+Push,Initial,Male,32,70.3,0.231,59.3
+Push,Sustained,Female,30,25.5,0.286,20.6
+Push,Sustained,Male,32,65.3,0.267,53.5
+Pull,Initial,Female,6,36.9,0.234,31.1
+Pull,Initial,Male,9,69.8,0.238,58.6
+Pull,Sustained,Female,7,25.5,0.298,20.4
+Pull,Sustained,Male,9,61.0,0.257,50.4
+Carry,,Female,19,28.6,0.231,24.1
+Carry,,Male,24,74.9,0.278,60.9
+Pooled,,Female,176,37.0,,
+Pooled,,Male,201,95.9,,
+All,,,377,95.9,,

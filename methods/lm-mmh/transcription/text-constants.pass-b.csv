@@ -1,0 +1,12 @@
+key,locator,value as printed
+frequency:one-per-day-conversion,"PDF p.10 (journal p.963), lift and lower constraints: the ""1 per day (i.e. 1/480 = ...)"" expression; write it exactly as printed",1 per day (i.e. 1/480 = ∼0.0021/min)
+coupling:no-handles,"PDF p.15 (journal p.968), section 4.3: coupling scale factor for lift and lower with no handles",0.84
+coupling:poor-handles-or-slippery,"PDF p.15 (journal p.968), section 4.3: coupling scale factor for poor handles or a slippery hold",0.925
+percentile:z-score-25th,"PDF p.11 (journal p.964), section 3.4: the z-score stated for the 25th percentile, with its sign as printed",−0.675
+percentile:z-in-75pct-formula,"PDF p.11 (journal p.964), section 3.4: the number substituted for Z in the MAL75%CAP calculation, with its sign as printed",0.675
+design:minimum-percent-of-females,"PDF p.11 (journal p.964), section 3.4: the minimum percentage of females used as a design threshold",75%
+caution:lift-lower-vertical-velocity,"PDF p.15 (journal p.968), section 4.3: lift or lower mean vertical velocity above which to use caution",∼3 m/min
+caution:push-pull-velocity-female,"PDF p.15 (journal p.968), section 4.3: push or pull velocity caution for females",∼10 m/min
+caution:push-pull-velocity-male,"PDF p.15 (journal p.968), section 4.3: push or pull velocity caution for males",15 m/min
+caution:carry-velocity-female,"PDF p.15 (journal p.968), section 4.3: carry mean horizontal velocity caution for females",∼10 m/min
+caution:lift-lower-frequency-examples,"PDF p.15 (journal p.968), section 4.3: the frequency and DV pairs given for supplementing with the physiological criterion; list each pair as ""F at DV"" in printed order, separated by ""; """,12/min at 0.25 m; 4/min at 0.75 m; 2/min at 1.5 m

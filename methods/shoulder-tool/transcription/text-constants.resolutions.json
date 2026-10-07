@@ -1,0 +1,18 @@
+[
+  {
+    "row": 17,
+    "column": 3,
+    "passA": "The highest value of CD for the left and right shoulders was used in the analysis under the assumption that the highest value is associated with a higher probability of a shoulder MSD. [PDF p7, journal p44, section 2.3]",
+    "passB": "“The highest value of CD for the left and right shoulders was used in the analysis under the assumption that the highest value is associated with a higher probability of a shoulder MSD.” (PDF p7, journal p44, section 2.3); also “An assumption was also made that the higher CD value between the shoulders (left or right) would be responsible for a higher probability of a shoulder outcome.” (PDF p6, journal p43, section 2.2)",
+    "resolved": "“The highest value of CD for the left and right shoulders was used in the analysis under the assumption that the highest value is associated with a higher probability of a shoulder MSD.” (PDF p7, journal p44, section 2.3); also “An assumption was also made that the higher CD value between the shoulders (left or right) would be responsible for a higher probability of a shoulder outcome.” (PDF p6, journal p43, section 2.2)",
+    "evidence": "PDF p. 7 (journal p. 44), section 2.3, and PDF p. 6 (journal p. 43), section 2.2: both sentences are printed as pass B quotes them. Pass A gave the first sentence only."
+  },
+  {
+    "row": 23,
+    "column": 3,
+    "passA": "bin 1: 157 repetitions (tasks 5, 7, and 9 among those grouped into bin 1); bin 2 (16–30 Nm): 122 repetitions (tasks 1, 4, 6, and 8 among others); bin 3 (31–45 Nm): 105 repetitions (tasks 2 and 3 among others)",
+    "passB": "bin 1: tasks 5, 7, and 9 (among those grouped into bin 1), repetitions total 157; bin 2 (16–30 Nm): tasks 1, 4, 6, and 8 among others, 122 repetitions; bin 3 (31–45 Nm): tasks 2 and 3 among others, 105 repetitions",
+    "resolved": "tasks 5, 7, and 9 would be among those grouped into bin 1 and their corresponding repetition within that bin totals 157 | the second bin (16–30 Nm) includes tasks 1, 4, 6, and 8 among others and has 122 repetitions | The third bin (31–45 Nm) includes tasks 2 and 3 among others and has 105 repetitions",
+    "evidence": "PDF p. 13 (journal p. 50), right column: \"For example, tasks 5, 7, and 9 would be among those grouped into bin 1 and their corresponding repetition within that bin totals 157. ... Thus, the second bin (16–30 Nm) includes tasks 1, 4, 6, and 8 among others and has 122 repetitions. The third bin (31–45 Nm) includes tasks 2 and 3 among others and has 105 repetitions.\" Both passes paraphrased the same facts; the resolved value quotes the source."
+  }
+]

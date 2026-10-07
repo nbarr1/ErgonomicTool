@@ -1,0 +1,12 @@
+OMNI-RES Scale,Estimated Percentage of Tendon Ultimate Stress,Estimated Cycles to Failure,Damage Per Cycle Weighting
+0 = very easy,3.6,"3,842,605",0.00000026
+1,7.1,"2,231,607",0.00000045
+2 = easy,14.3,"729,651",0.00000137
+3,21.4,"242,301",0.00000413
+4 = somewhat easy,28.6,"79,223",0.00001262
+5,35.7,"26,308",0.00003801
+6 = somewhat hard,42.9,"8,602",0.00011625
+7,50.0,"2,856",0.00035014
+8 = hard,57.1,949,0.00105374
+9,64.3,310,0.00322581
+10 = very hard,71.4,103,0.00970874

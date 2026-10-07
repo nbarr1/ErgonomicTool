@@ -1,0 +1,29 @@
+key,locator,value as printed
+eq1:intercept,"PDF p3, Eq (1): the constant term, exactly as printed",101.25
+eq1:log-term,"PDF p3, Eq (1): the term in N, with its sign, coefficient, multiplication symbol, and log notation exactly as printed",− 14.83 × log(N)
+scaling:ultimate-to-max-exertion-factor,"PDF p3, left column: the factor relating ultimate stress to the maximum exertion force on the OMNI-RES scale",1.4
+dpc:definition-sentence,"PDF p3: the sentence that says what DPC represents, verbatim",DPC represents the proportion of damage occurring in one cycle at a given stress level.
+task-cd:sentences,"PDF p3, right column: the two sentences that begin ""Based on the force level"" and ""If a job involves only one task"", verbatim","Based on the force level, the tool assigns a DPC value, which is then multiplied by daily repetitions. If a job involves only one task (i.e., mono-task), the selected force level is multiplied by the associated DPC to obtain an estimated CD, representing a “daily dose” of exposure."
+eq2:form,"PDF p3, Eq (2): the whole equation in plain text; write a subscript as _{...} and a centered ellipsis as ...",Total CD = DPC_{Task1} * n_{Task1} + DPC_{Task2} * n_{Task2} + ... + DPC_{Task j} * n_{Task j}
+eq3:form,"PDF p8, Eq (3) and its ""where"" clause: in plain text","P(Event) = exp(Y′) / (1 + exp(Y′)), where Y′ = β_0 + β_1 × Log CD"
+eq4:form,"PDF p8, Eq (4): in plain text",Average Pain Past Year = 45.24 + 5.898 * Log CD
+eq5:form,"PDF p8, Eq (5): in plain text",Average Pain Today = 17.86 + 2.2867 * Log CD
+eq6:form,"PDF p8, Eq (6): in plain text",Y′ = 0.573 + 0.747 * Log CD
+eq6:outcome,"PDF p8: the outcome named in the sentence that introduces Eq (6), verbatim",injury plus pain last year
+eq7:form,"PDF p8, Eq (7): in plain text",P(Outcome) = exp(Y’) / (1 + exp(Y’))
+cutpoint:cd,"PDF p7, statistical analyses: the CD cut point and the words used to describe its purpose",0.03; to discriminate between high and low risk jobs for each outcome
+cutpoint:probability,PDF p12: the outcome probability stated to correspond to the CD cut point,36.2%
+si-mapping:verbal-anchor,"PDF p6: the OMNI-RES values assigned to SI intensity ratings 1 to 5 by verbal anchor matching, in printed order","2, 6, 8, 9, and 10"
+si-mapping:scale-matching,"PDF p6: the OMNI-RES values assigned to SI intensity ratings 1 to 5 by relative scale matching, in printed order","2, 4, 6, 8, and 10"
+table5:injury-plus-pain-past-year-crude,"Table 5, PDF p10: the Crude Log CD row for Injury + pain past year; give Cases, N, df, chi-square, p, OR, and 95% CI separated by "" | ""","188 | 441 | 1 | 44.29 | <.001 | 2.111 | 1.657, 2.689"
+example-mono:inputs-sentence,"PDF p10-11: the sentence that sets the mono-task inputs, verbatim","Assume the task is performed ten times a minute over a nine-hour daily work period, and force demands are estimated to be a 2 (“Easy”) on the OMNI-RES scale."
+example-mono:repetitions,"PDF p10-11: the total daily repetitions, as printed","5,400"
+example-mono:dpc,"PDF p10-11: the DPC value used in the mono-task example, as printed",0.00000137
+example-mono:cd-and-probability,"PDF p11: the sentence that gives the mono-task CD daily dose and probability, verbatim","In this scenario, the analysis gives a CD daily dose of 0.0074, which gives an estimated probability of 26.5% of experiencing a DUE disorder."
+example-multi:inputs,"PDF p12: the sentences that give the four tasks and their daily repetitions, verbatim","Task 1 is characterized as easy on the OMNI-RES scale and is performed 5,184 times per workday. Task 2 is rated somewhat easy and has 180 daily repetitions. The third is rated extremely hard and is performed 60 times per workday, while the fourth task is rated easy and is performed 3,752 times/day."
+example-multi:total-and-risk,"PDF p12: the sentence that gives the total CD and the DUE risk, verbatim",The total CD associated with these four tasks (0.59703) puts the DUE risk at 60.5%.
+example-multi:largest-share,"PDF p12: the sentence that names the task with the largest share, verbatim","In this example, Task 3 is responsible for 97.6% of the total CD and would be a prime candidate for job redesign."
+fig1:anchors,"PDF p8: the sentence that gives the approximate probabilities at two log CD values, verbatim",This DUE outcome demonstrates a dose-response relationship such that the outcome probability is approximately 5% at a log CD of about −5.0 and rises to approximately 90% at a log CD value of 2.0 (refer to Table 5 for additional statistical results for this outcome).
+or-interpretation,"PDF p8: the sentence that begins ""Interpretation of these OR values"", verbatim","Interpretation of these OR values would be that for every order of magnitude increase in the DUET log CD measure, there would be an increase in probability of experiencing a DUE outcome equal to the OR."
+case-definition:injury-plus-pain,"PDF p4: the sentence that defines cases and controls for injury plus pain, verbatim","In these circumstances, participants on jobs having a recorded FTOV during the past year plus participant reported pain (>15 mm visual analog scale [VAS] current or past year) were considered cases, and individuals on jobs without an FTOV plus no current pain or pain last year (<15 mm VAS) were controls."
+rater:recommendation,"PDF p2: the sentence about who should provide the exertion estimate, verbatim","It is recommended that trained observers provide this estimate; however, worker estimates may also be obtained for this purpose."

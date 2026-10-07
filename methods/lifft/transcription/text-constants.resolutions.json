@@ -1,0 +1,26 @@
+[
+  {
+    "row": 11,
+    "column": 3,
+    "passA": "25.39%; moderate risk [yellow]",
+    "passB": "25.39% (i.e., moderate risk [yellow])",
+    "resolved": "25.39% (i.e., moderate risk [yellow])",
+    "evidence": "Manuscript section 2.2 (converted PDF p. 4): \"a figure associated with an estimated risk of 25.39% of experiencing a LBD (i.e., moderate risk [yellow])\". Both passes are correct; pass B keeps the printed \"i.e.\" wording."
+  },
+  {
+    "row": 16,
+    "column": 3,
+    "passA": "subtask 4; 56% of the total cumulative load",
+    "passB": "subtask 4 accounts for 56% of the total cumulative load",
+    "resolved": "subtask 4 accounts for 56% of the total cumulative load",
+    "evidence": "Manuscript section 2.2 (converted PDF p. 4): \"In this example, subtask 4 accounts for 56% of the total cumulative load and would merit priority attention for job redesign.\" Pass B is verbatim; pass A abbreviated."
+  },
+  {
+    "row": 17,
+    "column": 3,
+    "passA": "24 cm; would reduce the overall LBP risk by approximately10%",
+    "passB": "reducing the horizontal distance to 24 cm for this task would reduce the overall LBP risk by approximately10%",
+    "resolved": "reducing the horizontal distance to 24 cm for this task would reduce the overall LBP risk by approximately10%",
+    "evidence": "Manuscript section 2.2 (converted PDF p. 4): \"simply reducing the horizontal distance to 24 cm for this task would reduce the overall LBP risk by approximately10%.\" The missing space in \"approximately10%\" is in the source. Pass B is verbatim; pass A abbreviated."
+  }
+]

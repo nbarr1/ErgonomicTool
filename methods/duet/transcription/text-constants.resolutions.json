@@ -1,0 +1,18 @@
+[
+  {
+    "row": 8,
+    "column": 3,
+    "passA": "P(Event) = exp(Y′) / (1 + exp(Y′)), where Y′ = β_0 + β_1 × Log CD (derived from logistic regression)",
+    "passB": "P(Event) = exp(Y′) / (1 + exp(Y′)), where Y′ = β_0 + β_1 × Log CD",
+    "resolved": "P(Event) = exp(Y′) / (1 + exp(Y′)), where Y′ = β_0 + β_1 × Log CD (derived from logistic regression)",
+    "evidence": "PDF p. 8, left column, Eq (3): the where clause reads \"where Y′ = β0 + β1 × Log CD (derived from logistic regression)\". Pass B omitted the parenthetical."
+  },
+  {
+    "row": 14,
+    "column": 3,
+    "passA": "0.03 | performed to discriminate between high and low risk jobs for each outcome | the 3% cut point was taken to approximate daily tendon healing capacity, above which CD would accrue",
+    "passB": "0.03; to discriminate between high and low risk jobs for each outcome",
+    "resolved": "0.03 | performed to discriminate between high and low risk jobs for each outcome | the 3% cut point was taken to approximate daily tendon healing capacity, above which CD would accrue",
+    "evidence": "PDF p. 7, left column, \"Statistical analyses\": \"An analysis of 2 × 2 contingency tables using a CD cut point of 0.03 was performed to discriminate between high and low risk jobs for each outcome. ... Thus, the 3% cut point was taken to approximate daily tendon healing capacity, above which CD would accrue.\" Both passes are correct; pass A quotes both statements of purpose."
+  }
+]
