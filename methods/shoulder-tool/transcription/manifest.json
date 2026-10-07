@@ -69,6 +69,27 @@
         "by": "Claude (AI agent), build session: transcription agent B"
       },
       "notes": "Columns key and locator were written by the build engineer; only the third column is transcribed. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "shoulder-tool-workbook-v1.0.0",
+      "title": "The Shoulder Tool Excel version 1.0.0: calculation cells",
+      "locator": "Workbook shoulder_tool_one_shoulder_locked-1.xlsm, sheets TST_v1.0.0, push_pull, and Instructions; cells as listed",
+      "source": {
+        "title": "The Shoulder Tool Excel version 1.0.0 ('shoulder_tool_one_shoulder_locked-1.xlsm'), Gallagher S, Sesek R, Schall M, Huangfu R; linked from the Auburn University Human Systems Integration Center research page",
+        "file": "https://auburn.box.com/s/df6aqnspkpjd95bkis084c7utheqhnjy",
+        "sha256": "929450451344bafd83a3a18ee5faf12e8d85acbcfd0c5e8e2aaa3f3eeea7522e"
+      },
+      "passA": {
+        "method": "Independent transcription with the openpyxl spreadsheet library (formulas as stored, no macros kept or run)",
+        "date": "2026-10-07",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from the workbook's raw package XML (xl/workbook.xml, sharedStrings.xml, and worksheet XML) with the Python standard library only; no spreadsheet library",
+        "date": "2026-10-07",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Formulas are written as stored, without the leading \"=\"; text cells keep their characters, with a line break written as the literal \"\\n\" and a non-breaking space as \"\\u00a0\"; numeric cells are written as Python repr(float(stored value)). Rows were chosen by the build engineer from a reading of the workbook; both passes filled every row and agreed on every cell. Both passes report that cell TST_v1.0.0!J11, the moment for task row 3, holds no formula, so the workbook computes that task with a blank moment; and that R5 tests \"Please select...\" without the space that the task list and the other formulas use. Both are defects of the workbook, recorded in the specification."
     }
   ]
 }

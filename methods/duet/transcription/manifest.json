@@ -69,6 +69,27 @@
         "by": "Claude (AI agent), build session: transcription agent B"
       },
       "notes": "Columns key and locator were written by the build engineer; only the third column is transcribed. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "duet-workbook-v1.3.0",
+      "title": "DUET Excel version 1.3.0: calculation cells and damage-per-cycle table",
+      "locator": "Workbook 'The Distal Upper Extremity Tool_DUET_v1.3.0.xlsm', sheets DUET_v1.3.0, Scale, and Instructions, and two defined names; cells as listed",
+      "source": {
+        "title": "DUET Excel version 1.3.0 ('The Distal Upper Extremity Tool_DUET_v1.3.0.xlsm'), Gallagher S, Sesek R, Schall M, Huangfu R; linked from the Auburn University Human Systems Integration Center research page",
+        "file": "https://auburn.box.com/s/dfdko7lnmeqc99ro4wtrb3vr2rkyhch3",
+        "sha256": "a3e95040271481a21beebaca548ec780de9a405f180ee5a330cd603e75534b6b"
+      },
+      "passA": {
+        "method": "Independent transcription with the openpyxl spreadsheet library (formulas as stored, no macros kept or run)",
+        "date": "2026-10-07",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from the workbook's raw package XML (xl/workbook.xml, sharedStrings.xml, and worksheet XML) with the Python standard library only; no spreadsheet library",
+        "date": "2026-10-07",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Formulas are written as stored, without the leading \"=\"; text cells keep their characters, with a line break written as the literal \"\\n\" and a non-breaking space as \"\\u00a0\"; numeric cells are written as Python repr(float(stored value)). Rows were chosen by the build engineer from a reading of the workbook; both passes filled every row and agreed on every cell. The odd ratings in Scale!B4 to B12 are stored as numbers, so they appear as 1.0, 3.0, and so on."
     }
   ]
 }
