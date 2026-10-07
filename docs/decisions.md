@@ -159,7 +159,7 @@ Open questions that need an answer before a decision can be made are in the [ope
 
 ### D-108: Reference calculators are cross-checks only
 
-- **Status:** Engineer decision, pending review.
+- **Status:** Engineer decision, pending review. Partly superseded on October 7, 2026, by D-117: for LiFFT and the Shoulder Tool, the authors' calculators may supply values the papers don't print, with a small, recorded number of requests.
 - **Date:** October 6, 2026.
 - **Decision:** Where a public calculator's page is read, its content is used only to find disagreements with the primary source, which are then logged as open questions. It is never a source for an equation, threshold, or table value. The build sends no calculation requests to any calculator. Reference-tool parity pairs are recorded by a person, as part 2 of the build prompt requires.
 
@@ -206,9 +206,23 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Decision:** The Apache License, Version 2.0, covers the repository's original code and documentation. A `NOTICE` file states that third-party material, including every transcription of a source table, stays under its own terms and isn't relicensed.
 - **Reason:** The repository is public. Apache 2.0 is a permissive license with an explicit patent grant and a `NOTICE` mechanism suited to recording third-party attributions. The license text was retrieved from `https://www.apache.org/licenses/LICENSE-2.0.txt` on October 6, 2026 (SHA-256 `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`).
 
-### D-115: Recommended first-release methods and order
+### D-115: First-release methods and order
 
-- **Status:** Engineer recommendation, pending the product owner's confirmation (OQ-001). Revised October 7, 2026, after the supplied papers were read.
+- **Status:** Engineer recommendation, revised October 7, 2026, after the supplied papers were read. The product owner accepted it on October 7, 2026 ("That's fine"; answers OQ-001).
 - **Recommendation:** Implement and validate the methods in this order: (1) the Revised NIOSH Lifting Equation; (2) the BWC/OSU push/pull guidelines; (3) DUET; (4) the LM-MMH equations. LiFFT and the Shoulder Tool follow when a source for their missing equations is settled (OQ-180 and OQ-200), and the job demands analysis follows when its field list is decided (D-113).
 - **Reason:** The order follows how ready each method is and how much risk it carries. The NIOSH manual is public domain and its specification is drafted. The BWC/OSU specification is drafted but waits on answers about three source defects (OQ-130, OQ-132, OQ-133). DUET's paper prints everything its calculation needs, its worked examples reproduce, and building it first sets up the damage-per-cycle and cumulative-damage code that LiFFT and the Shoulder Tool would share. LM-MMH can be specified in full, but it has the most coefficients, the most open questions (OQ-160 to OQ-177), and a license question (OQ-150). The LiFFT manuscript and the Shoulder Tool paper don't print the equations or coefficients that turn their inputs into damage and risk, so neither can be implemented from its source.
 - **Earlier version (October 6, 2026):** The first version put LiFFT, DUET, and the Shoulder Tool together in third place, before the papers had been read.
+
+### D-117: The authors' online calculators may serve as sources
+
+- **Status:** Product owner answer, October 7, 2026 (answers OQ-180 and OQ-200).
+- **Answer:** "The online calculators are fine as a source."
+- **How the build applies it:** For LiFFT and the Shoulder Tool, the authors' public calculators may supply the values that the papers don't print. Where a paper prints a value, the paper governs until the product owner answers OQ-140. The repository rule against automated bulk requests to calculator sites still applies, so the build makes only a small, recorded number of requests to any calculator. A value inferred from a calculator's rounded outputs is approximate, while a value printed by the authors is exact. The build therefore looks first for a document by the same authors that prints the missing values, and reports any such document to the product owner before using it.
+
+### D-118: Private use and source licenses
+
+- **Status:** Product owner answer, October 7, 2026 (answers OQ-150).
+- **Answer:** "Don't do anything explicitly prohibited but this will be used privately as a tool and not distributed to the public."
+- **Fact the answer depends on:** The GitHub repository is public (checked October 7, 2026), so everything pushed to it is published, including the LM-MMH transcriptions and specification. The repository rules don't allow the build to change the repository's visibility.
+- **How the build applies it:** The build doesn't use any source in a way its license explicitly prohibits. The LM-MMH paper's license (CC BY-NC-ND 4.0) prohibits commercial use and sharing adapted material, and requires attribution. Private use of the equations is consistent with the answer. Publishing an implementation in a public repository may count as sharing adapted material, so the build doesn't push LM-MMH engine code while the repository is public.
+- **Recommendation:** The product owner makes the repository private. That keeps the private-use premise true for the material already pushed. The build can't judge whether the files already pushed count as adapted material; that is a legal question.
