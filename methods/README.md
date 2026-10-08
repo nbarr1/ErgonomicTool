@@ -14,7 +14,7 @@ methods/<method-id>/
 
 Part 2 of the [build prompt](../docs/build-prompt.md) requires that every table be transcribed twice, in two independent passes, and that each difference be resolved against the source. Each `transcription/` folder holds these files:
 
-- **`manifest.json`:** Lists each transcribed table with its source document, checksum, page, and table number, and describes how each pass was made.
+- **`manifest.json`:** Lists each transcribed table with its source document, checksum, page, and table number, and describes how each pass was made. A table taken from a different document than the method's main source names its own source in the table entry.
 - **`<table-id>.pass-a.csv` and `<table-id>.pass-b.csv`:** The two passes, stored exactly as transcribed. They are never edited after the comparison, so that the record of the comparison stays intact.
 - **`<table-id>.reconciled.csv`:** The reconciled table. Where the passes agree, it holds the agreed value. Where they differ, it holds the value that the source shows.
 - **`<table-id>.resolutions.json`:** One entry for each cell where the passes differ, with both values, the resolved value, and the evidence from the source.

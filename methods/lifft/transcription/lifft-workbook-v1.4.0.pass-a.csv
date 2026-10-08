@@ -1,0 +1,19 @@
+sheet,cell,what,value as stored
+Instructions,C4,version and date line,Version 1.4.0 - Last updated 06/05/2018
+LiFFT_v1.4.0,D3,column heading for the lever arm input,Lever Arm \n(inch)
+LiFFT_v1.4.0,F3,column heading for the load input,Load \n(lbs)
+LiFFT_v1.4.0,H3,column heading for the moment,Moment \n(ft.lbs.)
+LiFFT_v1.4.0,J3,column heading for the repetitions input,Repetitions\n (per work day)
+LiFFT_v1.4.0,L3,column heading for the damage,Damage\n(cumulative)
+LiFFT_v1.4.0,N3,column heading for the share of damage,% Total (damage)
+LiFFT_v1.4.0,H5,"moment formula, task 1","IF(OR(F5="""",D5=""""),"""",D5/12*F5)"
+LiFFT_v1.4.0,L5,"damage formula, task 1","IF(OR(D5="""", F5="""", J5=""""),"""", ROUND(10^(-5.81636221052493+0.0222878437409416*H5)*J5, 4))"
+LiFFT_v1.4.0,N5,"share-of-damage formula, task 1","IF(OR(D5="""",F5="""",J5=""""),"""",IF($N$34=0,0,ROUND(L5/$N$34, 4)*100))"
+LiFFT_v1.4.0,L32,"damage formula, task 10 (to confirm all rows match)","IF(OR(D32="""", F32="""", J32=""""),"""", ROUND(10^(-5.81636221052493+0.0222878437409416*H32)*J32, 4))"
+LiFFT_v1.4.0,H34,total label,Total Cumulative Damage:
+LiFFT_v1.4.0,N34,total cumulative damage formula,"IF(AND(L5="""", L8="""", L11="""", L14="""", L17="""", L20="""", L23="""", L26="""", L29="""", L32=""""), """", SUM(L5, L8, L11, L14, L17, L20, L23, L26, L29, L32))"
+LiFFT_v1.4.0,H35,probability label,Probability of High Risk Job * (%):
+LiFFT_v1.4.0,N35,probability formula,"IF(AND(N5="""", N8="""", N11="""", N14="""", N17="""", N20="""", N23="""", N26="""", N29="""", N32=""""),"""", IF($N$34=0,0,ROUND(EXP(1.7229+1.0239*LOG($N$34, 10))/(1+EXP(1.7229+1.0239*LOG($N$34, 10))), 3)))"
+LiFFT_v1.4.0,A47,high-risk job definition note,"* A “High Risk Job” is defined as a job experiencing 12+ injuries per 200,000 hours worked, as defined by Marras et al. (1993)."
+moment_cd_relationship,B2,heading of the damage-per-cycle column in the interpolation sheet,damage per cycle (ft.lbs)
+moment_cd_relationship,C4,"interpolation formula, task 1 (record it, and say in your notes whether any cell of the main sheet refers to this sheet)",((LiFFT_v1.4.0!$H$5-moment_cd_relationship!A3)*((moment_cd_relationship!B3-moment_cd_relationship!B4)/(moment_cd_relationship!A3-moment_cd_relationship!A4))+moment_cd_relationship!B3)*LiFFT_v1.4.0!$J$5

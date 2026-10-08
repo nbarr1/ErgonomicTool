@@ -1,0 +1,58 @@
+{
+  "method": "bwc-osu-push-pull",
+  "source": {
+    "title": "Weston EB, Aurand A, Dufour JS, Knapik GG, Allread WG, Marras WS. An objective set of guidelines for pushing and pulling. Spine Research Institute, The Ohio State University (BWC/OSU push/pull guidelines PDF)",
+    "file": "https://dam.assets.ohio.gov/image/upload/info.bwc.ohio.gov/forms/PushPullGuidelines.pdf",
+    "sha256": "4b113c40e672d7b5d025251f8e04860445f6444516a8f53d4ace67eb13981a93"
+  },
+  "tables": [
+    {
+      "id": "two-hand-straight",
+      "title": "Guidelines for Straight Pushing and Pulling With Two Hands (Limits in lbs.)",
+      "locator": "BWC/OSU guidelines PDF, page 3 (the document has no printed page numbers; PDF page 3 of 5)",
+      "passA": {
+        "method": "Machine extraction of the PDF text layer with tools/transcription/extract-bwc-osu.ts (Poppler pdftotext -bbox word coordinates; layout parameters only)",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session"
+      },
+      "passB": {
+        "method": "Manual reading of page images rendered with Poppler pdftoppm at 100 and 200 dpi, written before pass A existed",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session"
+      },
+      "notes": "The Action cell is merged across rows in the source; both passes write it on every row. Line breaks inside a heading are replaced by single spaces, and the two heading lines of each band column are joined."
+    },
+    {
+      "id": "two-hand-turning",
+      "title": "Guidelines for Turning Pushing and Pulling With Two Hands (Limits in ft-lbs.*)",
+      "locator": "BWC/OSU guidelines PDF, page 4, upper table",
+      "passA": {
+        "method": "Machine extraction of the PDF text layer with tools/transcription/extract-bwc-osu.ts (Poppler pdftotext -bbox word coordinates; layout parameters only)",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session"
+      },
+      "passB": {
+        "method": "Manual reading of page images rendered with Poppler pdftoppm at 100 and 200 dpi, written before pass A existed",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session"
+      },
+      "notes": "The Action cell is merged across rows in the source; both passes write it on every row. Line breaks inside a heading are replaced by single spaces, and the two heading lines of each band column are joined. The footnote marked * below the table is recorded in docs/methods/bwc-osu-push-pull.md."
+    },
+    {
+      "id": "one-hand-pull",
+      "title": "Guidelines for Straight and Turning Pulling With 1 Hand (Limits in lbs.)",
+      "locator": "BWC/OSU guidelines PDF, page 4, lower table",
+      "passA": {
+        "method": "Machine extraction of the PDF text layer with tools/transcription/extract-bwc-osu.ts (Poppler pdftotext -bbox word coordinates; layout parameters only)",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session"
+      },
+      "passB": {
+        "method": "Manual reading of page images rendered with Poppler pdftoppm at 100 and 200 dpi, written before pass A existed",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session"
+      },
+      "notes": "The Action cell is merged across rows in the source; both passes write it on every row. Line breaks inside a heading are replaced by single spaces, and the two heading lines of each band column are joined. The first pass A run placed the heading word 'Hand' (x = 94 points) in the Action column because the Action boundary was set at x = 100 points. The boundary was corrected to x = 90 points, which is still right of every Action word (x = 45 to 76 points), and pass A was regenerated. The data cells were identical in both runs."
+    }
+  ]
+}

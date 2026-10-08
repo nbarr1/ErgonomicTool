@@ -1,0 +1,47 @@
+{
+  "method": "lifft",
+  "source": {
+    "title": "Gallagher S, Sesek RF, Schall MC, Huangfu R. Development and validation of an easy-to-use risk assessment tool for cumulative low back loading: The Lifting Fatigue Failure Tool (LiFFT). Applied Ergonomics. 2017;63:142-150 (author manuscript, LiFFT_manuscript_Final_revised_3.docx)",
+    "file": "https://doi.org/10.1016/j.apergo.2017.04.016",
+    "sha256": "4daefbb722e19da6b181386fc5438d5656cad363fbb9781eec62223b4352965b"
+  },
+  "tables": [
+    {
+      "id": "text-constants",
+      "title": "Constants, worked-example values, and bands in the manuscript text",
+      "locator": "Locators in the second column of each row (manuscript section numbers)",
+      "passA": {
+        "method": "Independent transcription starting from the manuscript text (pandoc output and the DOCX document XML), with every value checked against renders of the LibreOffice PDF conversion (Poppler pdftoppm, 300 dpi)",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from renders of the LibreOffice PDF conversion only (Poppler pdftoppm, 300 to 400 dpi). The agent had no access to the DOCX text, the text layer, pass A, or the source survey; its tool log was checked for this",
+        "date": "2026-10-06",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Columns key and locator were written by the build engineer; only the third column is transcribed. The manuscript has no table or figure images, so this is the only transcription for this source. By the transcription rules, every minus sign in a number or equation is written as U+2212 (−), whatever glyph the source uses (the LiFFT DOCX uses a hyphen-minus, and some DUET sentences use an en dash); labels keep their printed en dashes."
+    },
+    {
+      "id": "lifft-workbook-v1.4.0",
+      "title": "LiFFT Excel version 1.4.0: calculation cells",
+      "locator": "Workbook LiFFT_v1.4.0_locked-New.xlsm, sheets LiFFT_v1.4.0, Instructions, and moment_cd_relationship; cells as listed",
+      "source": {
+        "title": "LiFFT Excel version 1.4.0 ('LiFFT_v1.4.0_locked-New.xlsm'), Gallagher S, Sesek R, Schall M, Huangfu R; linked from the Auburn University Human Systems Integration Center research page",
+        "file": "https://auburn.box.com/s/66hq1pht73xi9el7eq0jvg309rqqt1ah",
+        "sha256": "6d67fb470794fc12e8971f4710c8c47d8b87b198427acbd9ce4b8f5b7b975a81"
+      },
+      "passA": {
+        "method": "Independent transcription with the openpyxl spreadsheet library (formulas as stored, no macros kept or run)",
+        "date": "2026-10-07",
+        "by": "Claude (AI agent), build session: transcription agent A"
+      },
+      "passB": {
+        "method": "Independent transcription from the workbook's raw package XML (xl/workbook.xml, sharedStrings.xml, and worksheet XML) with the Python standard library only; no spreadsheet library",
+        "date": "2026-10-07",
+        "by": "Claude (AI agent), build session: transcription agent B"
+      },
+      "notes": "Formulas are written as stored, without the leading \"=\"; text cells keep their characters, with a line break written as the literal \"\\n\" and a non-breaking space as \"\\u00a0\"; numeric cells are written as Python repr(float(stored value)). Rows were chosen by the build engineer from a reading of the workbook; both passes filled every row and agreed on every cell. The hidden sheet moment_cd_relationship is not referenced by any formula on the main sheet, whose damage formula is closed-form; it is recorded only to document that. Formula H5 has no spaces after its commas while H8 to H32 have them; they are equivalent."
+    }
+  ]
+}

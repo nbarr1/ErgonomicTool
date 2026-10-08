@@ -1,0 +1,31 @@
+ErgonomicTool
+Copyright 2026 the ErgonomicTool authors
+
+The Apache License, Version 2.0 (see LICENSE) applies to the original code and
+documentation in this repository. It doesn't apply to, and grants no rights in,
+third-party material. Third-party material stays under its own terms. That
+includes every transcription of a source table under methods/*/transcription/,
+every data file derived from a source, and every quotation from a source in
+docs/.
+
+Sources whose content is transcribed or quoted in this repository:
+
+- NIOSH. Applications Manual for the Revised NIOSH Lifting Equation. DHHS (NIOSH)
+  Publication No. 94-110 (Revised 9/2021). The manual states that it is in the
+  public domain and may be freely copied or reprinted.
+- Weston EB, Aurand A, Dufour JS, Knapik GG, Allread WG, Marras WS. An Objective
+  Set of Guidelines for Pushing and Pulling. Spine Research Institute, The Ohio
+  State University, for the Ohio Bureau of Workers' Compensation. No terms of use
+  are stated.
+- Potvin JR, Ciriello VM, Snook SH, Maynard WS, Brogmus GE. The Liberty Mutual
+  manual materials handling (LM-MMH) equations. Ergonomics. 2021;64(8):955-970.
+  Licensed under CC BY-NC-ND 4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+- Gallagher S, Sesek RF, Schall MC, Huangfu R. The Lifting Fatigue Failure Tool
+  (LiFFT). Applied Ergonomics. 2017;63:142-150.
+- Gallagher S, Schall MC, Sesek RF, Huangfu R. The Distal Upper Extremity Tool
+  (DUET). Human Factors. 2018;60(8):1146-1162.
+- Bani Hani D, Huangfu R, Sesek R, Schall MC, Davis GA, Gallagher S. Development
+  and validation of a cumulative exposure shoulder risk assessment tool based on
+  fatigue failure theory. Ergonomics. 2021;64(1):39-54.
+
+docs/sources.md records each source's link, checksum, and terms of use.

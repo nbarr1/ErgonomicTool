@@ -1,0 +1,8 @@
+,,Metric,U.S. Customary
+Load Constant,LC,23kg,51lb
+Horizontal Multiplier,HM,(25/H),(10/H)
+Vertical Multiplier,VM,1− (.003|V-75|),1− (.0075|V-30|)
+Distance Multiplier,DM,.82 + (4.5/D),.82 + (1.8/D)
+Asymmetric Multiplier,AM,1− (.0032A),1− (.0032A)
+Frequency Multiplier,FM,From Table 5,From Table 5
+Coupling Multiplier,CM,From Table 7,From Table 7

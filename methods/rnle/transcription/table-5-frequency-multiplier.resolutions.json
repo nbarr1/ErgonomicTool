@@ -1,0 +1,18 @@
+[
+  {
+    "row": 1,
+    "column": 1,
+    "passA": "Frequency Lifts/min (F) ‡",
+    "passB": "F lifts/min",
+    "resolved": "Frequency Lifts/min (F)‡",
+    "evidence": "NIOSH 94-110 (Rev. 9/2021), Table 5, printed page 15 (PDF page 31): the first column heading reads 'Frequency Lifts/min (F)' on three lines, followed by a superscript double dagger. The footnote for the double dagger reads: 'For lifting less frequently than once per 5 minutes, set F=.2 lifts/minute.' Pass B abbreviated the heading and omitted the footnote marker."
+  },
+  {
+    "row": 1,
+    "column": 2,
+    "passA": "≤1 Hour V<30 †",
+    "passB": "≤1 Hour V<30",
+    "resolved": "≤1 Hour V<30†",
+    "evidence": "NIOSH 94-110 (Rev. 9/2021), Table 5, printed page 15 (PDF page 31): the first subheading under '≤1 Hour' reads 'V<30' followed by a superscript dagger. The footnote for the dagger reads: 'Values of V are in inches.' Pass B omitted the footnote marker."
+  }
+]

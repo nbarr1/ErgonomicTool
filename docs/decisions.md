@@ -102,12 +102,11 @@ Open questions that need an answer before a decision can be made are in the [ope
 
 ## Engineer decisions
 
-### D-101: Milestone 1 branch name
+### D-101: Milestone 1 branch and base branch
 
-- **Status:** Engineer decision, pending review.
-- **Date:** October 6, 2026.
-- **Context:** The hosting session for this build is bound to the branch `claude/pensive-maxwell-mqwopv` and can't push to any other branch without the product owner's explicit permission. The repository had no branches before the first commit.
-- **Decision:** Milestone 1 work is on `claude/pensive-maxwell-mqwopv`. Because that branch is the first one pushed, GitHub treats it as the default branch until a `main` branch exists and the product owner changes the default. Open question OQ-101 asks how the product owner wants the base branch set up for the milestone pull requests.
+- **Status:** Confirmed by the product owner on October 6, 2026.
+- **Context:** The hosting session for this build is bound to the branch `claude/pensive-maxwell-mqwopv` and can't push to any other branch without the product owner's explicit permission. The repository had no branches before the first commit, so that branch became the repository's first branch and its default.
+- **Decision:** Milestone 1 work is on `claude/pensive-maxwell-mqwopv`. The product owner renamed the repository's default branch to `main`. With the product owner's approval, `main` was then moved back to the first commit, `fd9070f` ("Add build prompt and repository scaffolding"), so that the milestone 1 pull request from `claude/pensive-maxwell-mqwopv` into `main` shows all of milestone 1 for review. Later milestones each get their own branch and pull request into `main` (design default D-001).
 
 ### D-102: Tool versions
 
@@ -144,3 +143,86 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Date:** October 6, 2026.
 - **Context:** Part 2 requires two independent transcription passes for every table. In this build session, one agent makes both passes, and the build prompt doesn't name a second transcriber.
 - **Decision:** Pass B is a manual reading of the rendered page image, written to a file before pass A exists. Pass A is a machine extraction of the PDF text layer. A script compares the passes cell by cell, and every difference is resolved against the page image and recorded with its evidence. Both passes come from the same agent, so they aren't independent in the sense of two people. A human second transcription before reviewer approval is recommended, and open question OQ-104 asks whether the reviewer accepts this procedure.
+
+### D-106: Chapter 1 RNLE tables govern
+
+- **Status:** Engineer decision, pending review.
+- **Date:** October 6, 2026.
+- **Context:** The NIOSH manual prints Tables 1 to 5 and 7 in chapter 1 and reprints them in chapter 3 "to provide a useful reference." The reprints differ in labels and formatting, including a typographical "≤2" where chapter 1 has "≤0.2."
+- **Decision:** The chapter 1 tables are transcribed twice and govern. The chapter 3 reprints are compared with them by machine, and every difference is listed in `docs/methods/rnle.md`. No numeric multiplier differs.
+
+### D-107: Transcription conventions
+
+- **Status:** Engineer decision, pending review.
+- **Date:** October 6, 2026.
+- **Decision:** Both passes follow the same conventions, which each manifest records: tables printed side by side in two unit systems are stored as separate files, merged cells are written on every row they span, line breaks inside a cell become single spaces, and multi-line headings are joined into one heading per column. Footnote markers and the characters printed in the source, such as "≤" and "−," are kept.
+
+### D-108: Reference calculators are cross-checks only
+
+- **Status:** Engineer decision, pending review. Partly superseded on October 7, 2026, by D-117: for LiFFT and the Shoulder Tool, the authors' calculators may supply values the papers don't print, with a small, recorded number of requests.
+- **Date:** October 6, 2026.
+- **Decision:** Where a public calculator's page is read, its content is used only to find disagreements with the primary source, which are then logged as open questions. It is never a source for an equation, threshold, or table value. The build sends no calculation requests to any calculator. Reference-tool parity pairs are recorded by a person, as part 2 of the build prompt requires.
+
+### D-109: CI actions pinned to commit SHAs
+
+- **Status:** Engineer decision, pending review.
+- **Date:** October 6, 2026.
+- **Decision:** Under design default D-015, every GitHub Action in the CI workflow is pinned to the full commit SHA of a release tag, with the tag named in a comment. The workflow uses `actions/checkout` v7, `actions/setup-node` v7, `actions/upload-artifact` v7, and `actions/download-artifact` v8, which run on Node.js 24. The v4 releases ran on the deprecated Node.js 20 runtime, and CI flagged them with a warning.
+
+### D-116: Two-agent transcription passes for the supplied papers
+
+- **Status:** Engineer decision, pending review (OQ-104).
+- **Date:** October 7, 2026.
+- **Context:** D-105 describes passes that one agent made by two methods. For the four papers the product owner supplied, the build could run two separate agents with separate working contexts.
+- **Decision:** For the LM-MMH, DUET, LiFFT, and Shoulder Tool sources, two transcription agents work in parallel from the same structural skeleton (header row and row keys). Pass A starts from the text layer and checks every cell against page renders, which govern. Pass B works from page renders only, with no access to the text layer, the other pass, or the source survey; its tool log is checked for this after the run. Every minus sign in a number or equation is written as U+2212, whatever glyph the source uses, and labels keep their printed dashes. The engineer prefilled the skeletons' header rows and row keys from a one-pass survey, and both passes checked those cells against the page. The comparison, resolutions, and check are the same as for D-105.
+- **Limits:** The two agents are separate instances of the same model, not two people. A human second transcription before reviewer approval is still recommended (OQ-104).
+
+## Product owner answers
+
+### D-110: The product owner is the qualified reviewer
+
+- **Status:** Confirmed by the product owner on October 6, 2026 (answers OQ-008).
+- **Decision:** The product owner is the qualified reviewer for method specifications and validation reports, and signs them.
+
+### D-111: The product owner approves band maps and ranking configuration
+
+- **Status:** Confirmed by the product owner on October 6, 2026 (answers OQ-010).
+- **Decision:** The product owner approves each band map, the priority level names, and the tie-breaker order.
+
+### D-112: Permission to implement the sources
+
+- **Status:** Confirmed by the product owner on October 6, 2026 (answers OQ-009).
+- **Decision:** "Unless stated otherwise, yes": the product owner has access to each primary source and permission to implement its equations and tables, except where the product owner says otherwise. The product owner supplied the LiFFT, DUET, Shoulder Tool, and LM-MMH papers on October 6, 2026 (answers OQ-102 and OQ-103).
+- **Note:** The repository is public. The LM-MMH paper carries a CC BY-NC-ND 4.0 license, which permits non-commercial reuse of the article "provided the original work is properly cited, and is not altered, transformed, or built upon in any way." Committing transcribed coefficients to a public repository and building software on them may fall outside those terms, depending on whether the coefficients are protected at all. This is flagged for the product owner (OQ-150). It isn't legal advice.
+
+### D-113: Deferred questions
+
+- **Status:** Confirmed by the product owner on October 6, 2026.
+- **Decision:** The Liberty Mutual interpretation figures (OQ-105) and the job demands field list (OQ-006 and OQ-142) are deferred. The LM-MMH band map proposal and the field-level job demands specification wait for them.
+
+### D-114: Repository license
+
+- **Status:** Engineer recommendation adopted at the product owner's request on October 6, 2026 (answers OQ-106). The product owner can change it.
+- **Decision:** The Apache License, Version 2.0, covers the repository's original code and documentation. A `NOTICE` file states that third-party material, including every transcription of a source table, stays under its own terms and isn't relicensed.
+- **Reason:** The repository is public. Apache 2.0 is a permissive license with an explicit patent grant and a `NOTICE` mechanism suited to recording third-party attributions. The license text was retrieved from `https://www.apache.org/licenses/LICENSE-2.0.txt` on October 6, 2026 (SHA-256 `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`).
+
+### D-115: First-release methods and order
+
+- **Status:** Engineer recommendation, revised October 7, 2026, after the supplied papers were read. The product owner accepted it on October 7, 2026 ("That's fine"; answers OQ-001).
+- **Recommendation:** Implement and validate the methods in this order: (1) the Revised NIOSH Lifting Equation; (2) the BWC/OSU push/pull guidelines; (3) DUET; (4) the LM-MMH equations. LiFFT and the Shoulder Tool follow when a source for their missing equations is settled (OQ-180 and OQ-200), and the job demands analysis follows when its field list is decided (D-113).
+- **Reason:** The order follows how ready each method is and how much risk it carries. The NIOSH manual is public domain and its specification is drafted. The BWC/OSU specification is drafted but waits on answers about three source defects (OQ-130, OQ-132, OQ-133). DUET's paper prints everything its calculation needs, its worked examples reproduce, and building it first sets up the damage-per-cycle and cumulative-damage code that LiFFT and the Shoulder Tool would share. LM-MMH can be specified in full, but it has the most coefficients, the most open questions (OQ-160 to OQ-177), and a license question (OQ-150). The LiFFT manuscript and the Shoulder Tool paper don't print the equations or coefficients that turn their inputs into damage and risk, so neither can be implemented from its source.
+- **Earlier version (October 6, 2026):** The first version put LiFFT, DUET, and the Shoulder Tool together in third place, before the papers had been read.
+
+### D-117: The authors' online calculators may serve as sources
+
+- **Status:** Product owner answer, October 7, 2026 (answers OQ-180 and OQ-200).
+- **Answer:** "The online calculators are fine as a source."
+- **How the build applies it:** For LiFFT and the Shoulder Tool, the authors' public calculators may supply the values that the papers don't print. Where a paper prints a value, the paper governs until the product owner answers OQ-140. The repository rule against automated bulk requests to calculator sites still applies, so the build makes only a small, recorded number of requests to any calculator. A value inferred from a calculator's rounded outputs is approximate, while a value printed by the authors is exact. The build therefore looks first for a document by the same authors that prints the missing values, and reports any such document to the product owner before using it.
+
+### D-118: Private use and source licenses
+
+- **Status:** Product owner answer, October 7, 2026 (answers OQ-150).
+- **Answer:** "Don't do anything explicitly prohibited but this will be used privately as a tool and not distributed to the public."
+- **Fact the answer depends on:** The GitHub repository is public (checked October 7, 2026), so everything pushed to it is published, including the LM-MMH transcriptions and specification. The repository rules don't allow the build to change the repository's visibility.
+- **How the build applies it:** The build doesn't use any source in a way its license explicitly prohibits. The LM-MMH paper's license (CC BY-NC-ND 4.0) prohibits commercial use and sharing adapted material, and requires attribution. Private use of the equations is consistent with the answer. Publishing an implementation in a public repository may count as sharing adapted material, so the build doesn't push LM-MMH engine code while the repository is public.
+- **Recommendation:** The product owner makes the repository private. That keeps the private-use premise true for the material already pushed. The build can't judge whether the files already pushed count as adapted material; that is a legal question.

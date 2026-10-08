@@ -1,0 +1,35 @@
+sheet,cell,what,value as stored
+Instructions,C4,version and date line,Version 1.0.0 - Last updated on 6/11/2019
+TST_v1.0.0,D3,column heading for the task type,Type of Task
+TST_v1.0.0,F3,column heading for the lever arm input,Lever Arm \n(inch)
+TST_v1.0.0,H3,column heading for the load input,Load \n(lbs)
+TST_v1.0.0,J3,column heading for the moment,Moment \n(ft.lbs.)
+TST_v1.0.0,L3,column heading for the repetitions input,Repetitions\n(/work day)
+TST_v1.0.0,N3,column heading for the damage,Damage\n(cum.)
+TST_v1.0.0,P3,column heading for the share of damage,% Total (damage)
+TST_v1.0.0,R3,column heading for the arm moment,Arm Moment (ft. lbs)
+TST_v1.0.0,R5,"arm moment formula, task 1","IF(OR(D5=""Please select..."", F5="""", H5="""", L5=""""), """", IF(F5<1.715, 0, IF(F5>=27, 121.9/12, (-8.27+4.8223*F5)/12)))"
+TST_v1.0.0,J5,"moment formula, task 1","IF(OR(D5=""Please select ..."",F5="""",H5="""", L5=""""),"""", IF(VLOOKUP(D5,push_pull!$B$2:$B$5,1,FALSE)=""Horizontal Push/Pull"", F5/12*H5,IF(VLOOKUP(D5,push_pull!$B$2:$B$5,1,FALSE)=""Handling Load"",F5/12*H5+(R5),F5/12*H5-(R5))))"
+TST_v1.0.0,N5,"damage formula, task 1","IF(OR(F5="""", H5="""", L5="""", D5=""Please select ...""),"""", IF(H5=0,0,1/(10^((101.25-100*(J5*12/681))/14.83))*L5))"
+TST_v1.0.0,P5,"share-of-damage formula, task 1","IF(OR(F5="""",H5="""",L5="""",  D5=""Please select ...""),"""",IF($P$34=0,0,ROUND(N5,4)/$P$34*100))"
+TST_v1.0.0,N32,"damage formula, task 10 (to confirm all rows match)","IF(OR(F32="""", H32="""", L32="""", D32=""Please select ...""),"""", IF(H32=0,0,1/(10^((101.25-100*(J32*12/681))/14.83))*L32))"
+TST_v1.0.0,D34,total label,Total Cumulative Damage:
+TST_v1.0.0,P34,total cumulative damage formula,"IF(AND(N5="""", N8="""", N11="""", N14="""", N17="""", N20="""", N23="""", N26="""", N29="""", N32=""""), """", ROUND(SUM(N5, N8, N11, N14, N17, N20, N23, N26, N29, N32), 4))"
+TST_v1.0.0,D35,probability label,Probability of Shoulder Outcome:
+TST_v1.0.0,P35,probability formula,"IF(AND(P5="""", P8="""", P11="""", P14="""", P17="""", P20="""", P23="""", P26="""", P29="""", P32=""""),"""", IF($P$34=0,0,ROUND(EXP(0.864+0.928*LOG10($P$34))/(1+EXP((0.864+0.928*LOG10($P$34)))), 3)))"
+push_pull,B2,task type list entry 1,Please select ...
+push_pull,B3,task type list entry 2,Handling Load
+push_pull,C3,note for entry 2,+ Arm Weight
+push_pull,D3,rule for entry 2,moment+Arm Moment
+push_pull,B4,task type list entry 3,Horizontal Push/Pull
+push_pull,C4,note for entry 3,NO Arm Weight
+push_pull,D4,rule for entry 3,moment
+push_pull,B5,task type list entry 4,Push/Pull Downward
+push_pull,C5,note for entry 4,- Arm Weight
+push_pull,D5,rule for entry 4,moment-Arm Moment
+push_pull,B10,arm moment rule condition 1,If lever arm<1.715
+push_pull,C10,arm moment rule value 1,0.0
+push_pull,B11,arm moment rule condition 2,If lever arm>=1.715 and <27
+push_pull,C11,arm moment rule value 2,(-8.27 + 4.8223 * lever_arm)/12.0\u00a0
+push_pull,B12,arm moment rule condition 3,If lever arm>=27
+push_pull,C12,arm moment rule value 3,121.9 / 12.0

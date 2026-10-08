@@ -1,0 +1,10 @@
+[
+  {
+    "row": 2,
+    "column": 3,
+    "passA": "1/480 = ∼0.0021/min",
+    "passB": "1 per day (i.e. 1/480 = ∼0.0021/min)",
+    "resolved": "1 per day (i.e. 1/480 = ∼0.0021/min)",
+    "evidence": "PDF p. 10 (journal p. 963), lift and lower constraint 3: \"Frequency (F) must range from 1 per day (i.e. 1/480 = ∼0.0021/min) to 20/min.\" The locator asks for the whole expression; pass A gave only the part inside the parentheses."
+  }
+]

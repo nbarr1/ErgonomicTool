@@ -20,17 +20,17 @@ Accuracy (each result matches the published method exactly) and repeatability (t
 
 The build runs in seven milestones, with a product-owner review at the end of each one. No application code is written until the method specifications are approved.
 
-| Milestone                     | Status      | Notes                                                      |
-| ----------------------------- | ----------- | ---------------------------------------------------------- |
-| 1. Sources and specifications | In progress | See [the milestone 1 plan](docs/milestones/m1-plan.md).    |
-| 2. Calculation engine         | Not started | Blocked on approved specifications and the stack decision. |
-| 3. Data and storage           | Not started |                                                            |
-| 4. Assessment workflow        | Not started |                                                            |
-| 5. Prioritization             | Not started |                                                            |
-| 6. Biomechanical analysis     | Not started |                                                            |
-| 7. Hardening                  | Not started |                                                            |
+| Milestone                     | Status          | Notes                                                                                                                                                                                                                            |
+| ----------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Sources and specifications | Awaiting review | Four specifications ready for review (RNLE, BWC/OSU, DUET, and LM-MMH); LiFFT and the Shoulder Tool blocked by missing equations; the job demands analysis deferred. See [the milestone 1 report](docs/milestones/m1-report.md). |
+| 2. Calculation engine         | Not started     | Blocked on approved specifications and the stack decision.                                                                                                                                                                       |
+| 3. Data and storage           | Not started     |                                                                                                                                                                                                                                  |
+| 4. Assessment workflow        | Not started     |                                                                                                                                                                                                                                  |
+| 5. Prioritization             | Not started     |                                                                                                                                                                                                                                  |
+| 6. Biomechanical analysis     | Not started     |                                                                                                                                                                                                                                  |
+| 7. Hardening                  | Not started     |                                                                                                                                                                                                                                  |
 
-No method is validated. Every method is in draft until a reviewer named by the product owner approves its specification and signs its validation report.
+No method is validated. Every method is in draft until the product owner, who is also the reviewer (decision D-110), approves its specification and signs its validation report.
 
 ## Install, run, and test
 
@@ -53,7 +53,7 @@ To run every check that continuous integration runs, use this command:
 npm run check
 ```
 
-The individual checks are `npm run lint`, `npm run format:check`, and `npm run typecheck`. To reformat files in place, run `npm run format`.
+The individual checks are `npm run lint`, `npm run format:check`, `npm run typecheck`, `npm test`, and `npm run check:transcriptions`. The last one checks the double-transcription files described in [`methods/README.md`](methods/README.md). To reformat files in place, run `npm run format`.
 
 ## Repository layout
 
@@ -71,6 +71,7 @@ docs/                Specification, logs, method specifications, validation repo
   validation/        One validation report for each method (from milestone 2)
   guides/            User guide, administrator guide, and method reference
 methods/<method-id>/ Specification data, transcriptions, code, and tests for each method
+tools/               Repository tooling: transcription check and determinism run
 engine/              Calculation engine (planned, milestone 2)
 api/                 API (planned, milestone 3)
 web/                 Web client (planned, milestone 4)
@@ -85,6 +86,7 @@ web/                 Web client (planned, milestone 4)
 - [Method specifications](docs/methods/README.md)
 - [Validation reports](docs/validation/README.md)
 - [Milestone 1 plan](docs/milestones/m1-plan.md)
+- [Milestone 1 report](docs/milestones/m1-report.md)
 - [User guide](docs/guides/user-guide.md)
 - [Administrator guide](docs/guides/administrator-guide.md)
 - [Method reference](docs/guides/method-reference.md)
@@ -93,4 +95,4 @@ web/                 Web client (planned, milestone 4)
 
 ## License
 
-The license is pending until the product owner chooses one. No license file exists, so no license is granted.
+The repository's original code and documentation are licensed under the [Apache License, Version 2.0](LICENSE). Third-party material, including every transcription of a source table, stays under its own terms. See [`NOTICE`](NOTICE) and decision D-114 in the [decision log](docs/decisions.md).

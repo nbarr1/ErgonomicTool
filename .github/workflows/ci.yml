@@ -5,6 +5,7 @@ on:
   pull_request:
   workflow_dispatch:
 
+# Actions are pinned to full commit SHAs (decision D-015); the comment names the release tag.
 permissions:
   contents: read
 
@@ -13,16 +14,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Linting, formatting, and type checks.
-  # Later milestones add jobs here as soon as they have something to check (decision D-014):
-  # unit and published-example tests and the cross-platform determinism run (milestones 1-2),
-  # end-to-end tests and automated accessibility checks (milestone 4).
+  # Linting, formatting, type checks, and the transcription check.
+  # Later milestones add jobs as soon as they have something to check (decision D-014):
+  # published-example tests (milestone 2) and end-to-end tests and automated
+  # accessibility checks (milestone 4).
   static-checks:
-    name: Lint, format, and type check
+    name: Lint, format, type check, and transcriptions
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -30,3 +31,65 @@ jobs:
       - run: npm run lint
       - run: npm run format:check
       - run: npm run typecheck
+      - run: npm run check:transcriptions
+
+  unit-tests:
+    name: Unit tests (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        # Linux x64, macOS arm64, and Windows x64: at least two operating systems and two
+        # processor architectures, as part 2 of the build prompt requires.
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+  # Cross-platform determinism run: each platform parses every reconciled table and writes its
+  # output, and the compare job fails if any output differs or fewer than two operating systems
+  # or two processor architectures ran. Milestone 2 extends the output to every engine fixture.
+  determinism-run:
+    name: Determinism run (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: mkdir -p determinism-output
+        shell: bash
+      - run: node tools/determinism/cli.ts emit determinism-output/${{ matrix.os }}.json
+        shell: bash
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: determinism-${{ matrix.os }}
+          path: determinism-output/${{ matrix.os }}.json
+          if-no-files-found: error
+
+  determinism-compare:
+    name: Determinism comparison
+    needs: determinism-run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: .nvmrc
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          pattern: determinism-*
+          path: determinism-output
+          merge-multiple: true
+      - run: node tools/determinism/cli.ts compare determinism-output/*.json

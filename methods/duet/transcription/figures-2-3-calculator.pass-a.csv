@@ -1,0 +1,12 @@
+figure,row,Task # or label,OMNI-RES Scale,Repetitions (per work day),Damage (cumulative),% Total (damage)
+Figure 2,task row 1,1,2: Easy,5400,0.0074,100.0
+Figure 2,first empty task row,2,Please select ...,0,0.0,0.0
+Figure 2,summary row 1,Total Cumulative Damage:,,,,0.0074
+Figure 2,summary row 2,Probability of Distal Upper Extremity Outcome (%):,,,,26.5
+Figure 3,task row 1,1,2: Easy,5184,0.0071,1.2
+Figure 3,task row 2,2,4: Somewhat Easy,180,0.00227,0.4
+Figure 3,task row 3,3,10: Extremely Hard,60,0.58252,97.6
+Figure 3,task row 4,4,2: Easy,3752,0.00514,0.9
+Figure 3,first empty task row,5,Please select ...,0,0.0,0.0
+Figure 3,summary row 1,Total Cumulative Damage:,,,,0.59703
+Figure 3,summary row 2,Probability of Distal Upper Extremity Outcome (%):,,,,60.5

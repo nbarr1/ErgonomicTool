@@ -1,0 +1,20 @@
+key,locator,value as printed
+eq1:coefficient,"Equation (1), section 2.1: the multiplying constant, digits and separators exactly as printed","902,416"
+eq1:exponent,"Equation (1), section 2.1: the whole exponent of e, exactly as printed, including its sign and variable",−0.162*%US
+ultimate-strength:average-spine,"Section 2.1: the ultimate strength of an ""average"" spine, with its qualifier and unit as printed",approximately 6 kN
+example-mono:load,"Section 2.2 mono-task example: the load, with unit",13 kg
+example-mono:horizontal-distance,"Section 2.2 mono-task example: the horizontal distance, with unit",40 cm
+example-mono:plm,"Section 2.2 mono-task example: the peak load moment, with unit",51 Nm
+example-mono:repetitions,Section 2.2 mono-task example: repetitions per day,400
+example-mono:dpc,Section 2.2 mono-task example: damage per cycle,0.000011
+example-mono:cd,Section 2.2 mono-task example: daily cumulative damage,0.0043
+example-mono:risk,Section 2.2 mono-task example: the risk percentage and its band wording,25.39%; moderate risk [yellow]
+bands:low,"Section 2.2: the low-risk band, with its wording and color as printed","low risk (green, < 25% risk of LBP)"
+bands:moderate,"Section 2.2: the moderate-risk band, with its wording and color as printed","moderate risk (yellow, between 25-50% risk of LBP)"
+bands:high,"Section 2.2: the high-risk band, with its wording and color as printed","high risk (red, > 50% risk of LBP)"
+example-multi:job-risk,Section 2.2 multi-task example: the overall job risk,35% risk of LBD (moderate risk range)
+example-multi:largest-share,Section 2.2 multi-task example: the subtask with the largest share and its share,subtask 4; 56% of the total cumulative load
+example-multi:redesign,Section 2.2 multi-task example: the redesigned distance and the stated effect on risk,24 cm; would reduce the overall LBP risk by approximately10%
+cutpoint:cd,Section 3.3 or 4: the cumulative damage cut point between high-risk and low-risk jobs,0.03
+outcome:high-risk-job,"Section 3: the definition of a high-risk job, with its injury rate and exposure hours","High-risk jobs were those having at least 12 injuries per 200,000 hours of exposure."
+caution:plm,"Discussion or conclusions: the peak moment above which caution is advised, with unit",100 Nm
