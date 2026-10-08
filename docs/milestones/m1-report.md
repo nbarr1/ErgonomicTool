@@ -6,15 +6,15 @@
 
 ## Summary
 
-| Method              | Result                                                                                                                                                                                                               |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rnle`              | [Draft specification](../methods/rnle.md). Nine source tables, stored as 12 files, transcribed twice and reconciled. 16 open questions (OQ-110 to OQ-125).                                                           |
-| `bwc-osu-push-pull` | [Draft specification](../methods/bwc-osu-push-pull.md). Three tables transcribed twice and reconciled. 6 open questions (OQ-130 to OQ-135).                                                                          |
-| `duet`              | [Draft specification](../methods/duet.md). Everything the calculation needs is printed, and two of the three printed probabilities reproduce. 10 open questions (OQ-190 to OQ-199).                                  |
-| `lm-mmh`            | [Draft specification](../methods/lm-mmh.md). All 14 equations transcribed term by term; the worked example and Table 4 reproduce. 18 open questions (OQ-160 to OQ-177), plus the license question (OQ-150).          |
-| `lifft`             | [Blocked](../methods/lifft.md). The supplied author manuscript doesn't print the moment-to-compression regression or the risk function, and its figures and tables are missing. 9 open questions (OQ-180 to OQ-188). |
-| `shoulder-tool`     | [Blocked](../methods/shoulder-tool.md). The paper doesn't print the risk-model coefficients, the shoulder strength value, or the forearm and hand moment. 10 open questions (OQ-200 to OQ-209).                      |
-| `jda`               | [Partly specified](../methods/jda.md). Section names and lifecycle recorded. The field list is deferred (D-113).                                                                                                     |
+| Method              | Result                                                                                                                                                                                                                                                                                  |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rnle`              | [Draft specification](../methods/rnle.md). Nine source tables, stored as 12 files, transcribed twice and reconciled. 16 open questions (OQ-110 to OQ-125).                                                                                                                              |
+| `bwc-osu-push-pull` | [Draft specification](../methods/bwc-osu-push-pull.md). Three tables transcribed twice and reconciled. 6 open questions (OQ-130 to OQ-135).                                                                                                                                             |
+| `duet`              | [Draft specification](../methods/duet.md), draft 2. The authors' workbook confirms the base-10 logarithm and the damage-per-cycle table; the instruction-page examples reproduce. 11 open questions (OQ-190 to OQ-199, OQ-220).                                                         |
+| `lm-mmh`            | [Draft specification](../methods/lm-mmh.md). All 14 equations transcribed term by term; the worked example and Table 4 reproduce. 18 open questions (OQ-160 to OQ-177), plus the license question (OQ-150).                                                                             |
+| `lifft`             | [Draft specification](../methods/lifft.md), draft 2. Formulas from the authors' LiFFT 1.4.0 workbook (D-117). The workbook's own screenshots reproduce only from a hidden lookup table, not from its damage formula (OQ-231). 16 open questions (OQ-181 to OQ-189, OQ-230 to OQ-236).   |
+| `shoulder-tool`     | [Draft specification](../methods/shoulder-tool.md), draft 2. Formulas from the authors' Shoulder Tool 1.0.0 workbook (D-117); the dissertation prints the same risk equation. The workbook leaves one task row without a moment formula (OQ-213). 14 open questions (OQ-201 to OQ-214). |
+| `jda`               | [Partly specified](../methods/jda.md). Section names and lifecycle recorded. The field list is deferred (D-113).                                                                                                                                                                        |
 
 ## What is complete
 
@@ -72,12 +72,13 @@
 Every question is in the [open-question log](../open-questions.md). These block the milestone 1 exit:
 
 - **Procedure and order:** OQ-104 (transcription procedures) and OQ-001 (release order; the recommendation is in D-115).
-- **Sources:** OQ-180 and OQ-181 (what source can unblock LiFFT) and OQ-200 (what source can unblock the Shoulder Tool). OQ-105 and the job demands fields (OQ-006, OQ-142) are deferred under D-113.
+- **Sources:** OQ-181 (whether the LiFFT version of record governs). OQ-180 and OQ-200 are answered (D-117). OQ-105 and the job demands fields (OQ-006, OQ-142) are deferred under D-113.
 - **RNLE content:** OQ-110 to OQ-125. The most consequential are OQ-122 (which unit system the engine computes in), OQ-124 (how worked-example tests handle the source's rounded multipliers), OQ-113 (FM interpolation near the maximum frequency), and OQ-118 (CLI tie-breaking).
 - **BWC/OSU content:** OQ-130 to OQ-135. The most consequential are OQ-130 (the turning moment arm, where the PDF and the calculator differ by a factor of two), OQ-131 (values between whole-number limits), and OQ-132 (the overlapping row).
 - **DUET content:** OQ-190 to OQ-199. The most consequential are OQ-194 (log base), OQ-195 (where the damage per cycle comes from), and OQ-199 (the Figure 3 probability and the Table 3 typo).
 - **LM-MMH content:** the blocking questions among OQ-161 to OQ-177. The most consequential are OQ-172 (the meaning of ln(F)²), OQ-175 (the sign and precision of z), OQ-164 (coupling scale factors), and OQ-161 (which sex's result sets the band). OQ-150 (license) decides whether LM-MMH is published and implemented at all.
-- **Shoulder Tool content:** OQ-201 to OQ-209, which matter once OQ-200 is answered.
+- **LiFFT content:** OQ-182 to OQ-189 and OQ-230 to OQ-236. The most consequential is OQ-231 (formula or lookup table).
+- **Shoulder Tool content:** OQ-201 to OQ-214. The most consequential are OQ-211 (rounding before the probability) and OQ-213 (the missing task-row formula).
 
 ## Files added in this milestone
 

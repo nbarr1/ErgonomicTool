@@ -19,6 +19,8 @@ Started October 6, 2026.
 - Double transcriptions of the tables, equation terms, constants, and worked-example screenshots in the four supplied papers, made by two independent agents (D-116).
 - A cross-platform determinism run in CI on Linux x64, macOS arm64, and Windows x64.
 - The milestone 1 plan and report.
+- Double transcriptions of the calculation cells in the authors' LiFFT, Shoulder Tool, and DUET Excel workbooks.
+- Draft 2 of the LiFFT, Shoulder Tool, and DUET specifications, which take the formulas the papers don't print from the authors' workbooks (D-117), with an independent check of each one.
 
 ### Changed
 
