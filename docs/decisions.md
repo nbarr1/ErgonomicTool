@@ -229,7 +229,7 @@ Open questions that need an answer before a decision can be made are in the [ope
 
 ### D-119: Source-backed answers to RNLE questions
 
-- **Status:** Product owner answer, October 13, 2026, pending the product owner's page check. The answers apply the source's own text; the engineer couldn't open the source PDF in the session that recorded them, so the product owner checks each page listed in this entry.
+- **Status:** Product owner answer, October 13, 2026. The engineer couldn't open the source PDF in the session that recorded these answers, so the product owner checked each page listed in this entry against the source and confirmed it the same day. For OQ-111, the product owner quoted section 1.3.5.4 and the Table 5 headings ("less than or equal to 1 hour, greater than 1 hour but less than or equal to 2 hours, and greater than 2 hours but less than or equal to 8 hours").
 - **Answer:** "Start by accepting everything that has a verifiable source as the basis." Questions whose answer needs judgment stay open until the accepted answers are implemented.
 - **Decisions:**
   - **OQ-111:** Exactly 2 hours is moderate duration, and exactly 1 hour is short. The section 1.3.5.2 text ("more than one hour, but not more than two hours") and the Table 5 heading ("> 1 but ≤ 2 Hours") agree.
@@ -239,7 +239,7 @@ Open questions that need an answer before a decision can be made are in the [ope
   - **OQ-121:** Load weight is in pounds or kilograms, consistent with the load constant (51 lb or 23 kg) and the terminology list (p. 2). The glossary's "pounds or Newtons" (p. 75) is not followed.
   - **OQ-123, display precision only:** Results display as the p. 29 statement gives: multipliers to two decimal places, and weight limits and lifting indices to one. The rounding mode for a value that ends exactly in 5 stays open.
   - **OQ-125, the boundary at 1.0 only:** LI = 1.0 is in the lowest band, because section 1.4.3 (p. 20) sets the goal as "an LI of 1.0 or less." Whether the LI 3.0 statement is a published threshold for the band map stays open.
-- **Pages for the product owner to check:** The source is NIOSH Publication 94-110 (Revised 9/2021), [Applications Manual for the Revised NIOSH Lifting Equation](https://www.cdc.gov/niosh/media/pdfs/2026/06/94-110_2021-revision.pdf). The PDF page number is the printed page number plus 16.
+- **Pages the product owner checked:** The source is NIOSH Publication 94-110 (Revised 9/2021), [Applications Manual for the Revised NIOSH Lifting Equation](https://www.cdc.gov/niosh/media/pdfs/2026/06/94-110_2021-revision.pdf). The PDF page number is the printed page number plus 16.
 
   | Question | What to check                                                                             | Printed page | PDF page  |
   | -------- | ----------------------------------------------------------------------------------------- | ------------ | --------- |
@@ -255,13 +255,13 @@ Open questions that need an answer before a decision can be made are in the [ope
 
 ### D-120: Source-backed answers to BWC/OSU questions
 
-- **Status:** Product owner answer, October 13, 2026, pending the product owner's page check, as for D-119.
+- **Status:** Product owner answer, October 13, 2026. The product owner checked each page listed in this entry against the source and confirmed it the same day.
 - **Answer:** "Start by accepting everything that has a verifiable source as the basis."
 - **Decisions:**
   - **OQ-131:** A value is green only if it is at or below the printed green limit. For example, 41.5 lb is yellow where green is "41 lbs. or less" and yellow is "42-57 lbs." This is the literal reading of the printed limits, and it matches the online calculator. The application doesn't round the measured value.
   - **OQ-133:** The PDF governs, under D-108: at 2 Hand Push, 38 inches, red starts at 65 lb. The rows where a limit falls or stays level as hand height rises are confirmed as printed.
   - **OQ-135:** Hand distances outside 12 to 36 inches are rejected, with a message that states the allowed range. The source says the guidelines "are not applicable for significantly wider or narrower hand distances" (p. 2), and the online calculator rejects them. This rule matters only when two-handed turning is implemented, which waits on OQ-130.
-- **Pages for the product owner to check:** The source is the [BWC/OSU push/pull guidelines PDF](https://dam.assets.ohio.gov/image/upload/info.bwc.ohio.gov/forms/PushPullGuidelines.pdf), linked from the [BWC push/pull guide page](https://www.bwc.ohio.gov/employer/programs/safety/PushPullGuide/PushPullGuide.aspx). The PDF has no printed page numbers, so pages are PDF pages.
+- **Pages the product owner checked:** The source is the [BWC/OSU push/pull guidelines PDF](https://dam.assets.ohio.gov/image/upload/info.bwc.ohio.gov/forms/PushPullGuidelines.pdf), linked from the [BWC push/pull guide page](https://www.bwc.ohio.gov/employer/programs/safety/PushPullGuide/PushPullGuide.aspx). The PDF has no printed page numbers, so pages are PDF pages.
 
   | Question | What to check                                                                                                        | PDF page |
   | -------- | -------------------------------------------------------------------------------------------------------------------- | -------- |
