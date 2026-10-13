@@ -226,3 +226,45 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Fact the answer depends on:** The GitHub repository is public (checked October 7, 2026), so everything pushed to it is published, including the LM-MMH transcriptions and specification. The repository rules don't allow the build to change the repository's visibility.
 - **How the build applies it:** The build doesn't use any source in a way its license explicitly prohibits. The LM-MMH paper's license (CC BY-NC-ND 4.0) prohibits commercial use and sharing adapted material, and requires attribution. Private use of the equations is consistent with the answer. Publishing an implementation in a public repository may count as sharing adapted material, so the build doesn't push LM-MMH engine code while the repository is public.
 - **Recommendation:** The product owner makes the repository private. That keeps the private-use premise true for the material already pushed. The build can't judge whether the files already pushed count as adapted material; that is a legal question.
+
+### D-119: Source-backed answers to RNLE questions
+
+- **Status:** Product owner answer, October 13, 2026, pending the product owner's page check. The answers apply the source's own text; the engineer couldn't open the source PDF in the session that recorded them, so the product owner checks each page listed in this entry.
+- **Answer:** "Start by accepting everything that has a verifiable source as the basis." Questions whose answer needs judgment stay open until the accepted answers are implemented.
+- **Decisions:**
+  - **OQ-111:** Exactly 2 hours is moderate duration, and exactly 1 hour is short. The section 1.3.5.2 text ("more than one hour, but not more than two hours") and the Table 5 heading ("> 1 but ≤ 2 Hours") agree.
+  - **OQ-112:** The formulas govern HM, VM, DM, and AM, because "Each multiplier should be computed from the appropriate formula" (p. 7). Tables 1 to 4 are used only for verification. The three table entries that differ from their formulas are recomputed in the specification: 10/22 = 0.4545 (Table 1, .46), 10/23 = 0.4348 (Table 1, .44), and 0.82 + 4.5/130 = 0.8546 (Table 3, metric, .86).
+  - **OQ-114:** The engine uses the exact quotient 50/15 = 3.33… lifts/minute. The printed 3.4 is an arithmetic or rounding error.
+  - **OQ-115:** CM uses V at the point being evaluated. This follows Example 4 (Figure 14, p. 46), where CM is .95 at the origin (V = 22 in) and 1.0 at the destination (V = 59 in). It comes from a worked example, not from a stated rule.
+  - **OQ-121:** Load weight is in pounds or kilograms, consistent with the load constant (51 lb or 23 kg) and the terminology list (p. 2). The glossary's "pounds or Newtons" (p. 75) is not followed.
+  - **OQ-123, display precision only:** Results display as the p. 29 statement gives: multipliers to two decimal places, and weight limits and lifting indices to one. The rounding mode for a value that ends exactly in 5 stays open.
+  - **OQ-125, the boundary at 1.0 only:** LI = 1.0 is in the lowest band, because section 1.4.3 (p. 20) sets the goal as "an LI of 1.0 or less." Whether the LI 3.0 statement is a published threshold for the band map stays open.
+- **Pages for the product owner to check:** The source is NIOSH Publication 94-110 (Revised 9/2021), [Applications Manual for the Revised NIOSH Lifting Equation](https://www.cdc.gov/niosh/media/pdfs/2026/06/94-110_2021-revision.pdf). The PDF page number is the printed page number plus 16.
+
+  | Question | What to check                                                                             | Printed page | PDF page  |
+  | -------- | ----------------------------------------------------------------------------------------- | ------------ | --------- |
+  | OQ-111   | The duration definitions in section 1.3.5.2, and the Table 5 column headings              | 13-15        | 29-31     |
+  | OQ-112   | "Each multiplier should be computed from the appropriate formula"                         | 7            | 23        |
+  | OQ-112   | Table 1 at H = 22 and 23 inches (.46 and .44)                                             | 8-9          | 24-25     |
+  | OQ-112   | Table 3, metric, at D = 130 cm (.86)                                                      | 11           | 27        |
+  | OQ-114   | The illustration that prints "50/15 = 3.4 lifts/minute"                                   | 16           | 32        |
+  | OQ-115   | Example 4 worksheet: CM .95 at the origin (V = 22 in), 1.0 at the destination (V = 59 in) | 46           | 62        |
+  | OQ-121   | "pounds or kilograms" in the terminology list, and "pounds or Newtons" in the glossary    | 2 and 75     | 18 and 91 |
+  | OQ-123   | The rounding statement for the examples                                                   | 29           | 45        |
+  | OQ-125   | "design all lifting jobs to achieve an LI of 1.0 or less" in section 1.4.3                | 20           | 36        |
+
+### D-120: Source-backed answers to BWC/OSU questions
+
+- **Status:** Product owner answer, October 13, 2026, pending the product owner's page check, as for D-119.
+- **Answer:** "Start by accepting everything that has a verifiable source as the basis."
+- **Decisions:**
+  - **OQ-131:** A value is green only if it is at or below the printed green limit. For example, 41.5 lb is yellow where green is "41 lbs. or less" and yellow is "42-57 lbs." This is the literal reading of the printed limits, and it matches the online calculator. The application doesn't round the measured value.
+  - **OQ-133:** The PDF governs, under D-108: at 2 Hand Push, 38 inches, red starts at 65 lb. The rows where a limit falls or stays level as hand height rises are confirmed as printed.
+  - **OQ-135:** Hand distances outside 12 to 36 inches are rejected, with a message that states the allowed range. The source says the guidelines "are not applicable for significantly wider or narrower hand distances" (p. 2), and the online calculator rejects them. This rule matters only when two-handed turning is implemented, which waits on OQ-130.
+- **Pages for the product owner to check:** The source is the [BWC/OSU push/pull guidelines PDF](https://dam.assets.ohio.gov/image/upload/info.bwc.ohio.gov/forms/PushPullGuidelines.pdf), linked from the [BWC push/pull guide page](https://www.bwc.ohio.gov/employer/programs/safety/PushPullGuide/PushPullGuide.aspx). The PDF has no printed page numbers, so pages are PDF pages.
+
+  | Question | What to check                                                                                                        | PDF page |
+  | -------- | -------------------------------------------------------------------------------------------------------------------- | -------- |
+  | OQ-131   | Every limit is a whole number of pounds, for example 2 Hand Pull at 32 inches: "41 lbs. or less," "42-57 lbs."       | 3        |
+  | OQ-133   | 2 Hand Push at 38 inches: red "65 lbs. or more"; at 39 inches: red "64 lbs. or more"                                 | 3        |
+  | OQ-135   | "accommodate hand distances of 12" to 36" and are not applicable for significantly wider or narrower hand distances" | 2        |
