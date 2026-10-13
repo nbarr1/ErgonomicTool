@@ -268,3 +268,10 @@ Open questions that need an answer before a decision can be made are in the [ope
   | OQ-131   | Every limit is a whole number of pounds, for example 2 Hand Pull at 32 inches: "41 lbs. or less," "42-57 lbs."       | 3        |
   | OQ-133   | 2 Hand Push at 38 inches: red "65 lbs. or more"; at 39 inches: red "64 lbs. or more"                                 | 3        |
   | OQ-135   | "accommodate hand distances of 12" to 36" and are not applicable for significantly wider or narrower hand distances" | 2        |
+
+### D-121: The RNLE engine computes in U.S. customary units
+
+- **Status:** Product owner answer, October 13, 2026 (answers OQ-122). The engineer recommended this option.
+- **Decision:** The engine converts every RNLE input to U.S. customary units and computes with the U.S. constants: LC = 51 lb, HM = 10/H, VM = 1 − .0075|V − 30|, and DM = .82 + 1.8/D (p. 7). Stored values stay in SI, as part 2 of the build prompt requires.
+- **Reason:** The manual's metric and U.S. constants aren't exact conversions, so only one set can give the same result for equivalent inputs. Example 4 (Figure 14, p. 46) is printed in pounds and inches, so the published-example tests can check the engine without converting.
+- **Consequences, computed from the transcribed formulas:** For the same task, a calculation with the metric constants gives a recommended weight limit about 2% lower than the engine's (2.0% to 2.6% lower for four illustrative tasks). Two boundaries also differ from a metric hand calculation: a horizontal distance between 63 and 63.5 cm gives a nonzero RWL in the engine but RWL = 0 with the metric limit of 63 cm, and a vertical location between 75 cm (29.53 in) and 30 in uses the V < 30 column of Tables 5 and 7 in the engine. The method reference should state these differences, so that metric users know why a hand calculation can differ.

@@ -280,7 +280,7 @@ The glossary gives the load weight unit as "pounds or Newtons" (p. 75), while th
 
 The source gives two parallel sets of constants, and they aren't exact conversions of each other. For example, LC is 51 lb or 23 kg (51 lb is about 23.13 kg), the H limit is 10 in or 25 cm (10 in is 25.4 cm), and the VM optimum is 30 in or 75 cm (30 in is 76.2 cm). The same physical task can therefore give a slightly different RWL in each unit system.
 
-Part 2 of the build prompt requires that "Equivalent metric and English inputs produce the same stored result." That is only possible if the engine computes in one designated unit system and converts inputs to it. The reviewer chooses the computation system (OQ-122). The canonical stored units are SI, as part 2 requires.
+Part 2 of the build prompt requires that "Equivalent metric and English inputs produce the same stored result." That is only possible if the engine computes in one designated unit system and converts inputs to it. The engine computes in U.S. customary units, with the U.S. constants, and converts metric inputs to them (OQ-122, answered in D-121). The canonical stored units are SI, as part 2 requires.
 
 ## Rounding
 
