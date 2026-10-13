@@ -155,7 +155,7 @@ FM comes from Table 5, using F, the duration category, and V. Table 5's columns 
 
 - **Which V:** "The FM value depends upon the average number of lifts/min (F), the vertical location (V) of the hands at the origin, and the duration of continuous lifting" (p. 15). The glossary repeats "Vertical Location (V) at the origin" (p. 74). FM therefore uses V at the origin, also when the RWL is evaluated at the destination.
 - **Interpolation:** "in some cases it will be necessary to use linear interpolation to determine the value of a multiplier, especially when the value of a variable is not directly available from a table. For example, when the measured frequency is not a whole number, the appropriate multiplier must be interpolated between the frequency values in the table for the two values that are closest to the actual frequency" (p. 7). Example 7 interpolates "between the FM values for 2 and 3 lifts/minute" for F = 2.4 (pp. 56-57). FM is linear in F between the two nearest rows of the column.
-- **Open points:** Interpolation between a nonzero row and a row of .00 (for example, F = 12.5 in the ≤ 1 hour, V < 30 column), and the meaning of "maximum frequency," are open (OQ-113).
+- **Next to a row of .00:** FM is interpolated linearly toward the .00 row, as for any other pair of rows. For example, F = 12.5 in the ≤ 1 hour, V < 30 column gives FM = .185 (between .37 at 12 and .00 at 13). In the ≤ 1 hour, V ≥ 30 column, the row after 15 is "> 15," which isn't a number, so FM is .00 for any F above 15 (OQ-113, answered in D-123).
 
 The reconciled Table 5 is `methods/rnle/transcription/table-5-frequency-multiplier.reconciled.csv` (p. 15).
 

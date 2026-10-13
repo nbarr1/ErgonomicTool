@@ -282,3 +282,10 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Decision:** The first release implements the BWC/OSU straight push and pull and one-handed pull tables only. Two-handed turning is left out until BWC or the guidelines' authors say which moment arm the turning limits assume. The product owner asks them.
 - **Reason:** The PDF defines the moment arm as "the distance between the center of the object being turned and the hand dynamometer that is exerting the torque" (p. 4), which with centered hands is half the hand distance. The online calculator uses the full hand distance. The two readings differ by a factor of two: computed from the transcribed turning table, a 60 lb force with hands 24 inches apart at a hand height of 32 inches gives 60 ft-lbs. (green) under one reading and 120 ft-lbs. (red) under the other. No source settles which reading is right.
 - **Consequence:** OQ-135 (the 12 to 36 inch hand-distance rule, answered in D-120) applies only to turning, so it has no effect until turning is implemented.
+
+### D-123: FM is interpolated toward a row of .00
+
+- **Status:** Product owner answer, October 13, 2026 (answers OQ-113). The engineer recommended the other option, setting FM to 0 above each column's last nonzero row.
+- **Decision:** Between a column's last nonzero row and the .00 row after it, FM is interpolated linearly, as the p. 7 rule says for any frequency between two rows. In the ≤ 1 hour, V ≥ 30 column, the row after 15 is "> 15," which isn't a number, so interpolation isn't defined there and FM is .00 for any F above 15.
+- **Examples, computed from the transcribed Table 5:** F = 12.5 in the ≤ 1 hour, V < 30 column gives FM = .185 (between .37 and .00). F = 8.5 in the > 2 but ≤ 8 hours, V < 30 column gives FM = .09 (between .18 and .00). F = 10.1 in the > 1 but ≤ 2 hours, V < 30 column gives FM = .234 (between .26 and .00).
+- **Reason:** The product owner chose the reading that applies the source's stated interpolation rule (p. 7) without an exception the source doesn't state. The stricter reading was the engineer's recommendation because it treats all six columns alike.
