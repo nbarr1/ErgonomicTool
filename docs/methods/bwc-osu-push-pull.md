@@ -66,7 +66,7 @@ The turning table's limits are torques in foot-pounds. The footnote to that tabl
 turning torque (ft-lbs.) = maximum hand force (lbs.) × moment arm (ft)        (p. 4, footnote *)
 ```
 
-The moment arm is open (OQ-130). The PDF defines it as the distance from the center of the object to the hand dynamometer, and it says the hands are assumed to be centered on the object (p. 2). That reading gives a moment arm of half the hand distance. The online calculator on the web page, read on October 6, 2026, divides the full handle distance by 12 and multiplies by the measured force, which uses the whole hand distance as the moment arm. The two readings differ by a factor of two.
+The moment arm is open (OQ-130). Two-handed turning is left out of the first release until BWC or the authors answer (D-122). The PDF defines it as the distance from the center of the object to the hand dynamometer, and it says the hands are assumed to be centered on the object (p. 2). That reading gives a moment arm of half the hand distance. The online calculator on the web page, read on October 6, 2026, divides the full handle distance by 12 and multiplies by the measured force, which uses the whole hand distance as the moment arm. The two readings differ by a factor of two.
 
 ### Band assignment
 
