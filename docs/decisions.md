@@ -295,3 +295,4 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Status:** Product owner answers on decision cards, October 14, 2026. The evidence for each question is summarized in the question's entry in the open-question log. Unless an item says otherwise, the product owner chose the engineer's recommended option.
 - **Decisions:**
   - **OQ-116:** The single-task LI is banded on the maximum load weight. The LI from the average load is shown next to it. The source doesn't say which load the single-task LI uses; the worksheets record both (Figure 3, p. 24; Figure 14, p. 46).
+  - **OQ-117:** For the combined frequencies in the CLI, the Table 5 column is V < 30 if any task in the combination has V < 30 inches, and V ≥ 30 otherwise. Computed from the transcribed Table 5: the V < 30 value is never higher than the V ≥ 30 value in any of its 18 rows, so this choice never gives a higher FM.
