@@ -288,7 +288,7 @@ The source states a rounding rule for its worked examples only: "for these examp
 
 - **Calculation:** Full precision, as part 2 of the build prompt requires. No intermediate rounding.
 - **Proposed display rule:** Multipliers to two decimal places, RWL, FIRWL, and STRWL to one decimal place, and LI, FILI, STLI, and CLI to one decimal place, matching p. 29. The display precision is accepted (OQ-123, D-119). The source states no rule for rounding a value that ends exactly in 5. Displayed values round half away from zero, matching the tables (OQ-123, answered in D-124).
-- **Consequence for worked examples:** The worksheets multiply rounded multipliers. In Example 4 (Figure 14, p. 46), the origin RWL is 51 × 1.0 × .94 × .87 × 1.0 × .88 × .95 = 34.9 lb. At full precision, DM = .82 + 1.8/37 = 0.8686…, and the RWL is 34.8 lb. The destination RWL is 15.2 lb in the worksheet and 15.3 lb at full precision. A full-precision engine therefore doesn't reproduce every printed worked-example value to the last digit. OQ-124 proposes how the worked-example tests handle this.
+- **Consequence for worked examples:** The worksheets multiply rounded multipliers. In Example 4 (Figure 14, p. 46), the origin RWL is 51 × 1.0 × .94 × .87 × 1.0 × .88 × .95 = 34.9 lb. At full precision, DM = .82 + 1.8/37 = 0.8686…, and the RWL is 34.8 lb. The destination RWL is 15.2 lb in the worksheet and 15.3 lb at full precision. A full-precision engine therefore doesn't reproduce every printed worked-example value to the last digit. The worked-example tests handle this with the three-part design accepted in D-124 (OQ-124).
 
 ## Interpretation thresholds published by the source
 
