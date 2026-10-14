@@ -205,7 +205,7 @@ When significant control is required at the destination, "the RWL is calculated 
 1. Compute the RWL at the origin, and at the destination when significant control is required (p. 26, section 2.3).
 2. LI = L / RWL, using the lower RWL (p. 26).
 
-The source doesn't say whether L is the average or the maximum weight for a single-task LI. The worksheets record both "L (avg.)" and "L (max.)" (Figure 3, p. 24; Figure 14, p. 46). See OQ-116.
+The source doesn't say whether L is the average or the maximum weight for a single-task LI. The worksheets record both "L (avg.)" and "L (max.)" (Figure 3, p. 24; Figure 14, p. 46). The LI is banded on the maximum weight, and the LI from the average weight is shown next to it (OQ-116, answered in D-124).
 
 ### Multi-task procedure
 

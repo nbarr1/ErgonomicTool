@@ -289,3 +289,9 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Decision:** Between a column's last nonzero row and the .00 row after it, FM is interpolated linearly, as the p. 7 rule says for any frequency between two rows. In the ≤ 1 hour, V ≥ 30 column, the row after 15 is "> 15," which isn't a number, so interpolation isn't defined there and FM is .00 for any F above 15.
 - **Examples, computed from the transcribed Table 5:** F = 12.5 in the ≤ 1 hour, V < 30 column gives FM = .185 (between .37 and .00). F = 8.5 in the > 2 but ≤ 8 hours, V < 30 column gives FM = .09 (between .18 and .00). F = 10.1 in the > 1 but ≤ 2 hours, V < 30 column gives FM = .234 (between .26 and .00).
 - **Basis:** This reading applies the source's stated interpolation rule (p. 7) without an exception the source doesn't state. The engineer's recommendation, the stricter reading, would have treated all six columns alike. The product owner chose on a decision card and didn't state a reason.
+
+### D-124: Answers to the second round of judgment questions
+
+- **Status:** Product owner answers on decision cards, October 14, 2026. The evidence for each question is summarized in the question's entry in the open-question log. Unless an item says otherwise, the product owner chose the engineer's recommended option.
+- **Decisions:**
+  - **OQ-116:** The single-task LI is banded on the maximum load weight. The LI from the average load is shown next to it. The source doesn't say which load the single-task LI uses; the worksheets record both (Figure 3, p. 24; Figure 14, p. 46).
