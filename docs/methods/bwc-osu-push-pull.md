@@ -1,8 +1,9 @@
 # BWC/OSU push/pull guidelines (`bwc-osu-push-pull`): method specification
 
-- **Status:** Draft. Not approved. Results computed under this specification must be labeled as draft and excluded from rankings.
-- **Specification revision:** Draft 1, October 6, 2026. A method version number is assigned when the reviewer approves the specification.
-- **Reviewer:** Not named (OQ-008).
+- **Status:** Specification approved by the product owner, who is also the reviewer (D-110), on October 14, 2026 (D-126). The method stays in draft until its validation report is signed in milestone 2. Until then, results computed under this specification must be labeled as draft and excluded from rankings.
+- **Specification revision:** Approved revision, October 14, 2026 (Draft 1 of October 6, 2026, with the answers in D-119 to D-124).
+- **Method version:** 1.0.0, assigned on approval (D-126).
+- **Reviewer:** The product owner (D-110).
 
 ## Source
 
@@ -120,9 +121,9 @@ The source works in pounds of force, inches, feet, and foot-pounds of torque. Th
 
 The source states no rounding rule. The online calculator reads whole numbers only: it converts the force and the handle distance with `parseInt` and offers hand heights as a list of whole inches. The application doesn't round a measured force or torque before banding it (OQ-131, D-120). A hand height between two rows is handled by the worse-band rule in the Units section (OQ-134, D-124). Until it's answered, the specification adds no rounding rule.
 
-## Proposed band map
+## Band map
 
-This proposal needs the reviewer's approval (OQ-010) before any ranking uses it.
+The product owner approved this band map on October 14, 2026 (D-111, D-126).
 
 | Source band             | Source label                  | Proposed priority level |
 | ----------------------- | ----------------------------- | ----------------------- |

@@ -314,3 +314,10 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Decisions:**
   - **OQ-002:** No Tier 2 method is in the first release. Every Tier 2 item in the build prompt needs a license or permission, and the first-release order (D-115) uses none of them. Tier 2 is revisited after the first release ships, and the question of which licenses the product owner holds waits until then.
   - **OQ-003:** The four Tier 3 collections (Washington State L&I, UK HSE, the AIHA toolkit, and the DoD Ergonomics Working Group) are reviewed after the first release. Until then, the engine covers the four methods in D-115. Any method added later needs its own source, specification, and double transcription.
+
+### D-126: RNLE and BWC/OSU specifications approved
+
+- **Status:** Product owner approval, October 14, 2026 ("Reviewed and approved"), after the product owner reviewed both specifications.
+- **Decision:** The product owner, as the reviewer (D-110), approves `docs/methods/rnle.md` and `docs/methods/bwc-osu-push-pull.md` as they stand with the answers in D-119 to D-124, including both band maps (D-111). Two-handed turning stays out of the BWC/OSU method until OQ-130 is answered (D-122).
+- **Method versions:** Each method gets version 1.0.0. The repository didn't set a version format, so the engineer chose semantic versioning: a change to logic or data that can change a result raises the major or minor number, and the product owner can change the format.
+- **What stays in draft:** Under the contribution guide, a method stays in draft until the reviewer also signs its validation report. Results from either method are labeled as draft and excluded from rankings until then. The validation reports are written in milestone 2.

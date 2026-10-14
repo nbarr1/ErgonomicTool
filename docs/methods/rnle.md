@@ -1,8 +1,9 @@
 # Revised NIOSH Lifting Equation (`rnle`): method specification
 
-- **Status:** Draft. Not approved. Results computed under this specification must be labeled as draft and excluded from rankings.
-- **Specification revision:** Draft 1, October 6, 2026. A method version number is assigned when the reviewer approves the specification.
-- **Reviewer:** Not named (OQ-008).
+- **Status:** Specification approved by the product owner, who is also the reviewer (D-110), on October 14, 2026 (D-126). The method stays in draft until its validation report is signed in milestone 2. Until then, results computed under this specification must be labeled as draft and excluded from rankings.
+- **Specification revision:** Approved revision, October 14, 2026 (Draft 1 of October 6, 2026, with the answers in D-119 to D-124).
+- **Method version:** 1.0.0, assigned on approval (D-126).
+- **Reviewer:** The product owner (D-110).
 
 ## Source
 
@@ -305,9 +306,9 @@ The source states a rounding rule for its worked examples only: "for these examp
 
 The source is inconsistent at LI = 1.0: section 1.4.3 treats "1.0 or less" as the design goal, and the glossary treats "1.0 or more" as hazardous (OQ-125).
 
-## Proposed band map
+## Band map
 
-This proposal needs the reviewer's approval (OQ-010) before any ranking uses it. It maps published thresholds only, in the source's own words, to the three priority levels in part 5 of the build prompt. The same map applies to LI, STLI (for a single task), and CLI (for a job).
+The product owner approved this band map on October 14, 2026 (D-111, D-126). It maps published thresholds only, in the source's own words, to the three priority levels in part 5 of the build prompt. The same map applies to LI, STLI (for a single task), and CLI (for a job).
 
 | Band | Condition      | Source wording for the band                                                                                                                                                           | Proposed priority level |
 | ---- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
