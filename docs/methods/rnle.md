@@ -48,7 +48,7 @@ Supporting detail from section 1.2 (pp. 5-6):
 - "No weight limits are provided for more than eight hours of work" (p. 14).
 - The lifting task is defined as "the act of manually grasping an object of definable size and mass with two hands, and vertically moving the object without mechanical assistance" (p. 2).
 
-The source qualifies several of these conditions with words such as "significantly" and "about." The application records the assessor's answer to each condition. It doesn't decide the threshold for "significantly." See OQ-110.
+The source qualifies several of these conditions with words such as "significantly" and "about." The application records the assessor's yes-or-no answer to each condition and shows the printed numbers next to each question as guidance. It doesn't decide the threshold for "significantly" (OQ-110, answered in D-124).
 
 ## Inputs
 
