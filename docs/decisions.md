@@ -60,13 +60,13 @@ Open questions that need an answer before a decision can be made are in the [ope
 
 ### D-009: TypeScript for the engine, API, and web client
 
-- **Status:** Design default, pending confirmation. The build prompt requires confirmation of the stack before milestone 2.
+- **Status:** Confirmed by the product owner on October 14, 2026 (answers OQ-022; see D-124).
 - **Source:** Build prompt, part 7, "Architecture."
 - **Decision:** TypeScript throughout. Repository tooling in milestone 1 uses the same language, so that the stack decision doesn't change the tooling if the default is confirmed.
 
 ### D-010: Standalone calculation engine
 
-- **Status:** Design default, pending confirmation.
+- **Status:** Confirmed by the product owner on October 14, 2026 (answers OQ-022; see D-124).
 - **Source:** Build prompt, part 7, "Architecture."
 - **Decision:** The engine is a standalone package with no dependency on the interface, the database, or the network. Each function takes a validated input object and returns a result object.
 
@@ -306,3 +306,4 @@ Open questions that need an answer before a decision can be made are in the [ope
   - **OQ-134:** A hand height between two whole-inch rows is classified against both neighboring rows, and the result is the worse of the two bands. The source gives no rule for heights between rows. Computed from the transcriptions: for every pair of neighboring rows except 2 Hand Push at 38 and 39 inches, one row's green and red limits are both lower than or equal to the other's. At 38 and 39 inches, 39 inches has the higher green limit (54 against 53 lb) but the lower red limit (64 against 65 lb), so no single row is more protective; the worse-band rule handles that pair as well.
   - **OQ-132:** At 2 Hand Pull, 33 inches, where green is "44 lbs. or less" and yellow is "43-60 lbs." (p. 3), forces of 43 and 44 lb are green, as the online calculator classifies them. The engineer recommended yellow, the protective choice; the product owner chose green. The product owner's question to BWC asks which value is the typo, and the answer is revisited when BWC replies.
   - **OQ-104:** The double-transcription procedures in D-105 and D-116 are accepted, with one human check: the product owner compares against the printed pages the 81 transcribed rows that the engine reads directly. Those are the RNLE multiplier formula table (7 rows, p. 7), Table 5 (18 rows, p. 15), Table 6 (2 rows, p. 17), and Table 7 (3 rows, p. 18), and the BWC/OSU two-hand straight table (34 rows, PDF p. 3) and one-hand pull table (17 rows, PDF p. 4). Tables 1 to 4 only verify the formulas (D-119), and the two-hand turning table is left out (D-122). The check is pending until the product owner reports it done.
+  - **OQ-022:** TypeScript for the engine, API, and web client (D-009) and the standalone calculation engine (D-010) are confirmed. The database choice (D-004, PostgreSQL by default) is decided at milestone 3, when the internal users are known. The product owner's plan is an internal release first, then possibly a desktop tool or web app, and the standalone engine fits either.
