@@ -232,7 +232,7 @@ A multi-task job is one "in which there are significant differences in task vari
 Open points on the multi-task procedure:
 
 - **Answered:** When the tasks differ in V, the Table 5 column for FM₁,₂,… is V < 30 if any task in the combination has V < 30 inches (OQ-117, answered in D-124).
-- How ties are broken when tasks have the same STLI and the same frequency, and whether "same STLI value" means equal at full precision or after rounding to one decimal (OQ-118).
+- **Answered:** "Same STLI value" means equal at full precision, and tasks that tie on both STLI and frequency keep the assessor's original order (OQ-118, answered in D-124).
 - How significant control interacts with FILI and STLI when a task's FIRWL is computed at both ends. The source says to compute both but doesn't say which value feeds FILI and STLI. By analogy with p. 26 the lower one would be used, but the source doesn't state it (OQ-119).
 
 ## Lookup tables
