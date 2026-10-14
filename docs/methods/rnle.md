@@ -272,7 +272,7 @@ Every table was transcribed twice and reconciled (decision D-105). The files are
 | Single-Task Lifting Index           | STLI                   | dimensionless    | p. 27     |
 | Composite Lifting Index             | CLI                    | dimensionless    | pp. 27-28 |
 
-When the RWL is zero (for example, A > 135° or H > 25 in), LI = L/0 is undefined. The source says the RWL is "zero, or no load" (p. 12) and doesn't say how to report the LI (OQ-120).
+When the RWL is zero (for example, A > 135° or H > 25 in), LI = L/0 is undefined. The source says the RWL is "zero, or no load" (p. 12) and doesn't say how to report the LI. The application shows no numeric LI, states that no load is within the limit, names the multiplier that is zero, and places the result in the highest band (OQ-120, answered in D-124).
 
 The glossary gives the load weight unit as "pounds or Newtons" (p. 75), while the terminology list says "pounds or kilograms" (p. 2). This specification uses pounds or kilograms, consistent with the load constant (OQ-121, answered in D-119).
 
