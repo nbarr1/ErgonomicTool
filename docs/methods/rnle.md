@@ -318,7 +318,7 @@ This proposal needs the reviewer's approval (OQ-010) before any ranking uses it.
 Points for the reviewer:
 
 - The boundary at exactly 1.0 follows section 1.4.3 (> 1.0), not the glossary (≥ 1.0) (OQ-125, answered for this boundary in D-119).
-- The source attributes the 3.0 threshold to "some experts" in a paragraph about worker selection, not to NIOSH. The reviewer decides whether it's a published threshold under rule 2 of the ranking rule. If not, the map has two bands: LI ≤ 1.0 and LI > 1.0.
+- The source attributes the 3.0 threshold to "some experts" in a paragraph about worker selection, not to NIOSH. The product owner kept it as a threshold, and results above 3.0 quote the attribution (OQ-125, answered in D-124).
 - FILI > 1.0 is a separate published flag for strength demands (p. 27). The proposal shows it as supporting information, not as a band.
 - Result text uses the source's wording. It never adds "safe" or "unsafe."
 
