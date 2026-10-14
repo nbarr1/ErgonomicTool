@@ -114,11 +114,11 @@ The application never shows a band by color alone. Each band appears with its so
 
 ## Units
 
-The source works in pounds of force, inches, feet, and foot-pounds of torque. The engine computes in those units and converts from the canonical SI units (newtons, meters, and newton-meters) with the shared conversion factors. A hand height entered in centimeters is converted to inches before the row is selected. The source has rows for whole inches only, and it doesn't say how a value between two rows selects a row (OQ-134).
+The source works in pounds of force, inches, feet, and foot-pounds of torque. The engine computes in those units and converts from the canonical SI units (newtons, meters, and newton-meters) with the shared conversion factors. A hand height entered in centimeters is converted to inches before the row is selected. The source has rows for whole inches only, and it doesn't say how a value between two rows selects a row. The force is classified against both neighboring rows, and the worse band is reported (OQ-134, answered in D-124).
 
 ## Rounding
 
-The source states no rounding rule. The online calculator reads whole numbers only: it converts the force and the handle distance with `parseInt` and offers hand heights as a list of whole inches. The application doesn't round a measured force or torque before banding it (OQ-131, D-120). How a hand height between two rows selects a row is still open (OQ-134). Until it's answered, the specification adds no rounding rule.
+The source states no rounding rule. The online calculator reads whole numbers only: it converts the force and the handle distance with `parseInt` and offers hand heights as a list of whole inches. The application doesn't round a measured force or torque before banding it (OQ-131, D-120). A hand height between two rows is handled by the worse-band rule in the Units section (OQ-134, D-124). Until it's answered, the specification adds no rounding rule.
 
 ## Proposed band map
 
