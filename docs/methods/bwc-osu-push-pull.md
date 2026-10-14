@@ -1,8 +1,9 @@
 # BWC/OSU push/pull guidelines (`bwc-osu-push-pull`): method specification
 
-- **Status:** Draft. Not approved. Results computed under this specification must be labeled as draft and excluded from rankings.
-- **Specification revision:** Draft 1, October 6, 2026. A method version number is assigned when the reviewer approves the specification.
-- **Reviewer:** Not named (OQ-008).
+- **Status:** Specification approved by the product owner, who is also the reviewer (D-110), on October 14, 2026 (D-126). The method stays in draft until its validation report is signed in milestone 2. Until then, results computed under this specification must be labeled as draft and excluded from rankings.
+- **Specification revision:** Approved revision, October 14, 2026 (Draft 1 of October 6, 2026, with the answers in D-119 to D-124).
+- **Method version:** 1.0.0, assigned on approval (D-126).
+- **Reviewer:** The product owner (D-110).
 
 ## Source
 
@@ -66,7 +67,7 @@ The turning table's limits are torques in foot-pounds. The footnote to that tabl
 turning torque (ft-lbs.) = maximum hand force (lbs.) × moment arm (ft)        (p. 4, footnote *)
 ```
 
-The moment arm is open (OQ-130). The PDF defines it as the distance from the center of the object to the hand dynamometer, and it says the hands are assumed to be centered on the object (p. 2). That reading gives a moment arm of half the hand distance. The online calculator on the web page, read on October 6, 2026, divides the full handle distance by 12 and multiplies by the measured force, which uses the whole hand distance as the moment arm. The two readings differ by a factor of two.
+The moment arm is open (OQ-130). Two-handed turning is left out of the first release until BWC or the authors answer (D-122). The PDF defines it as the distance from the center of the object to the hand dynamometer, and it says the hands are assumed to be centered on the object (p. 2). That reading gives a moment arm of half the hand distance. The online calculator on the web page, read on October 6, 2026, divides the full handle distance by 12 and multiplies by the measured force, which uses the whole hand distance as the moment arm. The two readings differ by a factor of two.
 
 ### Band assignment
 
@@ -80,7 +81,7 @@ Each table row, selected by action and hand height, gives three bands:
 
 The source uses the word "safe" in its own band descriptions. The application shows those descriptions as quotations attributed to the source, as the "Source wording for results" rule in part 6 of the build prompt allows, and adds no wording of its own.
 
-Every limit in the tables is a whole number: "N lbs. or less" for green, "A-B lbs." for yellow, and "M lbs. or more" for red. The source doesn't say how to classify a value between two whole numbers, such as 41.5 lb at a row whose green band is "41 lbs. or less" and whose yellow band is "42-57 lbs." (OQ-131). Measured forces and computed torques are often not whole numbers, and turning torques almost never are.
+Every limit in the tables is a whole number: "N lbs. or less" for green, "A-B lbs." for yellow, and "M lbs. or more" for red. The source doesn't say how to classify a value between two whole numbers, such as 41.5 lb at a row whose green band is "41 lbs. or less" and whose yellow band is "42-57 lbs." A value is green only at or below the printed green limit, so 41.5 lb is yellow (OQ-131, answered in D-120). Measured forces and computed torques are often not whole numbers, and turning torques almost never are.
 
 ## Lookup tables
 
@@ -96,11 +97,11 @@ Every table was transcribed twice and reconciled (decision D-105). The files are
 
 The build checked every row for gaps and overlaps between bands, and compared every row with the online calculator's thresholds, read from the web page's script on October 6, 2026 (HTML SHA-256 `d1650e39e1d44d79e3a0acd6b914b85e4fe4ce957228729715590b144d36628f`). The calculator's thresholds are a cross-check only. They aren't a source for the method.
 
-| Finding                                  | Detail                                                                                                                                                                                                                                                                                                                                                                                                                                       | Open question |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| Overlapping bands in the PDF             | 2 Hand Pull at 33 inches: green is "44 lbs. or less" and yellow is "43-60 lbs." Forces of 43 and 44 lb fall in both bands. Every other row's yellow band starts one pound above its green band and ends one pound below its red band. The neighboring rows (green 41 at 32 inches, 47 at 34 inches) don't show which value is the typographical error. The online calculator classifies 43 and 44 lb as green, because it tests green first. | OQ-132        |
-| PDF and online calculator disagree       | 2 Hand Push at 38 inches: the PDF gives yellow "54-64 lbs." and red "65 lbs. or more." The calculator treats 64 lb or more as red. The other 84 rows agree.                                                                                                                                                                                                                                                                                  | OQ-133        |
-| Red threshold falls as hand height rises | 2 Hand Push: red starts at 65 lb at 38 inches and at 64 lb at 39 inches. 2 Hand Pull at 47 and 48 inches both have red at 84 lb, and 1 Hand Pull has several such plateaus and decreases. These patterns may be correct. They're recorded so that the reviewer can confirm them.                                                                                                                                                             | OQ-133        |
+| Finding                                  | Detail                                                                                                                                                                                                                                                                                                                                                                                                                                       | Open question                                                                       |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Overlapping bands in the PDF             | 2 Hand Pull at 33 inches: green is "44 lbs. or less" and yellow is "43-60 lbs." Forces of 43 and 44 lb fall in both bands. Every other row's yellow band starts one pound above its green band and ends one pound below its red band. The neighboring rows (green 41 at 32 inches, 47 at 34 inches) don't show which value is the typographical error. The online calculator classifies 43 and 44 lb as green, because it tests green first. | OQ-132, answered in D-124: 43 and 44 lb are green until BWC answers                 |
+| PDF and online calculator disagree       | 2 Hand Push at 38 inches: the PDF gives yellow "54-64 lbs." and red "65 lbs. or more." The calculator treats 64 lb or more as red. The other 84 rows agree.                                                                                                                                                                                                                                                                                  | OQ-133, answered in D-120: the PDF governs, and these rows are confirmed as printed |
+| Red threshold falls as hand height rises | 2 Hand Push: red starts at 65 lb at 38 inches and at 64 lb at 39 inches. 2 Hand Pull at 47 and 48 inches both have red at 84 lb, and 1 Hand Pull has several such plateaus and decreases. These patterns may be correct. They're recorded so that the reviewer can confirm them.                                                                                                                                                             | OQ-133, answered in D-120: the PDF governs, and these rows are confirmed as printed |
 
 ## Outputs
 
@@ -114,15 +115,15 @@ The application never shows a band by color alone. Each band appears with its so
 
 ## Units
 
-The source works in pounds of force, inches, feet, and foot-pounds of torque. The engine computes in those units and converts from the canonical SI units (newtons, meters, and newton-meters) with the shared conversion factors. A hand height entered in centimeters is converted to inches before the row is selected. The source has rows for whole inches only, and it doesn't say how a value between two rows selects a row (OQ-134).
+The source works in pounds of force, inches, feet, and foot-pounds of torque. The engine computes in those units and converts from the canonical SI units (newtons, meters, and newton-meters) with the shared conversion factors. A hand height entered in centimeters is converted to inches before the row is selected. The source has rows for whole inches only, and it doesn't say how a value between two rows selects a row. The force is classified against both neighboring rows, and the worse band is reported (OQ-134, answered in D-124).
 
 ## Rounding
 
-The source states no rounding rule. The online calculator reads whole numbers only: it converts the force and the handle distance with `parseInt` and offers hand heights as a list of whole inches. Whether the application should round, truncate, or reject non-integer inputs is open (OQ-131, OQ-134). Until it's answered, the specification adds no rounding rule.
+The source states no rounding rule. The online calculator reads whole numbers only: it converts the force and the handle distance with `parseInt` and offers hand heights as a list of whole inches. The application doesn't round a measured force or torque before banding it (OQ-131, D-120). A hand height between two rows is handled by the worse-band rule in the Units section (OQ-134, D-124). Until it's answered, the specification adds no rounding rule.
 
-## Proposed band map
+## Band map
 
-This proposal needs the reviewer's approval (OQ-010) before any ranking uses it.
+The product owner approved this band map on October 14, 2026 (D-111, D-126).
 
 | Source band             | Source label                  | Proposed priority level |
 | ----------------------- | ----------------------------- | ----------------------- |
@@ -150,8 +151,8 @@ The source lists these design recommendations (p. 1). The application can show t
 
 The PDF has no worked examples. Verification therefore uses these tests:
 
-- **Row coverage:** For every row of every table, a force at the green limit, at each end of the yellow band, and at the red limit returns the printed band. The overlapping row (OQ-132) and the disputed row (OQ-133) wait for the reviewer's decision.
-- **Boundaries:** Hand height 32 and 48 inches are accepted, and 31 and 49 inches are rejected. For two-handed turning, hand distance 12 and 36 inches are accepted, and 11 and 37 inches are rejected, unless OQ-135 decides otherwise.
+- **Row coverage:** For every row of every table, a force at the green limit, at each end of the yellow band, and at the red limit returns the printed band. At the overlapping row, 43 and 44 lb return green (OQ-132, D-124). The disputed row (OQ-133) uses the PDF's limits (D-120).
+- **Boundaries:** Hand height 32 and 48 inches are accepted, and 31 and 49 inches are rejected. For two-handed turning, hand distance 12 and 36 inches are accepted, and 11 and 37 inches are rejected (OQ-135, answered in D-120).
 - **Reference-tool parity:** A person records input and output pairs from the online calculator by hand, with the date. The build doesn't send automated requests to the calculator.
 - **Unit round trips:** Forces entered in newtons and pounds, and heights entered in centimeters and inches, produce the same stored band.
 

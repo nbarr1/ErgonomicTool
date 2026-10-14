@@ -1,8 +1,9 @@
 # Revised NIOSH Lifting Equation (`rnle`): method specification
 
-- **Status:** Draft. Not approved. Results computed under this specification must be labeled as draft and excluded from rankings.
-- **Specification revision:** Draft 1, October 6, 2026. A method version number is assigned when the reviewer approves the specification.
-- **Reviewer:** Not named (OQ-008).
+- **Status:** Specification approved by the product owner, who is also the reviewer (D-110), on October 14, 2026 (D-126). The method stays in draft until its validation report is signed in milestone 2. Until then, results computed under this specification must be labeled as draft and excluded from rankings.
+- **Specification revision:** Approved revision, October 14, 2026 (Draft 1 of October 6, 2026, with the answers in D-119 to D-124).
+- **Method version:** 1.0.0, assigned on approval (D-126).
+- **Reviewer:** The product owner (D-110).
 
 ## Source
 
@@ -48,7 +49,7 @@ Supporting detail from section 1.2 (pp. 5-6):
 - "No weight limits are provided for more than eight hours of work" (p. 14).
 - The lifting task is defined as "the act of manually grasping an object of definable size and mass with two hands, and vertically moving the object without mechanical assistance" (p. 2).
 
-The source qualifies several of these conditions with words such as "significantly" and "about." The application records the assessor's answer to each condition. It doesn't decide the threshold for "significantly." See OQ-110.
+The source qualifies several of these conditions with words such as "significantly" and "about." The application records the assessor's yes-or-no answer to each condition and shows the printed numbers next to each question as guidance. It doesn't decide the threshold for "significantly" (OQ-110, answered in D-124).
 
 ## Inputs
 
@@ -94,7 +95,7 @@ Rules (p. 14):
 - Worked illustrations: 30 minutes of lifting, 10 minutes of light work, then 45 minutes of lifting is moderate duration (75 minutes total). With a 30-minute recovery period instead, the short-duration category applies. Two hours of continuous lifting needs at least 36 minutes of recovery to stay moderate.
 - For infrequent lifting (F < 0.1 lift/minute), "the recovery period will usually be sufficient to use the 1-hour duration category" (p. 15).
 
-The application asks the assessor for the work pattern and shows the category it derives, with the rule that produced it. See OQ-111 for the boundary at exactly one and two hours.
+The application asks the assessor for the work pattern and shows the category it derives, with the rule that produced it. Exactly one hour is short, and exactly two hours is moderate (OQ-111, answered in D-119).
 
 ## Equations
 
@@ -133,7 +134,7 @@ This specification computes HM, VM, DM, and AM from the formulas and uses Tables
 | Table 1, U.S. customary | H = 23 in  | .44         | 10/23 = 0.4347…         | .43             |
 | Table 3, metric         | D = 130 cm | .86         | .82 + 4.5/130 = 0.8546… | .85             |
 
-In addition, 15 rows have a formula value that ends exactly in 5 in the third decimal (for example, VM at 20 inches is 0.925). The tables round all of them up, which matches rounding half away from zero. The three exceptions don't depend on the rounding rule. The reviewer confirms that the formulas govern (OQ-112).
+In addition, 15 rows have a formula value that ends exactly in 5 in the third decimal (for example, VM at 20 inches is 0.925). The tables round all of them up, which matches rounding half away from zero. The three exceptions don't depend on the rounding rule. The formulas govern, and Tables 1 to 4 are used only for verification (OQ-112, answered in D-119).
 
 ### Restrictions on each variable
 
@@ -155,7 +156,7 @@ FM comes from Table 5, using F, the duration category, and V. Table 5's columns 
 
 - **Which V:** "The FM value depends upon the average number of lifts/min (F), the vertical location (V) of the hands at the origin, and the duration of continuous lifting" (p. 15). The glossary repeats "Vertical Location (V) at the origin" (p. 74). FM therefore uses V at the origin, also when the RWL is evaluated at the destination.
 - **Interpolation:** "in some cases it will be necessary to use linear interpolation to determine the value of a multiplier, especially when the value of a variable is not directly available from a table. For example, when the measured frequency is not a whole number, the appropriate multiplier must be interpolated between the frequency values in the table for the two values that are closest to the actual frequency" (p. 7). Example 7 interpolates "between the FM values for 2 and 3 lifts/minute" for F = 2.4 (pp. 56-57). FM is linear in F between the two nearest rows of the column.
-- **Open points:** Interpolation between a nonzero row and a row of .00 (for example, F = 12.5 in the ≤ 1 hour, V < 30 column), and the meaning of "maximum frequency," are open (OQ-113).
+- **Next to a row of .00:** FM is interpolated linearly toward the .00 row, as for any other pair of rows. For example, F = 12.5 in the ≤ 1 hour, V < 30 column gives FM = .185 (between .37 at 12 and .00 at 13). In the ≤ 1 hour, V ≥ 30 column, the row after 15 is "> 15," which isn't a number, so FM is .00 for any F above 15 (OQ-113, answered in D-123).
 
 The reconciled Table 5 is `methods/rnle/transcription/table-5-frequency-multiplier.reconciled.csv` (p. 15).
 
@@ -167,13 +168,13 @@ For repetitive lifting in which the worker doesn't lift continuously during the 
 2. Divide the total number of lifts by 15.
 3. Use the result as F to determine FM from Table 5.
 
-The worked illustration gives (10 × 8)/15 = 5.33 lifts/minute (p. 16). If the worker lifts continuously for more than 15 minutes, the actual lifting frequency is used. When the procedure applies, the duration category is based on recovery periods between work sessions, not within them (p. 16). A second illustration on p. 16 states "F = (10 lifts/minute × 5 minutes/15 minutes = 50/15 = 3.4 lifts/minute." Exact division gives 3.33…, so the printed 3.4 is either a rounding or an arithmetic error (OQ-114).
+The worked illustration gives (10 × 8)/15 = 5.33 lifts/minute (p. 16). If the worker lifts continuously for more than 15 minutes, the actual lifting frequency is used. When the procedure applies, the duration category is based on recovery periods between work sessions, not within them (p. 16). A second illustration on p. 16 states "F = (10 lifts/minute × 5 minutes/15 minutes = 50/15 = 3.4 lifts/minute." Exact division gives 3.33…, so the printed 3.4 is either a rounding or an arithmetic error. The engine uses the exact quotient (OQ-114, answered in D-119).
 
 ### Coupling Multiplier
 
 CM comes from Table 7, using the coupling classification and V. Table 7's columns are V < 30 inches (75 cm) and V ≥ 30 inches (75 cm). The reconciled tables are `table-6-coupling-classification.reconciled.csv` and `table-7-coupling-multiplier.reconciled.csv` (pp. 17-18).
 
-- **Which V:** The source says CM is "Based on the coupling classification and vertical location of the lift" (p. 17) and doesn't name origin or destination. In the Example 4 worksheet (Figure 14, p. 46), CM is .95 at the origin (V = 22 in, fair) and 1.0 at the destination (V = 59 in, fair), so CM uses V at the point being evaluated. This reading comes from a worked example, not from a stated rule (OQ-115).
+- **Which V:** The source says CM is "Based on the coupling classification and vertical location of the lift" (p. 17) and doesn't name origin or destination. In the Example 4 worksheet (Figure 14, p. 46), CM is .95 at the origin (V = 22 in, fair) and 1.0 at the destination (V = 59 in, fair), so CM uses V at the point being evaluated. This reading comes from a worked example, not from a stated rule. The engine uses V at the point being evaluated (OQ-115, answered in D-119).
 - **Notes to Table 6** (p. 17), transcribed here as text:
   1. "An optimal handle design has .75 – 1.5 inches (1.9 to 3.8 cm) diameter, ≥4.5 inches (11.5 cm) length, 2 inches (5 cm) clearance, cylindrical shape, and a smooth non-slip surface."
   2. "An optimal hand-hold cut-out has the following approximate characteristics: ≥ 1.5 inches (3.8 cm ) height, 4.5 inches (11.5 cm) length, semi-oval shape, ≥ 2 inches (5 cm) clearance, smooth non-slip surface, and ≥ 0.25 inches (0.60 cm) container thickness (e.g., double thickness cardboard)."
@@ -205,7 +206,7 @@ When significant control is required at the destination, "the RWL is calculated 
 1. Compute the RWL at the origin, and at the destination when significant control is required (p. 26, section 2.3).
 2. LI = L / RWL, using the lower RWL (p. 26).
 
-The source doesn't say whether L is the average or the maximum weight for a single-task LI. The worksheets record both "L (avg.)" and "L (max.)" (Figure 3, p. 24; Figure 14, p. 46). See OQ-116.
+The source doesn't say whether L is the average or the maximum weight for a single-task LI. The worksheets record both "L (avg.)" and "L (max.)" (Figure 3, p. 24; Figure 14, p. 46). The LI is banded on the maximum weight, and the LI from the average weight is shown next to it (OQ-116, answered in D-124).
 
 ### Multi-task procedure
 
@@ -231,9 +232,9 @@ A multi-task job is one "in which there are significant differences in task vari
 
 Open points on the multi-task procedure:
 
-- Which task's V selects the Table 5 column for FM₁,₂,… when the tasks differ in V (OQ-117).
-- How ties are broken when tasks have the same STLI and the same frequency, and whether "same STLI value" means equal at full precision or after rounding to one decimal (OQ-118).
-- How significant control interacts with FILI and STLI when a task's FIRWL is computed at both ends. The source says to compute both but doesn't say which value feeds FILI and STLI. By analogy with p. 26 the lower one would be used, but the source doesn't state it (OQ-119).
+- **Answered:** When the tasks differ in V, the Table 5 column for FM₁,₂,… is V < 30 if any task in the combination has V < 30 inches (OQ-117, answered in D-124).
+- **Answered:** "Same STLI value" means equal at full precision, and tasks that tie on both STLI and frequency keep the assessor's original order (OQ-118, answered in D-124).
+- **Answered:** When a task's FIRWL is computed at both ends, the lower one feeds FILI, STRWL, and STLI, by analogy with p. 26. The source doesn't state this for multi-task jobs (OQ-119, answered in D-124).
 
 ## Lookup tables
 
@@ -272,23 +273,23 @@ Every table was transcribed twice and reconciled (decision D-105). The files are
 | Single-Task Lifting Index           | STLI                   | dimensionless    | p. 27     |
 | Composite Lifting Index             | CLI                    | dimensionless    | pp. 27-28 |
 
-When the RWL is zero (for example, A > 135° or H > 25 in), LI = L/0 is undefined. The source says the RWL is "zero, or no load" (p. 12) and doesn't say how to report the LI (OQ-120).
+When the RWL is zero (for example, A > 135° or H > 25 in), LI = L/0 is undefined. The source says the RWL is "zero, or no load" (p. 12) and doesn't say how to report the LI. The application shows no numeric LI, states that no load is within the limit, names the multiplier that is zero, and places the result in the highest band (OQ-120, answered in D-124).
 
-The glossary gives the load weight unit as "pounds or Newtons" (p. 75), while the terminology list says "pounds or kilograms" (p. 2). This specification uses pounds or kilograms, consistent with the load constant (OQ-121).
+The glossary gives the load weight unit as "pounds or Newtons" (p. 75), while the terminology list says "pounds or kilograms" (p. 2). This specification uses pounds or kilograms, consistent with the load constant (OQ-121, answered in D-119).
 
 ## Units
 
 The source gives two parallel sets of constants, and they aren't exact conversions of each other. For example, LC is 51 lb or 23 kg (51 lb is about 23.13 kg), the H limit is 10 in or 25 cm (10 in is 25.4 cm), and the VM optimum is 30 in or 75 cm (30 in is 76.2 cm). The same physical task can therefore give a slightly different RWL in each unit system.
 
-Part 2 of the build prompt requires that "Equivalent metric and English inputs produce the same stored result." That is only possible if the engine computes in one designated unit system and converts inputs to it. The reviewer chooses the computation system (OQ-122). The canonical stored units are SI, as part 2 requires.
+Part 2 of the build prompt requires that "Equivalent metric and English inputs produce the same stored result." That is only possible if the engine computes in one designated unit system and converts inputs to it. The engine computes in U.S. customary units, with the U.S. constants, and converts metric inputs to them (OQ-122, answered in D-121). The canonical stored units are SI, as part 2 requires.
 
 ## Rounding
 
 The source states a rounding rule for its worked examples only: "for these examples, multipliers are rounded to two places to the right of the decimal and weight limit (RWL, FIRWL, and STRWL) and lifting index values (LI, FILI, STLI, and CLI) are rounded to one place to the right of the decimal" (p. 29). It also warns that "you might obtain slightly different values from those displayed in the worksheet examples due to differences in rounding, especially when these values are compared to those determined from computerized versions of the equation. These differences should not be significant" (p. 29).
 
 - **Calculation:** Full precision, as part 2 of the build prompt requires. No intermediate rounding.
-- **Proposed display rule:** Multipliers to two decimal places, RWL, FIRWL, and STRWL to one decimal place, and LI, FILI, STLI, and CLI to one decimal place, matching p. 29. The source states no rule for rounding a value that ends exactly in 5, so the rounding mode is open (OQ-123).
-- **Consequence for worked examples:** The worksheets multiply rounded multipliers. In Example 4 (Figure 14, p. 46), the origin RWL is 51 × 1.0 × .94 × .87 × 1.0 × .88 × .95 = 34.9 lb. At full precision, DM = .82 + 1.8/37 = 0.8686…, and the RWL is 34.8 lb. The destination RWL is 15.2 lb in the worksheet and 15.3 lb at full precision. A full-precision engine therefore doesn't reproduce every printed worked-example value to the last digit. OQ-124 proposes how the worked-example tests handle this.
+- **Proposed display rule:** Multipliers to two decimal places, RWL, FIRWL, and STRWL to one decimal place, and LI, FILI, STLI, and CLI to one decimal place, matching p. 29. The display precision is accepted (OQ-123, D-119). The source states no rule for rounding a value that ends exactly in 5. Displayed values round half away from zero, matching the tables (OQ-123, answered in D-124).
+- **Consequence for worked examples:** The worksheets multiply rounded multipliers. In Example 4 (Figure 14, p. 46), the origin RWL is 51 × 1.0 × .94 × .87 × 1.0 × .88 × .95 = 34.9 lb. At full precision, DM = .82 + 1.8/37 = 0.8686…, and the RWL is 34.8 lb. The destination RWL is 15.2 lb in the worksheet and 15.3 lb at full precision. A full-precision engine therefore doesn't reproduce every printed worked-example value to the last digit. The worked-example tests handle this with the three-part design accepted in D-124 (OQ-124).
 
 ## Interpretation thresholds published by the source
 
@@ -305,9 +306,9 @@ The source states a rounding rule for its worked examples only: "for these examp
 
 The source is inconsistent at LI = 1.0: section 1.4.3 treats "1.0 or less" as the design goal, and the glossary treats "1.0 or more" as hazardous (OQ-125).
 
-## Proposed band map
+## Band map
 
-This proposal needs the reviewer's approval (OQ-010) before any ranking uses it. It maps published thresholds only, in the source's own words, to the three priority levels in part 5 of the build prompt. The same map applies to LI, STLI (for a single task), and CLI (for a job).
+The product owner approved this band map on October 14, 2026 (D-111, D-126). It maps published thresholds only, in the source's own words, to the three priority levels in part 5 of the build prompt. The same map applies to LI, STLI (for a single task), and CLI (for a job).
 
 | Band | Condition      | Source wording for the band                                                                                                                                                           | Proposed priority level |
 | ---- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -317,8 +318,8 @@ This proposal needs the reviewer's approval (OQ-010) before any ranking uses it.
 
 Points for the reviewer:
 
-- The boundary at exactly 1.0 follows section 1.4.3 (> 1.0), not the glossary (≥ 1.0). See OQ-125.
-- The source attributes the 3.0 threshold to "some experts" in a paragraph about worker selection, not to NIOSH. The reviewer decides whether it's a published threshold under rule 2 of the ranking rule. If not, the map has two bands: LI ≤ 1.0 and LI > 1.0.
+- The boundary at exactly 1.0 follows section 1.4.3 (> 1.0), not the glossary (≥ 1.0) (OQ-125, answered for this boundary in D-119).
+- The source attributes the 3.0 threshold to "some experts" in a paragraph about worker selection, not to NIOSH. The product owner kept it as a threshold, and results above 3.0 quote the attribution (OQ-125, answered in D-124).
 - FILI > 1.0 is a separate published flag for strength demands (p. 27). The proposal shows it as supporting information, not as a band.
 - Result text uses the source's wording. It never adds "safe" or "unsafe."
 

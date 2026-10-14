@@ -30,7 +30,9 @@ Started October 6, 2026.
 - The LiFFT, DUET, Shoulder Tool, and LM-MMH papers recorded in the source log after the product owner supplied them.
 - The status documents for LM-MMH, LiFFT, DUET, and the Shoulder Tool replaced by draft specifications.
 - The recommended release order revised after the papers were read: DUET moves ahead of LM-MMH, and LiFFT and the Shoulder Tool wait for their missing equations (D-115).
+- The product owner's answers to the RNLE and BWC/OSU questions, the transcription procedure, the stack, and first-release scope recorded (D-119 to D-125).
 
 ### Method versions
 
-No method version exists yet. Each method specification is a draft until the product owner and the reviewer approve it.
+- `rnle` 1.0.0, October 14, 2026: specification approved (D-126). The method stays in draft until its validation report is signed in milestone 2.
+- `bwc-osu-push-pull` 1.0.0, October 14, 2026: specification approved, without two-handed turning (D-122, D-126). The method stays in draft until its validation report is signed in milestone 2.

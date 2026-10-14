@@ -60,13 +60,13 @@ Open questions that need an answer before a decision can be made are in the [ope
 
 ### D-009: TypeScript for the engine, API, and web client
 
-- **Status:** Design default, pending confirmation. The build prompt requires confirmation of the stack before milestone 2.
+- **Status:** Confirmed by the product owner on October 14, 2026 (answers OQ-022; see D-124).
 - **Source:** Build prompt, part 7, "Architecture."
 - **Decision:** TypeScript throughout. Repository tooling in milestone 1 uses the same language, so that the stack decision doesn't change the tooling if the default is confirmed.
 
 ### D-010: Standalone calculation engine
 
-- **Status:** Design default, pending confirmation.
+- **Status:** Confirmed by the product owner on October 14, 2026 (answers OQ-022; see D-124).
 - **Source:** Build prompt, part 7, "Architecture."
 - **Decision:** The engine is a standalone package with no dependency on the interface, the database, or the network. Each function takes a validated input object and returns a result object.
 
@@ -226,3 +226,98 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Fact the answer depends on:** The GitHub repository is public (checked October 7, 2026), so everything pushed to it is published, including the LM-MMH transcriptions and specification. The repository rules don't allow the build to change the repository's visibility.
 - **How the build applies it:** The build doesn't use any source in a way its license explicitly prohibits. The LM-MMH paper's license (CC BY-NC-ND 4.0) prohibits commercial use and sharing adapted material, and requires attribution. Private use of the equations is consistent with the answer. Publishing an implementation in a public repository may count as sharing adapted material, so the build doesn't push LM-MMH engine code while the repository is public.
 - **Recommendation:** The product owner makes the repository private. That keeps the private-use premise true for the material already pushed. The build can't judge whether the files already pushed count as adapted material; that is a legal question.
+
+### D-119: Source-backed answers to RNLE questions
+
+- **Status:** Product owner answer, October 13, 2026. The engineer couldn't open the source PDF in the session that recorded these answers, so the product owner checked each page listed in this entry against the source and confirmed it the same day. For OQ-111, the product owner quoted section 1.3.5.4 and the Table 5 headings ("less than or equal to 1 hour, greater than 1 hour but less than or equal to 2 hours, and greater than 2 hours but less than or equal to 8 hours").
+- **Answer:** "Start by accepting everything that has a verifiable source as the basis." Questions whose answer needs judgment stay open until the accepted answers are implemented.
+- **Decisions:**
+  - **OQ-111:** Exactly 2 hours is moderate duration, and exactly 1 hour is short. The section 1.3.5.2 text ("more than one hour, but not more than two hours") and the Table 5 heading ("> 1 but ≤ 2 Hours") agree.
+  - **OQ-112:** The formulas govern HM, VM, DM, and AM, because "Each multiplier should be computed from the appropriate formula" (p. 7). Tables 1 to 4 are used only for verification. The three table entries that differ from their formulas are recomputed in the specification: 10/22 = 0.4545 (Table 1, .46), 10/23 = 0.4348 (Table 1, .44), and 0.82 + 4.5/130 = 0.8546 (Table 3, metric, .86).
+  - **OQ-114:** The engine uses the exact quotient 50/15 = 3.33… lifts/minute. The printed 3.4 is an arithmetic or rounding error.
+  - **OQ-115:** CM uses V at the point being evaluated. This follows Example 4 (Figure 14, p. 46), where CM is .95 at the origin (V = 22 in) and 1.0 at the destination (V = 59 in). It comes from a worked example, not from a stated rule.
+  - **OQ-121:** Load weight is in pounds or kilograms, consistent with the load constant (51 lb or 23 kg) and the terminology list (p. 2). The glossary's "pounds or Newtons" (p. 75) is not followed.
+  - **OQ-123, display precision only:** Results display as the p. 29 statement gives: multipliers to two decimal places, and weight limits and lifting indices to one. The rounding mode for a value that ends exactly in 5 stays open.
+  - **OQ-125, the boundary at 1.0 only:** LI = 1.0 is in the lowest band, because section 1.4.3 (p. 20) sets the goal as "an LI of 1.0 or less." Whether the LI 3.0 statement is a published threshold for the band map stays open.
+- **Pages the product owner checked:** The source is NIOSH Publication 94-110 (Revised 9/2021), [Applications Manual for the Revised NIOSH Lifting Equation](https://www.cdc.gov/niosh/media/pdfs/2026/06/94-110_2021-revision.pdf). The PDF page number is the printed page number plus 16.
+
+  | Question | What to check                                                                             | Printed page | PDF page  |
+  | -------- | ----------------------------------------------------------------------------------------- | ------------ | --------- |
+  | OQ-111   | The duration definitions in section 1.3.5.2, and the Table 5 column headings              | 13-15        | 29-31     |
+  | OQ-112   | "Each multiplier should be computed from the appropriate formula"                         | 7            | 23        |
+  | OQ-112   | Table 1 at H = 22 and 23 inches (.46 and .44)                                             | 8-9          | 24-25     |
+  | OQ-112   | Table 3, metric, at D = 130 cm (.86)                                                      | 11           | 27        |
+  | OQ-114   | The illustration that prints "50/15 = 3.4 lifts/minute"                                   | 16           | 32        |
+  | OQ-115   | Example 4 worksheet: CM .95 at the origin (V = 22 in), 1.0 at the destination (V = 59 in) | 46           | 62        |
+  | OQ-121   | "pounds or kilograms" in the terminology list, and "pounds or Newtons" in the glossary    | 2 and 75     | 18 and 91 |
+  | OQ-123   | The rounding statement for the examples                                                   | 29           | 45        |
+  | OQ-125   | "design all lifting jobs to achieve an LI of 1.0 or less" in section 1.4.3                | 20           | 36        |
+
+### D-120: Source-backed answers to BWC/OSU questions
+
+- **Status:** Product owner answer, October 13, 2026. The product owner checked each page listed in this entry against the source and confirmed it the same day.
+- **Answer:** "Start by accepting everything that has a verifiable source as the basis."
+- **Decisions:**
+  - **OQ-131:** A value is green only if it is at or below the printed green limit. For example, 41.5 lb is yellow where green is "41 lbs. or less" and yellow is "42-57 lbs." This is the literal reading of the printed limits, and it matches the online calculator. The application doesn't round the measured value.
+  - **OQ-133:** The PDF governs, under D-108: at 2 Hand Push, 38 inches, red starts at 65 lb. The rows where a limit falls or stays level as hand height rises are confirmed as printed.
+  - **OQ-135:** Hand distances outside 12 to 36 inches are rejected, with a message that states the allowed range. The source says the guidelines "are not applicable for significantly wider or narrower hand distances" (p. 2), and the online calculator rejects them. This rule matters only when two-handed turning is implemented, which waits on OQ-130.
+- **Pages the product owner checked:** The source is the [BWC/OSU push/pull guidelines PDF](https://dam.assets.ohio.gov/image/upload/info.bwc.ohio.gov/forms/PushPullGuidelines.pdf), linked from the [BWC push/pull guide page](https://www.bwc.ohio.gov/employer/programs/safety/PushPullGuide/PushPullGuide.aspx). The PDF has no printed page numbers, so pages are PDF pages.
+
+  | Question | What to check                                                                                                        | PDF page |
+  | -------- | -------------------------------------------------------------------------------------------------------------------- | -------- |
+  | OQ-131   | Every limit is a whole number of pounds, for example 2 Hand Pull at 32 inches: "41 lbs. or less," "42-57 lbs."       | 3        |
+  | OQ-133   | 2 Hand Push at 38 inches: red "65 lbs. or more"; at 39 inches: red "64 lbs. or more"                                 | 3        |
+  | OQ-135   | "accommodate hand distances of 12" to 36" and are not applicable for significantly wider or narrower hand distances" | 2        |
+
+### D-121: The RNLE engine computes in U.S. customary units
+
+- **Status:** Product owner answer, October 13, 2026 (answers OQ-122). The engineer recommended this option.
+- **Decision:** The engine converts every RNLE input to U.S. customary units and computes with the U.S. constants: LC = 51 lb, HM = 10/H, VM = 1 − .0075|V − 30|, and DM = .82 + 1.8/D (p. 7). Stored values stay in SI, as part 2 of the build prompt requires.
+- **Reason:** The manual's metric and U.S. constants aren't exact conversions, so only one set can give the same result for equivalent inputs. Example 4 (Figure 14, p. 46) is printed in pounds and inches, so the published-example tests can check the engine without converting.
+- **Consequences, computed from the transcribed formulas:** For the same task, a calculation with the metric constants gives a recommended weight limit about 2% lower than the engine's (2.0% to 2.6% lower for four illustrative tasks). Two boundaries also differ from a metric hand calculation: a horizontal distance between 63 and 63.5 cm gives a nonzero RWL in the engine but RWL = 0 with the metric limit of 63 cm, and a vertical location between 75 cm (29.53 in) and 30 in uses the V < 30 column of Tables 5 and 7 in the engine. The method reference should state these differences, so that metric users know why a hand calculation can differ.
+
+### D-122: Two-handed turning waits for an answer from BWC or the authors
+
+- **Status:** Product owner answer, October 13, 2026. The engineer recommended this option. OQ-130 stays open.
+- **Decision:** The first release implements the BWC/OSU straight push and pull and one-handed pull tables only. Two-handed turning is left out until BWC or the guidelines' authors say which moment arm the turning limits assume. The product owner asks them.
+- **Reason:** The PDF defines the moment arm as "the distance between the center of the object being turned and the hand dynamometer that is exerting the torque" (p. 4), which with centered hands is half the hand distance. The online calculator uses the full hand distance. The two readings differ by a factor of two: computed from the transcribed turning table, a 60 lb force with hands 24 inches apart at a hand height of 32 inches gives 60 ft-lbs. (green) under one reading and 120 ft-lbs. (red) under the other. No source settles which reading is right.
+- **Consequence:** OQ-135 (the 12 to 36 inch hand-distance rule, answered in D-120) applies only to turning, so it has no effect until turning is implemented.
+
+### D-123: FM is interpolated toward a row of .00
+
+- **Status:** Product owner answer, October 13, 2026 (answers OQ-113). The engineer recommended the other option, setting FM to 0 above each column's last nonzero row.
+- **Decision:** Between a column's last nonzero row and the .00 row after it, FM is interpolated linearly, as the p. 7 rule says for any frequency between two rows. In the ≤ 1 hour, V ≥ 30 column, the row after 15 is "> 15," which isn't a number, so interpolation isn't defined there and FM is .00 for any F above 15.
+- **Examples, computed from the transcribed Table 5:** F = 12.5 in the ≤ 1 hour, V < 30 column gives FM = .185 (between .37 and .00). F = 8.5 in the > 2 but ≤ 8 hours, V < 30 column gives FM = .09 (between .18 and .00). F = 10.1 in the > 1 but ≤ 2 hours, V < 30 column gives FM = .234 (between .26 and .00).
+- **Basis:** This reading applies the source's stated interpolation rule (p. 7) without an exception the source doesn't state. The engineer's recommendation, the stricter reading, would have treated all six columns alike. The product owner chose on a decision card and didn't state a reason.
+
+### D-124: Answers to the second round of judgment questions
+
+- **Status:** Product owner answers on decision cards, October 14, 2026. The evidence for each question is summarized in the question's entry in the open-question log. Unless an item says otherwise, the product owner chose the engineer's recommended option.
+- **Decisions:**
+  - **OQ-116:** The single-task LI is banded on the maximum load weight. The LI from the average load is shown next to it. The source doesn't say which load the single-task LI uses; the worksheets record both (Figure 3, p. 24; Figure 14, p. 46).
+  - **OQ-117:** For the combined frequencies in the CLI, the Table 5 column is V < 30 if any task in the combination has V < 30 inches, and V ≥ 30 otherwise. Computed from the transcribed Table 5: the V < 30 value is never higher than the V ≥ 30 value in any of its 18 rows, so this choice never gives a higher FM.
+  - **OQ-118:** For CLI renumbering, "the same STLI value" (p. 57) means equal at full precision. When STLI and F both tie, the tasks keep the assessor's original order. Example 7 (pp. 55-59), in which every task has F = 2.4, becomes a milestone 2 test of this rule. If it doesn't reproduce, the engineer brings the numbers back to the product owner.
+  - **OQ-119:** When significant control at the destination means FIRWL is computed at both ends (p. 26), the lower of the two feeds FILI, STRWL, and STLI. This follows by analogy the single-task rule that "the lower of the RWL values at the origin or destination should be used to compute the Lifting Index for the task" (p. 26). The source doesn't state it for multi-task jobs.
+  - **OQ-120:** When the RWL is zero, the application shows no numeric LI. It reports that the RWL is zero and no load is within the limit, names the multiplier that is zero, and places the result in the highest band of the approved band map. The source says only that a zero RWL means "zero, or no load" (p. 12).
+  - **OQ-110:** The application records the assessor's yes-or-no answer to each "does not apply" condition (p. 6) and applies no numeric cut-off. Where the source prints a number (66 to 79 °F, 35% to 50% relative humidity, about 30 inches/second, a coefficient of friction below 0.4), the number is shown next to the question as guidance. The source qualifies the temperature with "significantly" and the speed with "about," so a hard cut-off would decide something the source doesn't.
+  - **OQ-125, the LI 3.0 threshold:** The RNLE band map keeps three bands: LI ≤ 1.0, 1.0 < LI ≤ 3.0, and LI > 3.0. Results above 3.0 quote the source's statement with its attribution to "some experts" (p. 20), so that the result doesn't present it as NIOSH's own threshold. The boundary at 1.0 was answered in D-119.
+  - **OQ-123, rounding exact halves:** A displayed value that ends exactly in 5 is rounded half away from zero, which matches how Tables 1 to 4 round the 15 formula values that end exactly in 5. This affects display only; calculations keep full precision. The display precision was answered in D-119.
+  - **OQ-124:** The engine keeps full precision and doesn't round multipliers before multiplying. Each worked-example test (a) checks every printed multiplier against the engine's multiplier rounded to two decimals, (b) recomputes the printed RWL and LI from the printed, rounded multipliers to confirm the transcription, and (c) checks that the engine's full-precision RWL and LI are within half a unit of the last printed digit plus the effect of multiplier rounding, with that bound derived and documented for each example. The source says its rounding applies "for these examples" (p. 29).
+  - **OQ-134:** A hand height between two whole-inch rows is classified against both neighboring rows, and the result is the worse of the two bands. The source gives no rule for heights between rows. Computed from the transcriptions: for every pair of neighboring rows except 2 Hand Push at 38 and 39 inches, one row's green and red limits are both lower than or equal to the other's. At 38 and 39 inches, 39 inches has the higher green limit (54 against 53 lb) but the lower red limit (64 against 65 lb), so no single row is more protective; the worse-band rule handles that pair as well.
+  - **OQ-132:** At 2 Hand Pull, 33 inches, where green is "44 lbs. or less" and yellow is "43-60 lbs." (p. 3), forces of 43 and 44 lb are green, as the online calculator classifies them. The engineer recommended yellow, the protective choice; the product owner chose green. The product owner's question to BWC asks which value is the typo, and the answer is revisited when BWC replies.
+  - **OQ-104:** The double-transcription procedures in D-105 and D-116 are accepted, with one human check: the product owner compares against the printed pages the 81 transcribed rows that the engine reads directly. Those are the RNLE multiplier formula table (7 rows, p. 7), Table 5 (18 rows, p. 15), Table 6 (2 rows, p. 17), and Table 7 (3 rows, p. 18), and the BWC/OSU two-hand straight table (34 rows, PDF p. 3) and one-hand pull table (17 rows, PDF p. 4). Tables 1 to 4 only verify the formulas (D-119), and the two-hand turning table is left out (D-122). The product owner completed the check on October 14, 2026, and reported that every row matches the printed pages.
+  - **OQ-022:** TypeScript for the engine, API, and web client (D-009) and the standalone calculation engine (D-010) are confirmed. The database choice (D-004, PostgreSQL by default) is decided at milestone 3, when the internal users are known. The product owner's plan is an internal release first, then possibly a desktop tool or web app, and the standalone engine fits either.
+
+### D-125: First-release scope beyond the Tier 1 methods
+
+- **Status:** Product owner answers on decision cards, October 14, 2026. The engineer recommended each option chosen.
+- **Decisions:**
+  - **OQ-002:** No Tier 2 method is in the first release. Every Tier 2 item in the build prompt needs a license or permission, and the first-release order (D-115) uses none of them. Tier 2 is revisited after the first release ships, and the question of which licenses the product owner holds waits until then.
+  - **OQ-003:** The four Tier 3 collections (Washington State L&I, UK HSE, the AIHA toolkit, and the DoD Ergonomics Working Group) are reviewed after the first release. Until then, the engine covers the four methods in D-115. Any method added later needs its own source, specification, and double transcription.
+
+### D-126: RNLE and BWC/OSU specifications approved
+
+- **Status:** Product owner approval, October 14, 2026 ("Reviewed and approved"), after the product owner reviewed both specifications.
+- **Decision:** The product owner, as the reviewer (D-110), approves `docs/methods/rnle.md` and `docs/methods/bwc-osu-push-pull.md` as they stand with the answers in D-119 to D-124, including both band maps (D-111). Two-handed turning stays out of the BWC/OSU method until OQ-130 is answered (D-122).
+- **Method versions:** Each method gets version 1.0.0. The repository didn't set a version format, so the engineer chose semantic versioning: a change to logic or data that can change a result raises the major or minor number, and the product owner can change the format.
+- **What stays in draft:** Under the contribution guide, a method stays in draft until the reviewer also signs its validation report. Results from either method are labeled as draft and excluded from rankings until then. The validation reports are written in milestone 2.
