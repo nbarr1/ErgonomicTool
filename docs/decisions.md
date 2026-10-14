@@ -313,3 +313,4 @@ Open questions that need an answer before a decision can be made are in the [ope
 - **Status:** Product owner answers on decision cards, October 14, 2026. The engineer recommended each option chosen.
 - **Decisions:**
   - **OQ-002:** No Tier 2 method is in the first release. Every Tier 2 item in the build prompt needs a license or permission, and the first-release order (D-115) uses none of them. Tier 2 is revisited after the first release ships, and the question of which licenses the product owner holds waits until then.
+  - **OQ-003:** The four Tier 3 collections (Washington State L&I, UK HSE, the AIHA toolkit, and the DoD Ergonomics Working Group) are reviewed after the first release. Until then, the engine covers the four methods in D-115. Any method added later needs its own source, specification, and double transcription.
